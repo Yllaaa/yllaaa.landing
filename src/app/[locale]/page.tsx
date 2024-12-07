@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./homePage.module.css";
-import cardImage from "../../../public/ourProcess/cardImg.svg";
+// import cardImage from "../../../public/ourProcess/cardImg.svg";
 import AboutUs from "@/components/aboutUs/AboutUs";
 import ForClients from "@/components/forClients/ForClients";
 import Team from "@/components/team/Team";
