@@ -1,0 +1,119 @@
+.heroContainer {
+  position: relative;
+  width: 100vw;
+  height: fit-content;
+  min-height: fit-content;
+  margin: 0 auto 70px auto;
+}
+.marqueeContainer {
+  margin: 70px auto 148px auto;
+  height: fit-content;
+  min-height: fit-content;
+  overflow-y: hidden;
+}
+.missionContainer {
+  position: relative;
+  height: fit-content;
+  min-height: fit-content;
+  margin: 148px auto 130px auto;
+}
+.missionContainer .missionIcons {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.missionContainer .missionIcons .icon1 {
+  position: absolute;
+  top: 15%;
+  left: 20%;
+}
+.missionContainer .missionIcons .icon2 {
+  position: absolute;
+  top: 20%;
+  right: 20%;
+}
+.missionContainer .missionIcons .icon3 {
+  position: absolute;
+  top: 65%;
+  left: 30%;
+}
+.missionContainer .missionIcons .icon4 {
+  position: absolute;
+  top: 60%;
+  right: 25%;
+}
+.processContainer {
+  position: relative;
+  width: 100vw;
+  min-height: fit-content;
+  padding-bottom: 102px;
+  margin: 130px auto;
+}
+.teamSection {
+  position: relative;
+  width: 100vw;
+  min-height: fit-content;
+  padding-bottom: 102px;
+  margin: 119px auto 130px auto;
+}
+.forClientsContainer {
+  position: relative;
+  width: 100vw;
+  height: fit-content;
+  min-height: fit-content;
+  margin: 130px auto 260px auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .processContainer {
+    margin: 40px auto 40px auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .heroContainer {
+    margin: 0 auto 40px auto;
+  }
+  .marqueeContainer {
+    margin: 40px auto 40px auto;
+  }
+  .missionContainer {
+    margin: 40px auto 40px auto;
+  }
+  .processContainer {
+    height: fit-content;
+  }
+  .teamSection {
+    margin: 50px auto 50px auto;
+  }
+  .forClientsContainer {
+    margin: 50px auto 50px auto;
+  }
+  .missionContainer .missionIcons .icon1 {
+    position: absolute;
+    top: 7%;
+    left: 10%;
+    width: 40px;
+  }
+  .missionContainer .missionIcons .icon2 {
+    position: absolute;
+    top: 6%;
+    right: 7%;
+    width: 40px;
+  }
+  .missionContainer .missionIcons .icon3 {
+    position: absolute;
+    top: 65%;
+    left: 5%;
+    width: 40px;
+  }
+  .missionContainer .missionIcons .icon4 {
+    position: absolute;
+    top: 60%;
+    right: 6%;
+    width: 40px;
+  }
+}

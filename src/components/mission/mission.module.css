@@ -1,0 +1,44 @@
+.missionContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  background: var(--Indigo-900);
+  padding: 35px 0px 45px 0px;
+}
+.row h4 {
+  color: var(--neutral-1);
+  font-family: var(--monta);
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 92px;
+  letter-spacing: -7.199999809265137px;
+  text-align: center;
+  text-decoration-skip-ink: none;
+}
+.logo {
+  margin: 24px auto 32px auto;
+}
+.btn{
+  z-index: 10;
+}
+
+@media screen and (max-width: 768px) {
+  .missionContainer {
+    padding: 77px 0px 40px 0px;
+  }
+  .row h4 {
+    font-size: 40px;
+    line-height: 42px;
+    letter-spacing: -1px;
+  }
+  .logo {
+    margin: 15px auto 27px auto;
+    height: 35px;
+  }
+  .logo img {
+    height: 35px;
+  }
+}

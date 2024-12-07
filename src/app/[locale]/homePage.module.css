@@ -1,0 +1,79 @@
+.heroContainer {
+  width: 100vw;
+  height: 1429px;
+  min-height: fit-content;
+  margin: 0 auto 102px auto;
+}
+.processContainer {
+  position: relative;
+  width: 100vw;
+  min-height: fit-content;
+  padding-bottom: 102px;
+  margin: 107px auto 130px auto;
+}
+.forClientsContainer{
+  position: relative;
+  width: 100vw;
+  height: fit-content;
+  min-height: fit-content;
+  margin: 130px auto 72px auto;
+}
+.teamSection{
+  position: relative;
+  width: 100vw;
+  height: fit-content;
+  min-height: fit-content;
+  margin: 72px auto 130px auto;
+}
+.aboutUsContainer {
+  position: relative;
+  width: 100vw;
+  min-height: fit-content;
+  margin: 107px auto 107px auto;
+}
+.forTalentContainer{
+  position: relative;
+  width: 100vw;
+  min-height: fit-content;
+  margin: 130px auto 182px auto;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .heroContainer {
+    height: fit-content;
+    min-height: 1024px;
+  }
+  .processContainer {
+    height: fit-content;
+    min-height: fit-content;
+    margin: 40px auto 40px auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .processContainer {
+    height: fit-content;
+    min-height: fit-content;
+    margin: 40px auto 40px auto;
+  }
+}
+@media screen and (max-width: 432px) {
+  .heroContainer {
+    height: fit-content;
+    min-height: 932px;
+    margin: 0 auto 50px auto;
+  }
+  .processContainer {
+    height: fit-content;
+  }
+  .forClientsContainer{
+    height: fit-content;
+    margin: 40px auto 40px auto;
+  }
+  .forTalentContainer{
+    position: relative;
+    width: 100vw;
+    min-height: fit-content;
+    margin: 40px auto 50px auto;
+  }
+}

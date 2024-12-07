@@ -1,0 +1,59 @@
+.heroContainer {
+  position: relative;
+  width: 100vw;
+  height: fit-content;
+  min-height: fit-content;
+  margin: 0 auto 100px auto;
+}
+.aboutUsContainer {
+  position: relative;
+  width: 100vw;
+  min-height: fit-content;
+  margin: 100px auto 107px auto;
+}
+.marqueeContainer {
+  margin: 130px auto;
+  height: fit-content;
+}
+.teamSection {
+  position: relative;
+  width: 100vw;
+  height: fit-content;
+  min-height: fit-content;
+  margin: 72px auto 130px auto;
+}
+.processContainer {
+  position: relative;
+  width: 100vw;
+  min-height: fit-content;
+  padding-bottom: 102px;
+  margin: 107px auto 130px auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .processContainer {
+    height: fit-content;
+    min-height: fit-content;
+    margin: 40px auto 40px auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .heroContainer {
+    margin: 0 auto 61px auto;
+  }
+  .marqueeContainer {
+    margin: 60px auto;
+  }
+  .processContainer {
+    height: fit-content;
+    min-height: fit-content;
+    margin: 40px auto 50px auto;
+  }
+  .aboutUsContainer {
+    margin: 61px auto 60px auto;
+  }
+  .teamSection {
+    margin: 60px auto 40px auto;
+  }
+}
+

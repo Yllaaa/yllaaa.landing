@@ -1,0 +1,17 @@
+.marqueeContainer {
+  height: 240px;
+  width: 100vw;
+  background: var(--Indigo-900);
+  margin: auto;
+  display: flex;
+}
+.marqueeWord {
+  font-family: var(--space);
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 108.39px;
+  text-align: left;
+  margin: auto 40px;
+  text-decoration-skip-ink: none;
+  color: var(--Indigo-200);
+}

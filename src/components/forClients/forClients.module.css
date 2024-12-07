@@ -1,0 +1,208 @@
+.forClients {
+  background-image: url("../../../public/forClients/forClients.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 88%;
+  margin: auto;
+  height: fit-content;
+  padding: 24px 35px 38px 35px;
+  z-index: 1;
+}
+.forClientsContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 622px;
+  height: fit-content;
+}
+.forClientsContent .forClientsContentTitle {
+  margin-bottom: 80px;
+}
+.forClientsContent .forClientsContentTitle h4 {
+  color: var(--neutral-1);
+  font-family: var(--monta);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 32px;
+  text-align: left;
+  text-decoration-skip-ink: none;
+}
+.forClientsContent .forClientsContentBody {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.forClientsContent .forClientsContentBody h2 {
+  color: var(--neutral-1);
+  font-family: var(--monta);
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 60px;
+  text-align: left;
+  text-decoration-skip-ink: none;
+}
+.forClientsContent .forClientsContentBody p {
+  color: var(--neutral-1);
+  font-family: var(--space);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  text-align: left;
+  text-decoration-skip-ink: none;
+}
+.forClientsBtns {
+  height: 172px;
+  display: flex;
+  gap: 28px;
+  margin-top: 32px;
+}
+.forClientsBtn {
+  padding: 20px;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  z-index: 2;
+  cursor: pointer;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+.forClientsBtn h5 {
+  font-family: var(--monta);
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 44px;
+  text-align: left;
+  text-decoration-skip-ink: none;
+  width: 80%;
+}
+.forClientsBtn p {
+  font-family: var(--space);
+  display: flex;
+  justify-content: flex-start;
+  gap: 8px;
+  height: 20px;
+  font-family: var(--monta);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.5px;
+  text-align: left;
+  text-decoration-skip-ink: none;
+  cursor: pointer;
+  transition: gap 0.4s ease-in-out;
+  -webkit-transition: gap 0.4s ease-in-out;
+  -moz-transition: gap 0.4s ease-in-out;
+  -ms-transition: gap 0.4s ease-in-out;
+  -o-transition: gap 0.4s ease-in-out;
+}
+.forClientsBtnDark {
+  background-color: var(--Indigo-700);
+  color: var(--neutral-1);
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+}
+.forClientsBtnDark:hover {
+  background-color: var(--Indigo-800);
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+}
+.forClientsBtnDark:hover p {
+  gap: 12px;
+  transition: gap 0.4s ease-in-out;
+  -webkit-transition: gap 0.4s ease-in-out;
+  -moz-transition: gap 0.4s ease-in-out;
+  -ms-transition: gap 0.4s ease-in-out;
+  -o-transition: gap 0.4s ease-in-out;
+}
+.forClientsBtnLight {
+  background-color: var(--Indigo-100);
+  color: var(--Indigo-700);
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+}
+.forClientsBtnLight:hover {
+  background-color: var(--Indigo-200);
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+}
+.forClientsBtnLight:hover p {
+  gap: 12px;
+  transition: gap 0.4s ease-in-out;
+  -webkit-transition: gap 0.4s ease-in-out;
+  -moz-transition: gap 0.4s ease-in-out;
+  -ms-transition: gap 0.4s ease-in-out;
+  -o-transition: gap 0.4s ease-in-out;
+}
+
+@media screen and (max-width: 1024px) {
+  .forClientsBtns {
+    height: fit-content;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 28px;
+  }
+  .forClientsBtn {
+    height: fit-content;
+    min-height: fit-content;
+  }
+  .forClientsBtn h5 {
+    margin-bottom: 24px;
+    width: 90%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .forClients {
+    background-image: none;
+    width: 88%;
+    margin: auto;
+    height: fit-content;
+    padding: 0;
+  }
+  .forClientsContent {
+    background-image: url("../../../public/forClients/forClients.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding: 14px 15px 14px 16px;
+  }
+  .forClientsContent .forClientsContentTitle {
+    margin-bottom: 40px;
+  }
+  .forClientsContent .forClientsContentTitle h4 {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+  }
+  .forClientsContent .forClientsContentBody {
+    gap: 12px;
+  }
+  .forClientsContent .forClientsContentBody h2 {
+    font-size: 32px;
+    line-height: 32px;
+  }
+  .forClientsContent .forClientsContentBody p {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
