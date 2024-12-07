@@ -6,7 +6,7 @@ import linkedInIcon from "../../../../../public/icons/linkedInTeam.svg";
 type Props = {
   name: string;
   position: string;
-  breif:string;
+  breif?:string;
   image: string;
 };
 function TeamCard(props: Props) {

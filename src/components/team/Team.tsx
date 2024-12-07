@@ -3,12 +3,15 @@ import React, { useEffect, useRef, useState } from "react";
 import styles from "./team.module.css";
 import ButtonFlip from "../aaabutton/ButtonFlip";
 import TeamCard from "../aaacards/cardNoImg/TeamCard/TeamCard";
-import johnSmith from "../../../public/team/johnSmith.svg";
-import janDoe from "../../../public/team/janDoe.svg";
-import brianWilliams from "../../../public/team/brianWilliams.svg";
-import micheal from "../../../public/team/michaelBrown.svg";
-import sarahKim from "../../../public/team/sarahKim.svg";
-import emily from "../../../public/team/emely.svg";
+import mohamedAbdelkader from "../../../public/team/mohamedAbdelkader.svg";
+import mohamedYasser from "../../../public/team/mohamedYasser.svg";
+import Moustafa from "../../../public/team/moustafaAdel.svg";
+import ziadSaleh from "../../../public/team/ziadSaleh.svg";
+import youssefAhmed from "../../../public/team/youssefAhmed.svg";
+import shaimaElfouly from "../../../public/team/shaimaElfouly.svg";
+import yehiaAbdelhamed from "../../../public/team/yehiaAbdelhamed.svg";
+import wiamOuafi from "../../../public/team/wiamOuafi.svg";
+import { useTranslations } from "next-intl";
 function Team() {
   // neon glow function
   const [neonWidth, setNeonWidth] = useState(0);
@@ -43,49 +46,71 @@ function Team() {
   // end neon glow function
   const team = [
     {
-      name: "John Smith",
-      position: "CEO and Founder",
-      breif:
-        "10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy",
-      image: johnSmith,
+      name: "Mohamed Abdelkader",
+      position: "CEO and CO-Founder",
+      // breif:
+      //   "10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy",
+      image: mohamedAbdelkader,
     },
     {
-      name: "Jane Doe",
-      position: "Director of Operations",
-      breif:
-        "7+ years of experience in project management and team leadership. Strong organizational and communication skills",
-      image: janDoe,
+      name: "Zeyad Saleh",
+      position: "CTO and Co-Founder",
+      // breif: `2+ years of experience in writing and editing ${(
+      //   <br />
+      // )} Skilled in creating compelling, SEO-optimized content for various industries`,
+      image: ziadSaleh,
     },
     {
-      name: "Michael Brown",
-      position: "Senior SEO Specialist",
-      breif:
-        "5+ years of experience in SEO and content creation. Proficient in keyword research and on-page optimization",
-      image: micheal,
+      name: "Wiam Ouafi",
+      position: "Marketing Executive",
+      // breif:
+      //   "3+ years of experience in paid search advertising. Skilled in campaign management and performance analysis",
+      image: wiamOuafi,
     },
     {
-      name: "Emily Johnson",
-      position: "PPC Manager",
-      breif:
-        "3+ years of experience in paid search advertising. Skilled in campaign management and performance analysis",
-      image: emily,
+      name: "Shaima Elfouly",
+      position: "Designer",
+      // breif:
+      //   "4+ years of experience in social media marketing. Proficient in creating and scheduling content, analyzing metrics, and building engagement",
+      image: shaimaElfouly,
     },
     {
-      name: "Brian Williams",
-      position: "Social Media Specialist",
-      breif:
-        "4+ years of experience in social media marketing. Proficient in creating and scheduling content, analyzing metrics, and building engagement",
-      image: brianWilliams,
+      name: "Yehia Abdelhamed",
+      position: "Designer",
+      // breif: `2+ years of experience in writing and editing ${(
+      //   <br />
+      // )} Skilled in creating compelling, SEO-optimized content for various industries`,
+      image: yehiaAbdelhamed,
     },
     {
-      name: "Sarah Kim",
-      position: "Content Creator",
-      breif: `2+ years of experience in writing and editing ${(
-        <br />
-      )} Skilled in creating compelling, SEO-optimized content for various industries`,
-      image: sarahKim,
+      name: "Mohamed Yasser",
+      position: "Back-End Developer",
+      // breif:
+      //   "7+ years of experience in project management and team leadership. Strong organizational and communication skills",
+      image: mohamedYasser,
     },
+    {
+      name: "Youssef Ahmed",
+      position: "Front-End Developer",
+      // breif: `2+ years of experience in writing and editing ${(
+      //   <br />
+      // )} Skilled in creating compelling, SEO-optimized content for various industries`,
+      image: youssefAhmed,
+    },
+    {
+      name: "Mostafa Adel",
+      position: "Front-End Developer",
+      // breif:
+      //   "5+ years of experience in SEO and content creation. Proficient in keyword research and on-page optimization",
+      image: Moustafa,
+    },
+    
+    
+    
+    
+    
   ];
+  const t = useTranslations("team");
   return (
     <>
       {/* beoGlow ref */}
@@ -104,14 +129,13 @@ function Team() {
         <div className={styles.teamContainer}>
           <div className={styles.teamHeaderContent}>
             <div className={styles.teamHeaderContentLine}>
-              <h2>Team</h2>
+              <h2>{t("sectionTitle")}</h2>
               <p>
-                Meet the skilled and experienced team behind our successful
-                digital marketing strategies
+                {t("description")}
               </p>
             </div>
             <div className={styles.teamHeaderContentBtn}>
-              <ButtonFlip lable="Our Team" />
+              <ButtonFlip lable={t("buttonText")} />
             </div>
           </div>
           <div className={styles.teamCards}>
@@ -120,7 +144,7 @@ function Team() {
                 key={index}
                 name={item.name}
                 position={item.position}
-                breif={item.breif}
+                // breif={item.breif}
                 image={item.image}
               />
             ))}

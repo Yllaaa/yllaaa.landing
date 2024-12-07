@@ -4,11 +4,12 @@ import styles from "./talent.module.css";
 import talent from "../../../public/forTalent/talent.svg";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 function Talent() {
   const route = useRouter();
   const locale = useLocale();
+  const t = useTranslations("talent");
   return (
     <>
       <div className={styles.talentContainer}>
@@ -17,20 +18,19 @@ function Talent() {
         </div>
         <div className={styles.talentContent}>
           <div className={styles.talentContentTop}>
-            <h6>For Talent</h6>
-            <h2>Find a great worker</h2>
+            <h6>{t("sectionLabel")}</h6>
+            <h2>{t("sectionTitle")}</h2>
             <p>
-              Meet clients you’re excited to work with and take your career or
-              to new heights.
+              {t("description")}
             </p>
           </div>
           <div className={styles.talentContentBottom}>
             <div className={styles.talentContentBottomText}>
               <span>
-                Find opportunities for every stage of your freelance career
+                {t("text1")}
               </span>
-              <span>Control when, where, and how you work</span>
-              <span>Explore different ways to earn</span>
+              <span>{t("text2")}</span>
+              <span>{t("text3")}</span>
             </div>
             <div
               onClick={() => {
@@ -38,7 +38,7 @@ function Talent() {
               }}
               className={styles.talentContentBottomBtn}
             >
-              Get Started
+              {t("buttonText")}
             </div>
           </div>
         </div>
