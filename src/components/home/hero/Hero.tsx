@@ -15,18 +15,20 @@ import user8 from "../../../../public/Hero/user8.svg";
 import combinedUsers from "../../../../public/Hero/combinedUsers.svg";
 import playStoreBtn from "../../../../public/Hero/playStoreBtn.svg";
 import appStoreBtn from "../../../../public/Hero/appStoreBtn.svg";
+import { useTranslations } from "next-intl";
 function Hero() {
   const { isMobile, isTablet } = ScreenBreakpoints();
+  const t = useTranslations("homeHero");
   return (
     <>
       <div className={styles.heroBg}>
         <div className={styles.heroHeader}>
           <h1>
-            Fuel Your Startup with <span>€10,000</span> in Development Support!
+            {t("header1")} <span>€10,000</span> {t("header2")}
           </h1>
         </div>
         <div className={styles.heroApp}>
-          <h4>€10,000 Could Be Yours – Take Your Startup to the Next Level!</h4>
+          <h4>{t("subHeader")}</h4>
           <div className={styles.heroAppDownload}>
             <a href="#" className={styles.heroAppDownloadLink}>
               <Image

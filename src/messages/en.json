@@ -1,70 +1,31 @@
 {
-  "HomePage": {
-    "title": "About us",
-    "about": "We assist you in finding your dream homes.",
-    "topRatedTitle": "TOP RATED",
-    "suggestedTitle": "SUGGESTED RENTALS",
-    "reviewsTitle": "REVIEWS"
+  "homeHero":{
+    "header1":"Launch your startup: win",
+    "header2":" for MVP development",
+    "subHeader":"€10,000 Could Be Yours – Take Your Startup to the Next Level!"
   },
-  "SearchPage": {
-    "title": "Find stay",
-    "search": "Search",
-    "loading": "Loading..",
-    "city": "CITY",
-    "district": "DISTRICT",
-    "date": "CHOOSE DATE",
-    "selectDate": "Select a date",
-    "selectCity": "Select city",
-    "selectDistrict": "Select district",
-    "apply": "Apply",
-    "startingFrom": "Starting from",
-    "night": "night",
-    "view": "View Place"
+  "aboutUs":{
+    "title":"About Us",
+    "subTitle":"Your Startup’s Partner for Talent, Growth, and Success",
+    "paragraph":"At Yllaaa, we believe in empowering startups to succeed by connecting them with the right talent and resources. Our platform goes beyond traditional freelancing by offering dedicated support through experienced account managers, a seamless matching process, and a focus on collaboration. We’re here to help you build and grow with confidence, every step of the way.",
+    "buttonText":"More About Us",
+    "projects":"Projects",
+    "months":"Months",
+    "clients":"Clients",
+    "profs":"Professionals"
   },
-  "About": {
-    "whyUs": "Why Choose Us?",
-    "enjoy": "Enjoy Our Excellent Service",
-    "services": "Experience service like never before with a focus on quality, reliability, and support. Our team is here around the clock to assist you, backed by trusted reviews from satisfied clients and a selection of premium properties designed to meet all your needs. We’re committed to making your experience seamless and enjoyable, every step of the way",
-    "customerSupport": "24/7 Customer Support",
-    "customerSupportText": "We offer 24 hours support during all week",
-    "trusted": "Trusted Reviews",
-    "trustedText": "We have 1000+ real reviews",
-    "exceptional": "Exceptional Properties",
-    "exceptionalText": "We have 1000+ exceptional properties"
-  },
-  "Header": {
-    "HOME": "HOME",
-    "ABOUT": "ABOUT",
-    "APARTMENTS": "APARTMENTS",
-    "CONTACT": "CONTACT",
-    "LOGIN": "LOGIN",
-    "SIGNUP": "SIGNUP",
-    "HISTORY": "HISTORY",
-    "LOGOUT": "LOGOUT"
-  },
-  "Buttons": {
-    "bookNow": "BOOK NOW"
-  },
-  "Payment": {
-    "title": "Price Details",
-    "payNow": "Pay Now",
-    "paymentError": "هناك خطأ في عملية الدفع. الرجاء المحاولة مرة اخرى",
-    "paymentSuccess": "تمت عملية الدفع بنجاح",
-    "paymentFailed": "عذرا، فشل الدفع. الرجاء المحاولة مرة اخرى",
-    "paymentDone": "تمت عملية الدفع بنجاح",
-    "paymentPending": "تمت عملية الدفع بنجاح",
-    "paymentCanceled": "تم الغاء عملية الدفع"
-  },
-  "Footer": {
-    "rights": " All Rights Reserved",
-    "company": "COMPANY",
-    "know": "KNOW MORE",
-    "terms": "Terms & Conditions ",
-    "privacy": " Privacy policy",
-    "faq": "FAQs ",
-    "contact": " contact us",
-    "follow": "FOLLOW",
-    "about": "About Us",
-    "apartments": "Apartments"
+  "proccess":{
+    "sectionLable":"OUR PROCESS",
+    "sectionTitle":"Our Process to Empower Your",
+    "sectionTitleSpecialWord":"Vision",
+    "description":"Yalla embraces a dynamic and flexible process, prioritizing collaboration and tailored solutions for every client.",
+    "title1":"Multi languages",
+    "paragraph1":"Choose an account manager who speaks your language and understands your business culture.",
+    "title2":"Dive deep",
+    "paragraph2":"Grab a virtual or real coffe with your account manager, we listen, we strategize, and we craft a planthat ressonate with your vision",
+    "title3":" AI-Powered Planning.",
+    "paragraph3":"Ditch the guesswork. Our AI-powered tool presents a tailored, transparent plan with recommended budgets and timelines.",
+    "title4":"World-Class Team",
+    "paragraph4":"Our advanced algorithm pairs you with a World-Class team of Egyptian talents, ensuring your venture reaches new heights."
   }
 }
