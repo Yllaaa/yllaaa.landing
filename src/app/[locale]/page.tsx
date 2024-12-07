@@ -45,7 +45,7 @@ function homePage() {
         <div className={styles.teamSection}>
           <Team />
         </div>
-        <div className={styles.processContainer}>
+        {/* <div className={styles.processContainer}>
           <Process
             sectionLable="OUR PROCESS"
             title="Our Process to Empower Your"
@@ -68,7 +68,7 @@ function homePage() {
             card4Title="Launch and Track Progress"
             card4Description="Monitor progress and stay connected every step"
           />
-        </div>
+        </div> */}
         <div className={styles.forTalentContainer}>
           <Talent />
         </div>
