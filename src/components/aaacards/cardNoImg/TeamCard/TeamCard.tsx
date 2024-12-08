@@ -8,14 +8,21 @@ type Props = {
   position: string;
   breif?:string;
   image: string;
+  linkedin?: string;
 };
 function TeamCard(props: Props) {
   const { name, position, breif, image } = props;
+  const redirect = () => {
+    if (props.linkedin) {
+      window.open(props.linkedin, "_blank");
+    }
+    
+  }
   return (
     <>
       <div className={styles.teamCardContainer}>
         <div className={styles.teamCardIcon}>
-          <Image src={linkedInIcon} alt="linkedInIcon" />
+          <Image src={linkedInIcon} alt="linkedInIcon" onClick={redirect} />
         </div>
         <div className={styles.teamCardHeader}>
           <div className={styles.teamCardHeaderImage}>

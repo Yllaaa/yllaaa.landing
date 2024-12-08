@@ -9,11 +9,10 @@ const CardMarquee = dynamic(
   () => import("@/components/marquee/cards/CardMarquee"),
   {
     ssr: true,
-
   }
 );
 import Image from "next/image";
-
+import { getTranslations } from "next-intl/server";
 
 import people1 from "../../../../public/marquee/icons/devs/ai.svg";
 import people2 from "../../../../public/marquee/icons/devs/cloud.svg";
@@ -40,10 +39,12 @@ import figma from "../../../../public/freelancersIcons/love.svg";
 import git from "../../../../public/missionIcons/git.svg";
 import triangle from "../../../../public/freelancersIcons/airplane.svg";
 import reactIcon from "../../../../public/freelancersIcons/black.svg";
-function forFreelancers() {
+async function forFreelancers() {
+  const tp = getTranslations("proccess");
+  const tb = getTranslations("freelancer");
   return (
     <>
-      <section style={{overflowX: "hidden"}}>
+      <section style={{ overflowX: "hidden" }}>
         <div className={styles.heroContainer}>
           <ForHero
             img1={people1}
@@ -54,66 +55,64 @@ function forFreelancers() {
             img6={people6}
             img7={people7}
             img8={people8}
-            header={"For Freelancers"}
-            subHeader={"The house of "}
-            specialSubHeader={"Freelancing"}
-            paragraph={
-              "Find projects that match your talent. We are the first freeworker community that puts talent first."
-            }
-            button="Start now"
+            header={(await tb)("sectionLable")}
+            subHeader={(await tb)("subHeader")}
+            specialSubHeader={(await tb)("specialSubHeader")}
+            paragraph={(await tb)("paragraph")}
+            button={(await tb)("button")}
           />
         </div>
         <div className={styles.marqueeContainer}>
           <CardMarquee
-            card1Header={"APP DEVELOPMENT"}
-            card1SubHeader={"skills: Flutter developer"}
+            card1Header={(await tb)("card1Header")}
+            card1SubHeader={(await tb)("card1SubHeader")}
             card1Img1={dev1}
             card1Img2={dev2}
             card1Img3={dev3}
-            card2Header={"marketing campaign"}
-            card2SubHeader={"skills: digital marketing"}
+            card2Header={(await tb)("card2Header")}
+            card2SubHeader={(await tb)("card2SubHeader")}
             card2Img1={market1}
             card2Img2={market2}
             card2Img3={market3}
-            card3Header={"WEB DESIGN"}
-            card3SubHeader={"skills: UX/UI Design"}
+            card3Header={(await tb)("card3Header")}
+            card3SubHeader={(await tb)("card3SubHeader")}
             card3Img1={web1}
             card3Img2={web2}
             card3Img3={web3}
           />
         </div>
         <div className={styles.missionContainer}>
-        <div className={styles.missionIcons}>
+          <div className={styles.missionIcons}>
             <Image src={figma} alt="figma" className={styles.icon1} />
             <Image src={reactIcon} alt="figma" className={styles.icon2} />
             <Image src={git} alt="figma" className={styles.icon3} />
             <Image src={triangle} alt="figma" className={styles.icon4} />
           </div>
           <Mission
-            row1="THE BEST TECH"
-            row2="TALENT IS AT"
+            row1={(await tb)("row1")}
+            row2={(await tb)("row2")}
             logo={bigLogo}
-            btnLable="Start now"
+            btnLable={(await tb)("btnLable")}
           />
         </div>
         <div className={styles.processContainer}>
           <Process
-            sectionLable="OUR PROCESS"
-            title="Find Your Ideal Way to Work and Grow with"
-            titleSpecialWord="Yllaaa"
-            description=" YLLAA embraces a dynamic and flexible process, prioritizing collaboration and tailored solutions for every client."
+            sectionLable={(await tp)("sectionLable")}
+            title={(await tp)("sectionTitle")}
+            titleSpecialWord={(await tp)("sectionTitleSpecialWord")}
+            description={(await tp)("description")}
             card1Number="01"
-            card1Title="Freelancer"
-            card1Description="Empowering freelancers to connect with high-impact projects and reputable clients. Get personalized support from dedicated account managers who guide you in project management and client communication."
+            card1Title={(await tp)("title1")}
+            card1Description={(await tp)("paragraph1")}
             card2Number="02"
-            card2Title="Support from managers"
-            card2Description="Get guidance from experienced managers at every step. From project planning to final delivery, our managers are here to help you succeed."
+            card2Title={(await tp)("title2")}
+            card2Description={(await tp)("paragraph2")}
             card3Number="03"
-            card3Title="New to Freelancing?"
-            card3Description="Embark on your freelancing journey with ease. Yllaaa helps you navigate the process, providing a steady flow of quality projects and professional growth resources."
+            card3Title={(await tp)("title3")}
+            card3Description={(await tp)("paragraph3")}
             card4Number="04"
-            card4Title="Client Partnerships"
-            card4Description="Our platform connects you with clients ready to invest in your expertise. With account managers on standby, Yllaaa enhances client relationships, giving you more time to focus on delivering excellence."
+            card4Title={(await tp)("title4")}
+            card4Description={(await tp)("paragraph4")}
           />
         </div>
 

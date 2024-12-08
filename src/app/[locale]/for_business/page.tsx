@@ -13,6 +13,8 @@ const CardMarquee = dynamic(
     ssr: true,
   }
 );
+import { getTranslations } from "next-intl/server";
+
 import people1 from "../../../../public/marquee/icons/people/img1.svg";
 import people2 from "../../../../public/marquee/icons/people/img2.svg";
 import people3 from "../../../../public/marquee/icons/people/img3.svg";
@@ -38,10 +40,12 @@ import git from "../../../../public/missionIcons/git.svg";
 import triangle from "../../../../public/missionIcons/triangle.svg";
 import reactIcon from "../../../../public/missionIcons/react.svg";
 import Image from "next/image";
-function forBusiness() {
+async function forBusiness() {
+  const tp = getTranslations("proccess");
+  const tb = getTranslations("business");
   return (
     <>
-      <section style={{overflowX: "hidden"}}>
+      <section style={{ overflowX: "hidden" }}>
         <div className={styles.heroContainer}>
           <ForHero
             img1={people1}
@@ -51,29 +55,27 @@ function forBusiness() {
             img5={people5}
             img6={people6}
             img7={people7}
-            header={"For Business"}
-            subHeader={"Boost your projects with "}
-            specialSubHeader={"Freeworkers"}
-            paragraph={
-              " Start working with the best software, design and marketing freelancers. Save on fixed costs and make your growth more flexible."
-            }
-            button="Start now"
+            header={(await tb)("sectionLable")}
+            subHeader={(await tb)("subHeader")}
+            specialSubHeader={(await tb)("specialSubHeader")}
+            paragraph={(await tb)("paragraph")}
+            button={(await tb)("button")}
           />
         </div>
         <div className={styles.marqueeContainer}>
           <CardMarquee
-            card1Header={"APP DEVELOPMENT"}
-            card1SubHeader={"within 6-8 weeks"}
+            card1Header={(await tb)("card1Header")}
+            card1SubHeader={(await tb)("card1SubHeader")}
             card1Img1={dev1}
             card1Img2={dev2}
             card1Img3={dev3}
-            card2Header={"marketing campaign"}
-            card2SubHeader={"within 3-5 weeks"}
+            card2Header={(await tb)("card2Header")}
+            card2SubHeader={(await tb)("card2SubHeader")}
             card2Img1={market1}
             card2Img2={market2}
             card2Img3={market3}
-            card3Header={"WEB DESIGN"}
-            card3SubHeader={"within 6-8 weeks"}
+            card3Header={(await tb)("card3Header")}
+            card3SubHeader={(await tb)("card3SubHeader")}
             card3Img1={web1}
             card3Img2={web2}
             card3Img3={web3}
@@ -87,31 +89,30 @@ function forBusiness() {
             <Image src={triangle} alt="figma" className={styles.icon4} />
           </div>
           <Mission
-            row1="THE BEST TECH"
-            row2="TALENT IS AT"
+            row1={(await tb)("row1")}
+            row2={(await tb)("row2")}
             logo={bigLogo}
-            btnLable="Start now"
+            btnLable={(await tb)("btnLable")}
           />
         </div>
         <div className={styles.processContainer}>
           <Process
-            sectionLable="OUR PROCESS"
-            title="Our Process to Empower Your"
-            titleSpecialWord="Vision"
-            description=" Yalla embraces a dynamic and flexible process, prioritizing
-              collaboration and tailored solutions for every client."
+            sectionLable={(await tp)("sectionLable")}
+            title={(await tp)("sectionTitle")}
+            titleSpecialWord={(await tp)("sectionTitleSpecialWord")}
+            description={(await tp)("description")}
             card1Number="01"
-            card1Title="Connect with business buddy"
-            card1Description="Grab a virtual or real coffe with your account manager, we listen, we strategize, and we craft a planthat ressonate with your vision"
+            card1Title={(await tp)("title1")}
+            card1Description={(await tp)("paragraph1")}
             card2Number="02"
-            card2Title="Dive deep"
-            card2Description="Grab a virtual or real coffe with your account manager, we listen, we strategize, and we craft a planthat ressonate with your vision"
+            card2Title={(await tp)("title2")}
+            card2Description={(await tp)("paragraph2")}
             card3Number="03"
-            card3Title="Unlock the perfect plan"
-            card3Description="Ditch the guesswork,we present a tailored transparent plan with recommended budgets and stratgies"
+            card3Title={(await tp)("title3")}
+            card3Description={(await tp)("paragraph3")}
             card4Number="04"
-            card4Title="Perfection"
-            card4Description="Finally, receive the polished results delivered with the highest standards of quality"
+            card4Title={(await tp)("title4")}
+            card4Description={(await tp)("paragraph4")}
           />
         </div>
         <div className={styles.teamSection}>

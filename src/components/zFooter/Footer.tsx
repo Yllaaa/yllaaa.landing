@@ -13,13 +13,21 @@ import facebook from "../../../public/icons/facebook.svg";
 import instagram from "../../../public/icons/instagram.svg";
 import linkedIn from "../../../public/icons/linkedIn.svg";
 import smallArrow from "../../../public/icons/smallArrow.svg";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 function Footer() {
   const locale = useLocale();
-  const words = ["IDEA", "VISION", "STARTUP", "PROJECT"];
   const [siteMapOpen, setSiteMapOpen] = React.useState(false);
   const { isDesktop } = ScreenBreakpoints();
+
+  const t = useTranslations("headerFooter");
+  const words = [
+    `${t("text1")}`,
+    `${t("text4")}`,
+    `${t("text3")}`,
+    `${t("text2")}`,
+  ];
+
   return (
     <>
       {/* upper container */}
@@ -31,7 +39,7 @@ function Footer() {
             <Image src={bgLogo} alt="yllaaaLogo" />
           </div>
           <div className={styles.textContainer}>
-            <h4>LET US POWER YOUR</h4>
+            <h4>{t("footerText")}</h4>
             <div className={styles.wordCyclerContainer}>
               {words.map((word, index) => (
                 <span
@@ -46,7 +54,7 @@ function Footer() {
               ))}
             </div>
             <div className={styles.getStarted}>
-              <span>GET STARTED</span>
+              <span>{t("btn")}</span>
               <Image src={arrowCircle} alt="yllaaaLogo" />
             </div>
           </div>
@@ -67,31 +75,31 @@ function Footer() {
                     href="/"
                     className={`${styles.lightLink} ${styles.link}`}
                   >
-                    <li>HOME</li>
+                    <li>{t("home")}</li>
                   </Link>
                   <Link
                     href={`/${locale}/about`}
                     className={`${styles.lightLink} ${styles.link}`}
                   >
-                    <li>About us</li>
+                    <li>{t("about")}</li>
                   </Link>
                   <Link
                     href={`/${locale}/for_business`}
                     className={`${styles.lightLink} ${styles.link}`}
                   >
-                    <li>For business</li>
+                    <li>{t("forBusiness")}</li>
                   </Link>
                   <Link
                     href={`/${locale}/for_freelancers`}
                     className={`${styles.darkLink} ${styles.link}`}
                   >
-                    <li>For freelancers</li>
+                    <li>{t("forFreelancers")}</li>
                   </Link>
                   <Link
                     href={`/${locale}/contact`}
                     className={`${styles.darkLink} ${styles.link}`}
                   >
-                    <li>Contact us</li>
+                    <li>{t("contact")}</li>
                   </Link>
                 </ul>
               </div>
@@ -103,7 +111,7 @@ function Footer() {
                   <span>
                     <Image src={message} alt="yllaaaLogo" />
                   </span>{" "}
-                  Download the app
+                  {t("download")}
                 </p>
               </div>
               <div className={styles.email}>

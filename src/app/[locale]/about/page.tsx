@@ -5,8 +5,9 @@ import Process from "@/components/process/process/Process";
 import Team from "@/components/team/Team";
 import AboutUs from "@/components/aboutUs/AboutUs";
 import AboutHero from "@/components/heroAbout/AboutHero";
-
-function aboutPage() {
+import { getTranslations } from "next-intl/server";
+async function aboutPage() {
+  const tp = getTranslations("proccess");
   return (
     <>
       <section>
@@ -24,23 +25,22 @@ function aboutPage() {
         </div>
         <div className={styles.processContainer}>
           <Process
-            sectionLable="OUR PROCESS"
-            title="Our Process to Empower Your"
-            titleSpecialWord="Vision"
-            description=" Yalla embraces a dynamic and flexible process, prioritizing
-              collaboration and tailored solutions for every client."
+            sectionLable={(await tp)("sectionLable")}
+            title={(await tp)("sectionTitle")}
+            titleSpecialWord={(await tp)("sectionTitleSpecialWord")}
+            description={(await tp)("description")}
             card1Number="01"
-            card1Title="Connect with business buddy"
-            card1Description="Grab a virtual or real coffe with your account manager, we listen, we strategize, and we craft a planthat ressonate with your vision"
+            card1Title={(await tp)("title1")}
+            card1Description={(await tp)("paragraph1")}
             card2Number="02"
-            card2Title="Dive deep"
-            card2Description="Grab a virtual or real coffe with your account manager, we listen, we strategize, and we craft a planthat ressonate with your vision"
+            card2Title={(await tp)("title2")}
+            card2Description={(await tp)("paragraph2")}
             card3Number="03"
-            card3Title="Unlock the perfect plan"
-            card3Description="Ditch the guesswork,we present a tailored transparent plan with recommended budgets and stratgies"
+            card3Title={(await tp)("title3")}
+            card3Description={(await tp)("paragraph3")}
             card4Number="04"
-            card4Title="Perfection"
-            card4Description="Finally, receive the polished results delivered with the highest standards of quality"
+            card4Title={(await tp)("title4")}
+            card4Description={(await tp)("paragraph4")}
           />
         </div>
       </section>

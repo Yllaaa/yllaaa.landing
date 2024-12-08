@@ -11,6 +11,9 @@ const CardMarquee = dynamic(
     ssr: true,
   }
 );
+
+import { getTranslations } from "next-intl/server";
+
 import people1 from "../../../../public/marquee/icons/devs/ai.svg";
 import people2 from "../../../../public/marquee/icons/devs/cloud.svg";
 import people3 from "../../../../public/marquee/icons/devs/css.svg";
@@ -22,10 +25,13 @@ import people8 from "../../../../public/marquee/icons/devs/photoshop.svg";
 import bigLogo from "../../../../public/icons/bigLogo.svg";
 import Mission from "@/components/mission/Mission";
 import Talent from "@/components/forTalent/Talent";
-function forManagers() {
+async function forManagers() {
+  const tp = getTranslations("proccess");
+  const tb = getTranslations("manager");
+
   return (
     <>
-      <section style={{overflowX: "hidden"}}>
+      <section style={{ overflowX: "hidden" }}>
         <div className={styles.heroContainer}>
           <ForHero
             img1={people1}
@@ -36,58 +42,49 @@ function forManagers() {
             img6={people6}
             img7={people7}
             img8={people8}
-            header={"For Managers"}
-            subHeader={"Your Strategic Project "}
-            specialSubHeader={"Partner"}
-            paragraph={
-              "Maximize Efficiency. Deliver Success. Yalla's dedicated Account Managers ensure seamless project flow, so you can focus on growth"
-            }
-            button="Start Managing Now"
+            header={(await tb)("sectionLable")}
+            subHeader={(await tb)("subHeader")}
+            specialSubHeader={(await tb)("specialSubHeader")}
+            paragraph={(await tb)("paragraph")}
+            button={(await tb)("button")}
           />
         </div>
         <div className={styles.marqueeContainer}>
           <CardMarquee
-            card1Header={"Digital Marketing Experts"}
-            card1SubHeader={
-              "Leverage data-driven strategies and targeted campaigns to maximize project visibility and user engagement"
-            }
-            card2Header={"Product Design"}
-            card2SubHeader={
-              "ransform concepts into user-centric designs that elevate product appeal and usability."
-            }
-            card3Header={"Software Development"}
-            card3SubHeader={
-              "Deliver scalable, reliable software solutions tailored to project requirements and user needs"
-            }
+            card1Header={(await tb)("card1Header")}
+            card1SubHeader={(await tb)("card1SubHeader")}
+            card2Header={(await tb)("card2Header")}
+            card2SubHeader={(await tb)("card2SubHeader")}
+            card3Header={(await tb)("card3Header")}
+            card3SubHeader={(await tb)("card3SubHeader")}
           />
         </div>
         <div className={styles.missionContainer}>
           <Mission
-            row1="Lead  projects and connect with"
-            row2="top industry players at"
+            row1={(await tb)("row1")}
+            row2={(await tb)("row2")}
+            btnLable={(await tb)("btnLable")}
             logo={bigLogo}
-            btnLable="Start now"
           />
         </div>
         <div className={styles.processContainer}>
           <Process
-            sectionLable="OUR PROCESS"
-            title="Our Process to Empower Your"
-            titleSpecialWord="Vision"
-            description=" Yalla embraces a dynamic and flexible process, prioritizing
-              collaboration and tailored solutions for every client."
+            sectionLable={(await tp)("sectionLable")}
+            title={(await tp)("sectionTitle")}
+            titleSpecialWord={(await tp)("sectionTitleSpecialWord")}
+            description={(await tp)("description")}
             card1Number="01"
-            card1Title="Manage projects"
-            card1Description="Effortlessly oversee all your projects in one place. Our platform helps you stay organized and in control from start to finish"
+            card1Title={(await tp)("title1")}
+            card1Description={(await tp)("paragraph1")}
             card2Number="02"
-            card2Title="select your expertise"
-            card2Description="Showcase your unique skills and expertise, and let us match you with projects that suit your strengths"
+            card2Title={(await tp)("title2")}
+            card2Description={(await tp)("paragraph2")}
             card3Number="03"
-            card3Title="simple project tracking"
-            card3Description="Track progress with ease. Keep tabs on every project detail to ensure smooth delivery and timely updates"
+            card3Title={(await tp)("title3")}
+            card3Description={(await tp)("paragraph3")}
             card4Number="04"
-            card4Title="increase your income"
-            card4Description="Unlock more opportunities and boost your earnings by connecting with clients who need your expertise"
+            card4Title={(await tp)("title4")}
+            card4Description={(await tp)("paragraph4")}
           />
         </div>
 

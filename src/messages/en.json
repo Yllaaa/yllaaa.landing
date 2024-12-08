@@ -52,5 +52,82 @@
     "text2": "Explore different ways to earn",
     "text3": "Control when, where, and how you work",
     "buttonText": "Get Started"
+  },
+  "aboutHero": {
+    "sectionLable": "Mission",
+    "sectionTitleW1": "Empowering Connections Between",
+    "sectionTitleB1": "Clients",
+    "sectionTitleW2": "and",
+    "sectionTitleB2": "Freelancers",
+    "description": " At Yllaaa, we connect freelancers and businesses, supported by project managers, to foster collaboration, flexibility, and growth. Our platform creates an ecosystem where talent and opportunity meet, empowering both to thrive."
+  },
+  "business": {
+    "sectionLable": "For Business",
+    "subHeader": "Boost your projects with ",
+    "specialSubHeader": "Freeworkers",
+    "paragraph": " Start working with the best software, design and marketing freelancers. Save on fixed costs and make your growth more flexible.",
+    "button": "Start now",
+
+    "card1Header": "APP DEVELOPMENT",
+    "card1SubHeader": "within 6-8 weeks",
+    "card2Header": "APP DEVELOPMENT",
+    "card2SubHeader": "within 6-8 weeks",
+    "card3Header": "APP DEVELOPMENT",
+    "card3SubHeader": "within 6-8 weeks",
+
+    "row1": "THE BEST TECH",
+    "row2": "TALENT IS AT",
+    "btnLable": "Start now"
+  },
+  "freelancer": {
+    "sectionLable": "For Freelancers",
+    "subHeader": "The house of ",
+    "specialSubHeader": "Freelancing",
+    "paragraph": "Find projects that match your talent. We are the first freeworker community that puts talent first.",
+    "button": "Start now",
+
+    "card1Header": "APP DEVELOPMENT",
+    "card1SubHeader": "skills: Flutter developer",
+    "card2Header": "marketing campaign",
+    "card2SubHeader": "skills: digital marketing",
+    "card3Header": "WEB DESIGN",
+    "card3SubHeader": "skills: UX/UI Design",
+
+    "row1": "THE BEST TECH",
+    "row2": "TALENT IS AT",
+    "btnLable": "Start now"
+  },
+  "manager": {
+    "sectionLable": "For Managers",
+    "subHeader": "Your Strategic Project ",
+    "specialSubHeader": "Partner",
+    "paragraph": "Maximize Efficiency. Deliver Success. Yalla's dedicated Account Managers ensure seamless project flow, so you can focus on growth",
+    "button": "Start Managing Now",
+
+    "card1Header": "Digital Marketing Experts",
+    "card1SubHeader": "Leverage data-driven strategies and targeted campaigns to maximize project visibility and user engagement",
+    "card2Header": "Product Design",
+    "card2SubHeader": "ransform concepts into user-centric designs that elevate product appeal and usability.",
+    "card3Header": "Software Development",
+    "card3SubHeader": "Deliver scalable, reliable software solutions tailored to project requirements and user needs",
+
+    "row1": "Lead  projects and connect with",
+    "row2": "top industry players at",
+    "btnLable": "Start now"
+  },
+  "headerFooter": {
+    "home": "Home",
+    "about": "About us",
+    "contact": "Contact us",
+    "forBusiness": "For Business",
+    "forFreelancers": "For Freelancers",
+    "forManagers": "For Managers",
+    "footerText": "LET US POWER YOUR",
+    "text1": "IDEA",
+    "text2": "PROJECT",
+    "text3": "STARTUP",
+    "text4": "VISION",
+    "download": "Download the app",
+    "btn": "GET STARTED"
   }
 }

@@ -1,10 +1,13 @@
+"use client";
 import React from "react";
 import styles from "./aboutHero.module.css";
 import Image from "next/image";
 import heroImg1 from "../../../public/Hero/about/bg1.jpeg";
 import heroImg2 from "../../../public/Hero/about/bg2.jpeg";
+import { useTranslations } from "next-intl";
 
 function AboutHero() {
+  const t = useTranslations("aboutHero");
   return (
     <>
       <div className={styles.heroContainer}>
@@ -16,16 +19,13 @@ function AboutHero() {
         </div>
         <div className={styles.bgShade}></div>
         <div className={styles.heroContent}>
-          <h4>Mission</h4>
+          <h4>{t("sectionLabel")}</h4>
           <h2>
-            Empowering Connections Between <span>Clients</span> and{" "}
-            <span>Freelancers</span>.
+            {t("sectionTitleW1")} <span>{t("sectionTitleB1")}</span>{" "}
+            {t("sectionTitleW2")} <span>{t("sectionTitleB2")}</span>.
           </h2>
           <p>
-            At Yllaaa, we connect freelancers and businesses, supported by
-            project managers, to foster collaboration, flexibility, and growth.
-            Our platform creates an ecosystem where talent and opportunity meet,
-            empowering both to thrive.
+            {t("description")}
           </p>
         </div>
       </div>

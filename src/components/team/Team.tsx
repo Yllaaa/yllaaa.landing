@@ -51,6 +51,7 @@ function Team() {
       // breif:
       //   "10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy",
       image: mohamedAbdelkader,
+      linkedin:"https://www.linkedin.com/in/mohamed-abdelkader-353bb3159/"
     },
     {
       name: "Zeyad Saleh",
@@ -59,6 +60,8 @@ function Team() {
       //   <br />
       // )} Skilled in creating compelling, SEO-optimized content for various industries`,
       image: ziadSaleh,
+      linkedin:"https://www.linkedin.com/in/zeyad-saleh-612ab7124/"
+
     },
     {
       name: "Wiam Ouafi",
@@ -66,6 +69,8 @@ function Team() {
       // breif:
       //   "3+ years of experience in paid search advertising. Skilled in campaign management and performance analysis",
       image: wiamOuafi,
+      linkedin:"https://www.linkedin.com/in/mohamed-abdelkader-353bb3159/"
+
     },
     {
       name: "Shaima Elfouly",
@@ -73,6 +78,8 @@ function Team() {
       // breif:
       //   "4+ years of experience in social media marketing. Proficient in creating and scheduling content, analyzing metrics, and building engagement",
       image: shaimaElfouly,
+      linkedin:"https://www.linkedin.com/in/shaimaa-elfoly-94a822192/"
+
     },
     {
       name: "Yehia Abdelhamed",
@@ -81,6 +88,8 @@ function Team() {
       //   <br />
       // )} Skilled in creating compelling, SEO-optimized content for various industries`,
       image: yehiaAbdelhamed,
+      linkedin:"https://www.linkedin.com/in/yehia-abdelhamed-2768a528a/"
+
     },
     {
       name: "Mohamed Yasser",
@@ -88,6 +97,8 @@ function Team() {
       // breif:
       //   "7+ years of experience in project management and team leadership. Strong organizational and communication skills",
       image: mohamedYasser,
+      linkedin:"https://www.linkedin.com/in/mohamedyasser14"
+
     },
     {
       name: "Youssef Ahmed",
@@ -96,6 +107,8 @@ function Team() {
       //   <br />
       // )} Skilled in creating compelling, SEO-optimized content for various industries`,
       image: youssefAhmed,
+      linkedin:"www.linkedin.com/in/youssef-ahmed-aa483b206"
+
     },
     {
       name: "Mostafa Adel",
@@ -103,6 +116,8 @@ function Team() {
       // breif:
       //   "5+ years of experience in SEO and content creation. Proficient in keyword research and on-page optimization",
       image: Moustafa,
+      linkedin:"https://www.linkedin.com/in/moustafa-adel-714616299/"
+
     },
     
     
@@ -145,6 +160,7 @@ function Team() {
                 name={item.name}
                 position={item.position}
                 // breif={item.breif}
+                linkedin={item.linkedin}
                 image={item.image}
               />
             ))}

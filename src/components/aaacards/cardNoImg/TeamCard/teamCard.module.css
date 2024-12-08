@@ -19,6 +19,9 @@
   right: 0;
   padding: 40px 35px;
 }
+.teamCardIcon img {
+  cursor: pointer;
+}
 .teamCardHeader {
   display: flex;
   align-items: flex-end;

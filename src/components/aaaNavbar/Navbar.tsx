@@ -4,9 +4,10 @@ import Image from "next/image";
 import logo from "../../../public/navbar/logo.svg";
 import styles from "./navbar.module.css";
 import Link from "next/link";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 import { ScreenBreakpoints } from "@/Utils/screenBreakPoints/ScreenBreakPoints";
+import LangBtn from "../languageBtn/LangBtn";
 function Navbar() {
   const locale = useLocale();
   const path = usePathname();
@@ -33,6 +34,7 @@ function Navbar() {
   };
 
   const { isDesktop } = ScreenBreakpoints();
+  const t = useTranslations("headerFooter");
 
   return (
     <>
@@ -52,7 +54,7 @@ function Navbar() {
                       : { color: "var(--neutral-1)" }
                   }
                 >
-                  Home
+                  {t("home")}
                 </Link>
               </li>
               <li>
@@ -64,7 +66,7 @@ function Navbar() {
                       : { color: "var(--neutral-1)" }
                   }
                 >
-                  About us
+                  {t("about")}
                 </Link>
               </li>
               <li>
@@ -76,7 +78,7 @@ function Navbar() {
                       : { color: "var(--neutral-1)" }
                   }
                 >
-                  For Business
+                  {t("forBusiness")}
                 </Link>
               </li>
               <li>
@@ -88,7 +90,7 @@ function Navbar() {
                       : { color: "var(--neutral-1)" }
                   }
                 >
-                  For Freelancers
+                  {t("forFreelancers")}
                 </Link>
               </li>
               <li>
@@ -100,7 +102,7 @@ function Navbar() {
                       : { color: "var(--neutral-1)" }
                   }
                 >
-                  For Managers
+                  {t("forManagers")}
                 </Link>
               </li>
             </ul>
@@ -108,9 +110,10 @@ function Navbar() {
 
           <div className={styles.navbarButtons}>
             <Link href={`/${locale}/contact`} className={styles.navbarContact}>
-              contact us
+              {t("contact")}
             </Link>
-            <p className={styles.navbarSignup}>Signup</p>
+            {/* <p className={styles.navbarSignup}>Signup</p> */}
+            <LangBtn />
           </div>
           <div className={styles.navbarResponsive} onClick={toggleMenu}>
             <svg
@@ -144,18 +147,22 @@ function Navbar() {
               <ul>
                 <li
                   className={path === `/${locale}` ? `${styles.bgCurved}` : ""}
-                  style={path === `/${locale}` ? { background: "var(--Indigo-300)" } : {}}
+                  style={
+                    path === `/${locale}`
+                      ? { background: "var(--Indigo-300)" }
+                      : {}
+                  }
                 >
                   <Link
                     href={`/${locale}`}
                     style={
                       path === `/${locale}`
-                      ? { color: "var(--neutral-1)" }
+                        ? { color: "var(--neutral-1)" }
                         : { color: "var(--Indigo-300)" }
                     }
                     onClick={toggleMenu}
                   >
-                    Home
+                    {t("home")}
                   </Link>
                 </li>
                 <li
@@ -163,19 +170,21 @@ function Navbar() {
                     path === `/${locale}/about` ? `${styles.bgCurved}` : ""
                   }
                   style={
-                    path === `/${locale}/about` ? { background: "var(--Indigo-300)" } : {}
+                    path === `/${locale}/about`
+                      ? { background: "var(--Indigo-300)" }
+                      : {}
                   }
                 >
                   <Link
                     href={`/${locale}/about`}
                     style={
                       path === `/${locale}/about`
-                      ? { color: "var(--neutral-1)" }
+                        ? { color: "var(--neutral-1)" }
                         : { color: "var(--Indigo-300)" }
                     }
                     onClick={toggleMenu}
                   >
-                    About us
+                    {t("about")}
                   </Link>
                 </li>
                 <li
@@ -194,12 +203,12 @@ function Navbar() {
                     href={`/${locale}/for_business`}
                     style={
                       path === `/${locale}/for_business`
-                      ? { color: "var(--neutral-1)" }
-                      : { color: "var(--Indigo-300)" }
+                        ? { color: "var(--neutral-1)" }
+                        : { color: "var(--Indigo-300)" }
                     }
                     onClick={toggleMenu}
                   >
-                    For Business
+                    {t("forBusiness")}
                   </Link>
                 </li>
                 <li
@@ -218,12 +227,12 @@ function Navbar() {
                     href={`/${locale}/for_freelancers`}
                     style={
                       path === `/${locale}/for_freelancers`
-                      ? { color: "var(--neutral-1)" }
-                      : { color: "var(--Indigo-300)" }
+                        ? { color: "var(--neutral-1)" }
+                        : { color: "var(--Indigo-300)" }
                     }
                     onClick={toggleMenu}
                   >
-                    For Freelancers
+                    {t("forFreelancers")}
                   </Link>
                 </li>
                 <li
@@ -242,13 +251,40 @@ function Navbar() {
                     href={`/${locale}/for_managers`}
                     style={
                       path === `/${locale}/for_managers`
-                      ? { color: "var(--neutral-1)" }
-                      : { color: "var(--Indigo-300)" }
+                        ? { color: "var(--neutral-1)" }
+                        : { color: "var(--Indigo-300)" }
                     }
                     onClick={toggleMenu}
                   >
-                    For Managers
+                    {t("forManagers")}
                   </Link>
+                </li>
+                <li
+                  className={
+                    path === `/${locale}/contact`
+                      ? `${styles.bgCurved}`
+                      : ""
+                  }
+                  style={
+                    path === `/${locale}/for_managers`
+                      ? { background: "var(--Indigo-300)" }
+                      : {}
+                  }
+                >
+                  <Link
+                    href={`/${locale}/contact`}
+                    style={
+                      path === `/${locale}/for_managers`
+                        ? { color: "var(--neutral-1)" }
+                        : { color: "var(--Indigo-300)" }
+                    }
+                    onClick={toggleMenu}
+                  >
+                    {t("contact")}
+                  </Link>
+                </li>
+                <li>
+                  <LangBtn />
                 </li>
               </ul>
             </div>

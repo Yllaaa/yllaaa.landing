@@ -18,7 +18,7 @@ function Talent() {
         </div>
         <div className={styles.talentContent}>
           <div className={styles.talentContentTop}>
-            <h6>{t("sectionLabel")}</h6>
+            <h6>{t("sectionLable")}</h6>
             <h2>{t("sectionTitle")}</h2>
             <p>
               {t("description")}
