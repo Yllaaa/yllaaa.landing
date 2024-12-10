@@ -1,11 +1,16 @@
 "use client";
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState } from "react";
-// import Image from "next/image";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 import { useLocale } from "next-intl";
 import { Link } from "@/i18n/routing";
+
+import catalan from "../../../public/flags/catalan.svg";
+import spanish from "../../../public/flags/spanish.svg";
+import english from "../../../public/flags/english.svg";
+import arabic from "../../../public/flags/arabic.svg";
 
 const LangBtn: React.FC = () => {
   // const router = useRouter();
@@ -18,25 +23,25 @@ const LangBtn: React.FC = () => {
     {
       code: "en",
       label: "English",
-      flag: "",
+      flag: english,
       
     },
     {
       code: "ar",
       label: "Arabic",
-      flag: "",
+      flag: arabic,
       
     },
     {
       code: "es",
       label: "Spanish",
-      flag: "",
+      flag: spanish,
       
     },
     {
       code: "ca",
       label: "Catalan",
-      flag: "",
+      flag: catalan,
       
     },
   ];
@@ -50,14 +55,14 @@ const LangBtn: React.FC = () => {
         style={styles.button}
         onClick={() => setIsDropdownOpen((prev) => !prev)}
       >
-        {/* <Image
+        <Image
           src={currentLanguage?.flag}
           alt={currentLanguage?.label}
           style={styles.flag}
-          width={20}
-          height={20}
-        /> */}
-        {currentLanguage?.label}
+          width={40}
+          height={40}
+        />
+        {/* {currentLanguage?.label} */}
       </button>
       {isDropdownOpen && (
         <div style={styles.dropdown}>
@@ -68,14 +73,14 @@ const LangBtn: React.FC = () => {
               key={lang.code}
               style={styles.dropdownItem}
             >
-              {/* <Image
+              <Image
                 src={lang.flag}
                 alt={lang.label}
                 style={styles.dropdownFlag}
                 width={20}
                 height={20}
-              /> */}
-              {lang.label}
+              />
+              {/* {lang.label} */}
             </Link>
           ))}
         </div>
@@ -93,23 +98,22 @@ const styles: any = {
     display: "flex",
     alignItems: "center",
     gap: "8px",
-    padding: "8px 12px",
-    backgroundColor: "#f9f9f9",
-    border: "1px solid #ccc",
+    backgroundColor: "transparent",
+    
+    border: "1px solid transparent",
     borderRadius: "5px",
     cursor: "pointer",
   },
   flag: {
-    width: "20px",
-    height: "12px",
+    width: "40px",
+    height: "30px",
     borderRadius: "2px",
   },
   dropdown: {
     position: "absolute",
     top: "100%",
     left: "0",
-    backgroundColor: "#fff",
-    border: "1px solid #ccc",
+    border: "1px solid transparent",
     borderRadius: "5px",
     boxShadow: "0 2px 5px rgba(0, 0, 0, 0.1)",
     zIndex: 1000,
@@ -119,7 +123,7 @@ const styles: any = {
   dropdownItem: {
     display: "flex",
     alignItems: "center",
-    padding: "8px 12px",
+    padding: "8px 0px",
     cursor: "pointer",
     gap: "8px",
     transition: "background-color 0.2s",
@@ -128,8 +132,8 @@ const styles: any = {
     backgroundColor: "#f0f0f0",
   },
   dropdownFlag: {
-    width: "20px",
-    height: "12px",
+    width: "40px",
+    height: "30px",
     borderRadius: "2px",
   },
 };

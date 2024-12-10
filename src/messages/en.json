@@ -19,10 +19,10 @@
     "sectionTitle": "Our Process to Empower Your",
     "sectionTitleSpecialWord": "Vision",
     "description": "Yalla embraces a dynamic and flexible process, prioritizing collaboration and tailored solutions for every client.",
-    "title1": "Multi languages",
+    "title1": "Choose your business body",
     "paragraph1": "Choose an account manager who speaks your language and understands your business culture.",
     "title2": "Dive deep",
-    "paragraph2": "Grab a virtual or real coffe with your account manager, we listen, we strategize, and we craft a planthat ressonate with your vision",
+    "paragraph2": "Grab a virtual or real coffe with your account manager, we listen, we strategize, and we craft a plan that ressonate with your vision",
     "title3": " AI-Powered Planning.",
     "paragraph3": "Ditch the guesswork. Our AI-powered tool presents a tailored, transparent plan with recommended budgets and timelines.",
     "title4": "World-Class Team",
@@ -54,7 +54,7 @@
     "buttonText": "Get Started"
   },
   "aboutHero": {
-    "sectionLable": "Mission",
+    "sectionLabel": "Mission",
     "sectionTitleW1": "Empowering Connections Between",
     "sectionTitleB1": "Clients",
     "sectionTitleW2": "and",
