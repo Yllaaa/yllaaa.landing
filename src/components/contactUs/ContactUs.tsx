@@ -2,6 +2,7 @@
 "use client";
 import React from "react";
 import { useForm } from "react-hook-form";
+import emailjs from "emailjs-com";
 import styles from "./contactUs.module.css";
 
 function ContactUs() {
@@ -9,9 +10,31 @@ function ContactUs() {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm();
-  const onSubmit = (data: any) => console.log(data);
-  console.log(errors);
+
+  const onSubmit = (data: any) => {
+    emailjs
+      .send(
+        "service_jodg9zg", // Replace with your EmailJS Service ID
+        "template_xvb35th", // Replace with your EmailJS Template ID
+        {
+          from_name: data.name,
+          reply_to: data.email,
+          message: data.message,
+        },
+        "lTzlwWWUa0erxJSnA" // Replace with your EmailJS Public Key (User ID)
+      )
+      .then(
+        (result) => {
+          console.log("Email sent successfully:", result.text);
+          reset(); // Reset the form after successful submission
+        },
+        (error) => {
+          console.error("Error sending email:", error.text);
+        }
+      );
+  };
 
   return (
     <>
@@ -34,18 +57,33 @@ function ContactUs() {
               type="text"
               {...register("Name", { required: true })}
             />
+            {errors.Name && <span className={styles.error}>Name is required</span>}
+
             <label htmlFor="email">Email*</label>
             <input
               id="email"
               type="email"
-              {...register("Email", { required: true, max: -3 })}
+              {...register("Email", {
+                required: "Email is required",
+                pattern: {
+                  value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                  message: "Invalid email address",
+                },
+              })}
             />
+            {errors.Email && (
+              <span className={styles.error}>Faild</span>
+            )}
+
             <label htmlFor="message">Message*</label>
             <textarea
               rows={5}
               id="message"
               {...register("message", { required: true })}
             />
+            {errors.message && (
+              <span className={styles.error}>Message is required</span>
+            )}
           </div>
         </div>
         <button type="submit">Let’s talk!</button>
