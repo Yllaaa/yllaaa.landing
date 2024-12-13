@@ -19,7 +19,7 @@ function AboutHero() {
         </div>
         <div className={styles.bgShade}></div>
         <div className={styles.heroContent}>
-          <h4>{t("sectionLable")}</h4>
+          <h4>{t("sectionLabel")}</h4>
           <h2>
             {t("sectionTitleW1")} <span>{t("sectionTitleB1")}</span>{" "}
             {t("sectionTitleW2")} <span>{t("sectionTitleB2")}</span>.
