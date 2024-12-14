@@ -13,9 +13,10 @@
 .mobileGrp {
   position: absolute;
   width: 57.22vw;
+  max-width: 600px;
   min-width: 400px;
-  height: 735px;
-  top: 657px;
+  height: 600px;
+  top: 700px;
   left: 50%;
   gap: 0px;
   overflow: hidden;
@@ -187,6 +188,28 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+  }
+
+  .mobileGrp {
+    position: absolute;
+    width: 57.22vw;
+    min-width: 400px;
+    max-width: 435px;
+    height: 435px;
+    top: 800px;
+    left: 50%;
+    gap: 0px;
+    overflow: hidden;
+    margin: auto;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+  }
+  .mobileGrp img {
+    width: 100%;
+    height: 100%;
   }
 }
 @media screen and (max-width: 432px) {

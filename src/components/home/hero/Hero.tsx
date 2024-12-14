@@ -3,7 +3,8 @@ import React from "react";
 import styles from "./hero.module.css";
 import Image from "next/image";
 import { ScreenBreakpoints } from "@/Utils/screenBreakPoints/ScreenBreakPoints";
-import mobileGrp from "../../../../public/Hero/mobileGrp.svg";
+// import mobileGrp from "../../../../public/Hero/mobileGrp.svg";
+import mobileGrp from "../../../../public/Hero/Mockup.png";
 import user1 from "../../../../public/Hero/user1.svg";
 import user2 from "../../../../public/Hero/user2.svg";
 import user3 from "../../../../public/Hero/user3.svg";
@@ -26,6 +27,15 @@ function Hero() {
           <h1>
             {t("header1")} <span>€10,000</span> {t("header2")}
           </h1>
+          {/* <h1>
+            {t("header1")}
+          </h1>
+          <h1>
+           <span>€10,000</span>
+          </h1>
+          <h1>
+            {t("header2")}
+          </h1> */}
         </div>
         <div className={styles.heroApp}>
           <h4>{t("subHeader")}</h4>
