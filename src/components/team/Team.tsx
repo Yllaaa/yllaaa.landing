@@ -11,6 +11,7 @@ import youssefAhmed from "../../../public/team/youssefAhmed.svg";
 import shaimaElfouly from "../../../public/team/shaimaElfouly.svg";
 import yehiaAbdelhamed from "../../../public/team/yehiaAbdelhamed.svg";
 import wiamOuafi from "../../../public/team/wiamOuafi.svg";
+import MohAshraf from "../../../public/team/mohamedAshraf.svg";
 import { useTranslations } from "next-intl";
 function Team() {
   // neon glow function
@@ -70,6 +71,15 @@ function Team() {
       //   "3+ years of experience in paid search advertising. Skilled in campaign management and performance analysis",
       image: wiamOuafi,
       linkedin:"https://www.linkedin.com/in/mohamed-abdelkader-353bb3159/"
+
+    },
+    {
+      name: "Mohamed Ashraf",
+      position: "Content Creator",
+      // breif:
+      //   "3+ years of experience in paid search advertising. Skilled in campaign management and performance analysis",
+      image: MohAshraf,
+      linkedin:"https://www.linkedin.com/in/mohamedashrafmarc/"
 
     },
     {
