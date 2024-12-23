@@ -81,10 +81,15 @@
   width: 157px;
   height: 60px;
 }
-.teamCards {
+/* .teamCards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
+  gap: 40px;
+} */
+.teamCards {
+  display: flex;
+  height: 300px;
   gap: 40px;
 }
 

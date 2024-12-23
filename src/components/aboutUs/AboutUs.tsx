@@ -44,6 +44,11 @@ function AboutUs() {
   const { isMobile } = ScreenBreakpoints();
   const locale = useLocale();
   const t = useTranslations("aboutUs");
+
+  const [mounted, setMounted] = React.useState(false);
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
   return (
     <>
       {/* beoGlow ref */}
@@ -72,7 +77,7 @@ function AboutUs() {
           </div>
           <div className={styles.aboutImg}>
             <Image
-              src={isMobile ? laptopM : laptop}
+              src={mounted && isMobile ? laptopM : laptop}
               alt="laptop"
               width={100}
               height={100}

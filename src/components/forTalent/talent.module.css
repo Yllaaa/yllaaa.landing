@@ -41,6 +41,7 @@
   line-height: 32px;
   text-decoration-skip-ink: none;
   margin-bottom: 24px;
+  font-family: var(--monta);
 }
 .talentContent h2 {
   font-size: 60px;
@@ -48,6 +49,7 @@
   line-height: 60px;
   text-decoration-skip-ink: none;
   margin-bottom: 20px;
+  font-family: var(--monta);
 }
 .talentContent p {
   font-size: 20px;

@@ -28,7 +28,7 @@
 }
 .navbarLinks ul li a {
   color: var(--neutral-1);
-  font-family: var(--space);
+  font-family: var(--monta);
   font-size: 16px;
   font-weight: 500;
   line-height: 26px;
@@ -68,6 +68,14 @@
 }
 .navbarResponsive {
   display: none;
+}
+.navbarLogo {
+  height: 39px;
+  width: 120px;
+}
+.navbarLogo img {
+  height: 100%;
+  width: 100%;
 }
 
 @media screen and (max-width: 1024px) {
@@ -145,6 +153,7 @@
 }
   .navbarLogo {
     height: 26px;
+    width: 80px;
   }
 
   /* When the menu is open, move it into view */

@@ -50,6 +50,11 @@ function Process(props: Props) {
     card4Description,
   } = props;
   const { isDesktop } = ScreenBreakpoints();
+
+  const [mounted, setMounted] = React.useState(false);
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
   return (
     <>
       <div
@@ -64,7 +69,7 @@ function Process(props: Props) {
             : `${styles.secondProcessBg}`
         }
       ></div>
-      {isDesktop ? (
+      {mounted && isDesktop ? (
         <div className={styles.processTitle}>{sectionLable}</div>
       ) : null}
       {/* section body */}

@@ -66,7 +66,7 @@ const LangBtn: React.FC = () => {
       </button>
       {isDropdownOpen && (
         <div style={styles.dropdown}>
-          {languages.map((lang) => (
+          {languages.filter((lang) => lang.code !== locale).map((lang) => (
             <Link
               href={`/${pathWithoutLocale}`}
               locale={lang.code}

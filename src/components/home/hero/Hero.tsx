@@ -20,20 +20,23 @@ import { useTranslations } from "next-intl";
 function Hero() {
   const { isMobile, isTablet } = ScreenBreakpoints();
   const t = useTranslations("homeHero");
+
+  const [mounted, setMounted] = React.useState(false);
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
   return (
     <>
       <div className={styles.heroBg}>
         <div className={styles.heroHeader}>
-          <h1>
+          {/* <h1>
             {t("header1")} <span>€10,000</span> {t("header2")}
+          </h1> */}
+          <h1>{t("header1")}</h1>
+          <h1>
+            <span>{t("header2")}</span>
           </h1>
           {/* <h1>
-            {t("header1")}
-          </h1>
-          <h1>
-           <span>€10,000</span>
-          </h1>
-          <h1>
             {t("header2")}
           </h1> */}
         </div>
@@ -56,24 +59,42 @@ function Hero() {
             </a>
           </div>
         </div>
-        {isTablet || isMobile ? (
+        {(mounted && isTablet) || (mounted && isMobile) ? (
           <div className={styles.combinedFloatingImg}>
-            <Image
-              src={combinedUsers}
-              alt="combinedUsers"
-              className={styles.combinedUsers}
-            />
+            {mounted && (
+              <Image
+                src={combinedUsers}
+                alt="combinedUsers"
+                className={styles.combinedUsers}
+              />
+            )}
           </div>
         ) : (
           <div className={styles.floatingImg}>
-            <Image src={user1} alt="user1" className={styles.user1} />
-            <Image src={user2} alt="user2" className={styles.user2} />
-            <Image src={user3} alt="user3" className={styles.user3} />
-            <Image src={user4} alt="user4" className={styles.user4} />
-            <Image src={user5} alt="user5" className={styles.user5} />
-            <Image src={user6} alt="used6" className={styles.user6} />
-            <Image src={user7} alt="used7" className={styles.user7} />
-            <Image src={user8} alt="used8" className={styles.user8} />
+            {mounted && (
+              <Image src={user1} alt="user1" className={styles.user1} />
+            )}
+            {mounted && (
+              <Image src={user2} alt="user2" className={styles.user2} />
+            )}
+            {mounted && (
+              <Image src={user3} alt="user3" className={styles.user3} />
+            )}
+            {mounted && (
+              <Image src={user4} alt="user4" className={styles.user4} />
+            )}
+            {mounted && (
+              <Image src={user5} alt="user5" className={styles.user5} />
+            )}
+            {mounted && (
+              <Image src={user6} alt="used6" className={styles.user6} />
+            )}
+            {mounted && (
+              <Image src={user7} alt="used7" className={styles.user7} />
+            )}
+            {mounted && (
+              <Image src={user8} alt="used8" className={styles.user8} />
+            )}
           </div>
         )}
         <div className={styles.mobileGrp}>

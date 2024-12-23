@@ -36,6 +36,11 @@ function Navbar() {
   const { isDesktop } = ScreenBreakpoints();
   const t = useTranslations("headerFooter");
 
+  const [mounted, setMounted] = React.useState(false);
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
     <>
       <div className={styles.navbar}>
@@ -138,7 +143,7 @@ function Navbar() {
             </svg>
           </div>
 
-          {!isDesktop && (
+          {mounted && !isDesktop && (
             <div
               className={`${styles.menuContainer} ${isOpen ? styles.open : ""}`}
               ref={menuRef}
@@ -261,9 +266,7 @@ function Navbar() {
                 </li>
                 <li
                   className={
-                    path === `/${locale}/contact`
-                      ? `${styles.bgCurved}`
-                      : ""
+                    path === `/${locale}/contact` ? `${styles.bgCurved}` : ""
                   }
                   style={
                     path === `/${locale}/for_managers`

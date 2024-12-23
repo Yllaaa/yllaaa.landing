@@ -28,6 +28,11 @@ function Footer() {
     `${t("text2")}`,
   ];
 
+   const [mounted, setMounted] = React.useState(false);
+    React.useEffect(() => {
+      setMounted(true);
+    }, []);
+
   return (
     <>
       {/* upper container */}
@@ -62,7 +67,7 @@ function Footer() {
       </div>
       {/* lower container */}
       <div className={styles.lowerContainer}>
-        {isDesktop ? (
+        {mounted && isDesktop ? (
           <>
             <div className={styles.shaddow3}></div>
             <div className={styles.lowerContainerLogo}>

@@ -1,3 +1,4 @@
+// "use client";
 import React from "react";
 import styles from "./homePage.module.css";
 // import cardImage from "../../../public/ourProcess/cardImg.svg";

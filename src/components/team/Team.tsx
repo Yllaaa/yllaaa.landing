@@ -13,6 +13,7 @@ import yehiaAbdelhamed from "../../../public/team/yehiaAbdelhamed.svg";
 import wiamOuafi from "../../../public/team/wiamOuafi.svg";
 import MohAshraf from "../../../public/team/mohamedAshraf.svg";
 import { useTranslations } from "next-intl";
+import Marquee from "react-fast-marquee";
 function Team() {
   // neon glow function
   const [neonWidth, setNeonWidth] = useState(0);
@@ -52,7 +53,7 @@ function Team() {
       // breif:
       //   "10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy",
       image: mohamedAbdelkader,
-      linkedin:"https://www.linkedin.com/in/mohamed-abdelkader-353bb3159/"
+      linkedin: "https://www.linkedin.com/in/mohamed-abdelkader-353bb3159/",
     },
     {
       name: "Zeyad Saleh",
@@ -61,8 +62,7 @@ function Team() {
       //   <br />
       // )} Skilled in creating compelling, SEO-optimized content for various industries`,
       image: ziadSaleh,
-      linkedin:"https://www.linkedin.com/in/zeyad-saleh-612ab7124/"
-
+      linkedin: "https://www.linkedin.com/in/zeyad-saleh-612ab7124/",
     },
     {
       name: "Wiam Ouafi",
@@ -70,8 +70,7 @@ function Team() {
       // breif:
       //   "3+ years of experience in paid search advertising. Skilled in campaign management and performance analysis",
       image: wiamOuafi,
-      linkedin:"https://www.linkedin.com/in/mohamed-abdelkader-353bb3159/"
-
+      linkedin: "https://www.linkedin.com/in/mohamed-abdelkader-353bb3159/",
     },
     {
       name: "Mohamed Ashraf",
@@ -79,8 +78,7 @@ function Team() {
       // breif:
       //   "3+ years of experience in paid search advertising. Skilled in campaign management and performance analysis",
       image: MohAshraf,
-      linkedin:"https://www.linkedin.com/in/mohamedashrafmarc/"
-
+      linkedin: "https://www.linkedin.com/in/mohamedashrafmarc/",
     },
     {
       name: "Shaima Elfouly",
@@ -88,8 +86,7 @@ function Team() {
       // breif:
       //   "4+ years of experience in social media marketing. Proficient in creating and scheduling content, analyzing metrics, and building engagement",
       image: shaimaElfouly,
-      linkedin:"https://www.linkedin.com/in/shaimaa-elfoly-94a822192/"
-
+      linkedin: "https://www.linkedin.com/in/shaimaa-elfoly-94a822192/",
     },
     {
       name: "Yehia Abdelhamed",
@@ -98,8 +95,7 @@ function Team() {
       //   <br />
       // )} Skilled in creating compelling, SEO-optimized content for various industries`,
       image: yehiaAbdelhamed,
-      linkedin:"https://www.linkedin.com/in/yehia-abdelhamed-2768a528a/"
-
+      linkedin: "https://www.linkedin.com/in/yehia-abdelhamed-2768a528a/",
     },
     {
       name: "Mohamed Yasser",
@@ -107,8 +103,7 @@ function Team() {
       // breif:
       //   "7+ years of experience in project management and team leadership. Strong organizational and communication skills",
       image: mohamedYasser,
-      linkedin:"https://www.linkedin.com/in/mohamedyasser14"
-
+      linkedin: "https://www.linkedin.com/in/mohamedyasser14",
     },
     {
       name: "Youssef Ahmed",
@@ -117,8 +112,7 @@ function Team() {
       //   <br />
       // )} Skilled in creating compelling, SEO-optimized content for various industries`,
       image: youssefAhmed,
-      linkedin:"www.linkedin.com/in/youssef-ahmed-aa483b206"
-
+      linkedin: "www.linkedin.com/in/youssef-ahmed-aa483b206",
     },
     {
       name: "Mostafa Adel",
@@ -126,14 +120,8 @@ function Team() {
       // breif:
       //   "5+ years of experience in SEO and content creation. Proficient in keyword research and on-page optimization",
       image: Moustafa,
-      linkedin:"https://www.linkedin.com/in/moustafa-adel-714616299/"
-
+      linkedin: "https://www.linkedin.com/in/moustafa-adel-714616299/",
     },
-    
-    
-    
-    
-    
   ];
   const t = useTranslations("team");
   return (
@@ -155,25 +143,27 @@ function Team() {
           <div className={styles.teamHeaderContent}>
             <div className={styles.teamHeaderContentLine}>
               <h2>{t("sectionTitle")}</h2>
-              <p>
-                {t("description")}
-              </p>
+              <p>{t("description")}</p>
             </div>
             <div className={styles.teamHeaderContentBtn}>
               <ButtonFlip lable={t("buttonText")} />
             </div>
           </div>
           <div className={styles.teamCards}>
-            {team.map((item, index) => (
-              <TeamCard
-                key={index}
-                name={item.name}
-                position={item.position}
-                // breif={item.breif}
-                linkedin={item.linkedin}
-                image={item.image}
-              />
-            ))}
+            <Marquee speed={50} autoFill={true} gradient={false} pauseOnHover>
+              {team.map((item, index) => (
+                <div key={index} style={{ margin: "0 10px" }}>
+                  <TeamCard
+                    key={index}
+                    name={item.name}
+                    position={item.position}
+                    // breif={item.breif}
+                    linkedin={item.linkedin}
+                    image={item.image}
+                  />
+                </div>
+              ))}
+            </Marquee>
           </div>
         </div>
       </div>
