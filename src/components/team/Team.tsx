@@ -107,7 +107,7 @@ function Team() {
     },
     {
       name: "Youssef Ahmed",
-      position: "Front-End Developer",
+      position: "Flutter Developer",
       // breif: `2+ years of experience in writing and editing ${(
       //   <br />
       // )} Skilled in creating compelling, SEO-optimized content for various industries`,
