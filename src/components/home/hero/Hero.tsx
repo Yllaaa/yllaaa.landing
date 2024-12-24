@@ -72,28 +72,75 @@ const Hero = memo(function Hero() {
         ) : (
           <div className={styles.floatingImg}>
             {mounted && (
-              <Image src={user1} alt="user1" className={styles.user1} />
+              <Image
+                src={user1}
+                alt="user1"
+                className={styles.user1}
+                priority
+              />
             )}
             {mounted && (
-              <Image src={user2} alt="user2" className={styles.user2} />
+              <Image
+                
+                src={user2}
+                alt="user2"
+                className={styles.user2}
+                priority
+              />
             )}
             {mounted && (
-              <Image src={user3} alt="user3" className={styles.user3} />
+              <Image
+                
+                src={user3}
+                alt="user3"
+                className={styles.user3}
+                priority
+              />
             )}
             {mounted && (
-              <Image src={user4} alt="user4" className={styles.user4} />
+              <Image
+                
+                src={user4}
+                alt="user4"
+                className={styles.user4}
+                priority
+              />
             )}
             {mounted && (
-              <Image src={user5} alt="user5" className={styles.user5} />
+              <Image
+                
+                src={user5}
+                alt="user5"
+                className={styles.user5}
+                priority
+              />
             )}
             {mounted && (
-              <Image src={user6} alt="used6" className={styles.user6} />
+              <Image
+                
+                src={user6}
+                alt="used6"
+                className={styles.user6}
+                priority
+              />
             )}
             {mounted && (
-              <Image src={user7} alt="used7" className={styles.user7} />
+              <Image
+                
+                src={user7}
+                alt="used7"
+                className={styles.user7}
+                priority
+              />
             )}
             {mounted && (
-              <Image src={user8} alt="used8" className={styles.user8} />
+              <Image
+                
+                src={user8}
+                alt="used8"
+                className={styles.user8}
+                priority
+              />
             )}
           </div>
         )}
@@ -103,6 +150,6 @@ const Hero = memo(function Hero() {
       </div>
     </>
   );
-})
+});
 
 export default Hero;
