@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { memo } from "react";
 import styles from "./hero.module.css";
 import Image from "next/image";
 import { ScreenBreakpoints } from "@/Utils/screenBreakPoints/ScreenBreakPoints";
@@ -17,7 +17,7 @@ import combinedUsers from "../../../../public/Hero/combinedUsers.svg";
 import playStoreBtn from "../../../../public/Hero/playStoreBtn.svg";
 import appStoreBtn from "../../../../public/Hero/appStoreBtn.svg";
 import { useTranslations } from "next-intl";
-function Hero() {
+const Hero = memo(function Hero() {
   const { isMobile, isTablet } = ScreenBreakpoints();
   const t = useTranslations("homeHero");
 
@@ -103,6 +103,6 @@ function Hero() {
       </div>
     </>
   );
-}
+})
 
 export default Hero;

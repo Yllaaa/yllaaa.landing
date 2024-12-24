@@ -1,6 +1,6 @@
 "use client";
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
@@ -49,11 +49,14 @@ const LangBtn: React.FC = () => {
     const pathWithoutLocale = pathname.replace(`/${locale}`, "");
 
   const currentLanguage: any = languages.find((lang) => lang.code === locale);
+  const toggleDropdown = useCallback(() => {
+    setIsDropdownOpen((prev) => !prev);
+  }, []);
   return (
     <div style={styles.container}>
       <button
         style={styles.button}
-        onClick={() => setIsDropdownOpen((prev) => !prev)}
+        onClick={toggleDropdown}
       >
         <Image
           src={currentLanguage?.flag}
