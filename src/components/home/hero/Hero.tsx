@@ -76,7 +76,9 @@ const Hero = memo(function Hero() {
                 src={user1}
                 alt="user1"
                 className={styles.user1}
-                priority
+                // priority
+                loading="lazy"
+                // placeholder="blur"
               />
             )}
             {mounted && (
@@ -85,7 +87,9 @@ const Hero = memo(function Hero() {
                 src={user2}
                 alt="user2"
                 className={styles.user2}
-                priority
+                // priority
+                loading="lazy"
+                // placeholder="blur"
               />
             )}
             {mounted && (
@@ -94,7 +98,9 @@ const Hero = memo(function Hero() {
                 src={user3}
                 alt="user3"
                 className={styles.user3}
-                priority
+                // priority
+                loading="lazy"
+                // placeholder="blur"
               />
             )}
             {mounted && (
@@ -103,7 +109,9 @@ const Hero = memo(function Hero() {
                 src={user4}
                 alt="user4"
                 className={styles.user4}
-                priority
+                // priority
+                loading="lazy"
+                // placeholder="blur"
               />
             )}
             {mounted && (
@@ -112,7 +120,9 @@ const Hero = memo(function Hero() {
                 src={user5}
                 alt="user5"
                 className={styles.user5}
-                priority
+                // priority
+                loading="lazy"
+                // placeholder="blur"
               />
             )}
             {mounted && (
@@ -121,7 +131,9 @@ const Hero = memo(function Hero() {
                 src={user6}
                 alt="used6"
                 className={styles.user6}
-                priority
+                // priority
+                loading="lazy"
+                // placeholder="blur"
               />
             )}
             {mounted && (
@@ -130,7 +142,9 @@ const Hero = memo(function Hero() {
                 src={user7}
                 alt="used7"
                 className={styles.user7}
-                priority
+                // priority
+                loading="lazy"
+                // placeholder="blur"
               />
             )}
             {mounted && (
@@ -139,7 +153,9 @@ const Hero = memo(function Hero() {
                 src={user8}
                 alt="used8"
                 className={styles.user8}
-                priority
+                // priority
+                loading="lazy"
+                // placeholder="blur"
               />
             )}
           </div>
