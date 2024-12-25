@@ -157,17 +157,30 @@
     font-size: 14.45px;
   }
   .centerImage {
-    width: 100%;
-    height: 25%;
+    width: 160%;
+    height: 40%;
     top: auto;
-    bottom: 5%;
+    bottom: 1%;
     left: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   .centerImage img {
-    width: 150%;
-    height: 145%;
+    width: 100%;
+    height: 100%;
   }
+}
+@media screen and (max-width: 360px) {
+  .centerImage {
+    width: 140%;
+    height: 35%;
+    top: auto;
+    bottom: 1%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
 }
