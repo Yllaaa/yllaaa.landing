@@ -24,50 +24,50 @@ function IconMarquee(props: Props) {
       <div className={styles.iconMarquee}>
         <div
           className={`${styles.iconMarqueeItem} ${styles.iconMarqueeItem1}`}
-          style={{ margin: "auto 40px" }}
+          // style={{ margin: "auto 40px" }}
         >
           <Image src={img1} alt="1" />
         </div>
         <div
           className={`${styles.iconMarqueeItem} ${styles.iconMarqueeItem2}`}
-          style={{ margin: "auto 40px" }}
+          // style={{ margin: "auto 40px" }}
         >
           <Image src={img2} alt="1" />
         </div>
         <div
           className={`${styles.iconMarqueeItem} ${styles.iconMarqueeItem3}`}
-          style={{ margin: "auto 40px" }}
+          // style={{ margin: "auto 40px" }}
         >
           <Image src={img3} alt="1" />
         </div>
         <div
           className={`${styles.iconMarqueeItem} ${styles.iconMarqueeItem4}`}
-          style={{ margin: "auto 40px" }}
+          // style={{ margin: "auto 40px" }}
         >
           <Image src={img4} alt="1" />
         </div>
         <div
           className={`${styles.iconMarqueeItem} ${styles.iconMarqueeItem5}`}
-          style={{ margin: "auto 40px" }}
+          // style={{ margin: "auto 40px" }}
         >
           <Image src={img5} alt="1" />
         </div>
         <div
           className={`${styles.iconMarqueeItem} ${styles.iconMarqueeItem6}`}
-          style={{ margin: "auto 40px" }}
+          // style={{ margin: "auto 40px" }}
         >
           <Image src={img6} alt="1" />
         </div>
         <div
           className={`${styles.iconMarqueeItem} ${styles.iconMarqueeItem7}`}
-          style={{ margin: "auto 40px" }}
+          // style={{ margin: "auto 40px" }}
         >
           <Image src={img7} alt="1" />
         </div>
 
         <div
           className={`${styles.iconMarqueeItem} ${styles.iconMarqueeItem8}`}
-          style={{ margin: "auto 40px" }}
+          // style={{ margin: "auto 0px" }}
         >
           <Image src={img8 ? img8 : img4} alt="1" />
         </div>

@@ -77,12 +77,16 @@
 .forMarquee {
   height: fit-content;
 }
-.forBtn{
+.forBtn {
   z-index: 10;
 }
 @media screen and (max-width: 768px) {
   .forHeroContainer {
     gap: 0;
+  }
+  .forTexts {
+    width: 100%;
+    padding: 0px 21px;
   }
   .forTexts h4 {
     font-size: 20px;

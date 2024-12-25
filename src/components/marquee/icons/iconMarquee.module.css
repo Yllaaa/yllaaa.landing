@@ -2,15 +2,6 @@
   margin: auto 200px;
   overflow: hidden;
 }
-@media screen and (max-width: 768px) {
-  .element {
-    margin: auto 32px;
-  }
-  .element img {
-    width: 60px;
-    height: 60px;
-  }
-}
 
 .iconMarquee {
   position: relative;
@@ -24,10 +15,15 @@
   }
 }
 .iconMarqueeItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
-  width: 100px;
+  width: 100%;
+  height: auto;
   left: 100%;
   top: 50%;
+  margin: auto 0px;
   animation-name: scrollLeft;
   animation-duration: 30s;
   animation-timing-function: linear;
@@ -66,4 +62,20 @@
 }
 .iconMarqueeItem8 {
   animation-delay: calc(30s / 8 * (8 - 8) * -1);
+}
+
+@media screen and (max-width: 768px) {
+  .element {
+    margin: auto 32px;
+  }
+  .element img {
+    width: 60px;
+    height: 60px;
+  }
+  .iconMarqueeItem {
+    height: 70%;
+  }
+  .iconMarqueeItem img {
+    height: 80%;
+  }
 }
