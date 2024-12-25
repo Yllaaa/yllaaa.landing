@@ -3,6 +3,7 @@ import React, { Suspense, lazy } from "react";
 import styles from "./homePage.module.css";
 // import cardImage from "../../../public/ourProcess/cardImg.svg";
 import { getTranslations } from "next-intl/server";
+const Barriers =lazy(() => import("@/components/barriers/Barriers"));
 const AboutUs = lazy(() => import("@/components/aboutUs/AboutUs"));
 const ForClients = lazy(() => import("@/components/forClients/ForClients"));
 const Team = lazy(() => import("@/components/team/Team"));
@@ -22,6 +23,7 @@ async function homePage() {
           <div className={styles.aboutUsContainer}>
             <AboutUs />
           </div>
+          
           <div className={styles.processContainer}>
             <Process
               sectionLable={(await tp)("sectionLable")}
@@ -47,6 +49,9 @@ async function homePage() {
           </div>
           <div className={styles.teamSection}>
             <Team />
+          </div>
+          <div className={styles.aboutUsContainer}>
+            <Barriers />
           </div>
           {/* <div className={styles.processContainer}>
           <Process
