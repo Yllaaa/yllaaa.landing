@@ -15,9 +15,9 @@ const Process = lazy(() => import("@/components/process/process/Process"));
 export const metadata = {
   title: "YLLAAA",
   description:
-    "Empowering freelancers and startups to thrive with YLLAAA, your ultimate platform for growth, collaboration, and success.",
+    "Start your startup now",
   openGraph: {
-    title: "YLLAAA - Freelancing & Startup Management",
+    title: "YLLAAA - Freelance now",
     description:
       "Empowering freelancers and startups to thrive with YLLAAA, your ultimate platform for growth, collaboration, and success.",
     url: "https://yllaaa.com",
@@ -53,12 +53,12 @@ async function homePage() {
           content="Empowering freelancers and startups to thrive with YLLAAA, your ultimate platform for growth, collaboration, and success."
         />
 
-        {/* "https://yllaaa.s3.ca-central-1.amazonaws.com/yllaaa.png" */}
+        
         {/* Open Graph Tags */}
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="YLLAAA - Freelancing & Startup Management"
+          content="YLLAAA"
         />
         <meta
           property="og:description"

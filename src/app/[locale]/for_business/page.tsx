@@ -4,6 +4,7 @@ import Process from "@/components/process/process/Process";
 import Team from "@/components/team/Team";
 import ForClients from "@/components/forClients/ForClients";
 import dynamic from "next/dynamic";
+import Head from "next/head";
 const ForHero = dynamic(() => import("@/components/forHero/ForHero"), {
   ssr: true,
 });
@@ -40,11 +41,122 @@ import git from "../../../../public/missionIcons/git.svg";
 import triangle from "../../../../public/missionIcons/triangle.svg";
 import reactIcon from "../../../../public/missionIcons/react.svg";
 import Image from "next/image";
+
+export const metadata = {
+  title: "YLLAAA – For Business",
+  description:
+    "Connect with the Top 1% of Egyptian talent for your startup. YLLAAA connects you with skilled freelancers to meet your goals efficiently and cost-effectively.",
+  openGraph: {
+    title: "Streamline Your Workforce with YLLAAA",
+    description:
+      "Connect with the Top 1% of Egyptian talent for your startup. YLLAAA connects you with skilled freelancers to meet your goals efficiently and cost-effectively.",
+    url: "https://yllaaa.com",
+    siteName: "YLLAAA",
+    images: [
+      {
+        url: "https://yllaaa.s3.ca-central-1.amazonaws.com/yllaaa.png", // Replace with actual S3 image URL
+        width: 1200,
+        height: 630,
+        alt: "YLLAAA - Freelancing & Startup Management",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Streamline Your Workforce with YLLAAA",
+    description:
+      "Connect with the Top 1% of Egyptian talent for your startup. YLLAAA connects you with skilled freelancers to meet your goals efficiently and cost-effectively.",
+    images: ["https://yllaaa.s3.ca-central-1.amazonaws.com/yllaaa.png"], // Replace with actual S3 image URL
+  },
+};
+
 async function forBusiness() {
   const tp = getTranslations("proccess");
   const tb = getTranslations("business");
   return (
     <>
+      <Head>
+        {/* General Meta Tags */}
+        <title>YLLAAA - Streamline Your Workforce with YLLAAA</title>
+        <meta
+          name="description"
+          content="Connect with the Top 1% of Egyptian talent for your startup. YLLAAA connects you with skilled freelancers to meet your goals efficiently and cost-effectively."
+        />
+
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Streamline Your Workforce with YLLAAA"
+        />
+        <meta
+          property="og:description"
+          content="Connect with the Top 1% of Egyptian talent for your startup. YLLAAA connects you with skilled freelancers to meet your goals efficiently and cost-effectively."
+        />
+        <meta property="og:url" content="https://yllaaa.com" />
+        <meta
+          property="og:image"
+          content="https://yllaaa.s3.ca-central-1.amazonaws.com/yllaaa.png"
+        />
+        <meta property="og:site_name" content="YLLAAA" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Streamline Your Workforce with YLLAAA"
+        />
+        <meta
+          name="twitter:description"
+          content="Connect with the Top 1% of Egyptian talent for your startup. YLLAAA connects you with skilled freelancers to meet your goals efficiently and cost-effectively."
+        />
+        <meta
+          name="twitter:image"
+          content="https://yllaaa.s3.ca-central-1.amazonaws.com/yllaaa.png"
+        />
+
+        {/* Snapchat & Instagram */}
+
+        <meta
+          property="og:image"
+          content="https://yllaaa.s3.ca-central-1.amazonaws.com/yllaaa.png"
+        />
+        <meta
+          property="og:title"
+          content="Streamline Your Workforce with YLLAAA"
+        />
+        <meta
+          property="og:description"
+          content="Connect with the Top 1% of Egyptian talent for your startup. YLLAAA connects you with skilled freelancers to meet your goals efficiently and cost-effectively."
+        />
+        {/* Slack */}
+        <meta
+          property="og:title"
+          content="Streamline Your Workforce with YLLAAA"
+        />
+        <meta
+          property="og:description"
+          content="Connect with the Top 1% of Egyptian talent for your startup. YLLAAA connects you with skilled freelancers to meet your goals efficiently and cost-effectively."
+        />
+        <meta
+          property="og:image"
+          content="https://yllaaa.s3.ca-central-1.amazonaws.com/yllaaa.png"
+        />
+        {/* WhatsApp */}
+        <meta
+          property="og:image"
+          content="https://yllaaa.s3.ca-central-1.amazonaws.com/yllaaa.png"
+        />
+        {/* Google (Search Engines)
+         */}
+
+        <meta name="title" content="Streamline Your Workforce with YLLAAA" />
+        <meta
+          name="description"
+          content="Connect with the Top 1% of Egyptian talent for your startup. YLLAAA connects you with skilled freelancers to meet your goals efficiently and cost-effectively."
+        />
+      </Head>
       <section style={{ overflowX: "hidden" }}>
         <div className={styles.heroContainer}>
           <ForHero

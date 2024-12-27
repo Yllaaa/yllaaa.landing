@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./forFreelancers.module.css";
 import Process from "@/components/process/process/Process";
 import dynamic from "next/dynamic";
+import Head from "next/head";
 const ForHero = dynamic(() => import("@/components/forHero/ForHero"), {
   ssr: true,
 });
@@ -39,11 +40,122 @@ import figma from "../../../../public/freelancersIcons/love.svg";
 import git from "../../../../public/missionIcons/git.svg";
 import triangle from "../../../../public/freelancersIcons/airplane.svg";
 import reactIcon from "../../../../public/freelancersIcons/black.svg";
+
+export const metadata = {
+  title: "YLLAAA – For Freelancers",
+  description:
+    "Connect with European clients, earn in hard currencies, and work on exciting projects. Join our platform and work in an international marketplace.",
+  openGraph: {
+    title: "Grow Your Freelance Career with YLLAAA",
+    description:
+      "Connect with European clients, earn in hard currencies, and work on exciting projects. Join our platform and work in an international marketplace.",
+    url: "https://yllaaa.com",
+    siteName: "YLLAAA",
+    images: [
+      {
+        url: "https://yllaaa.s3.ca-central-1.amazonaws.com/yllaaa.png", // Replace with actual S3 image URL
+        width: 1200,
+        height: 630,
+        alt: "YLLAAA - Freelancing & Startup Management",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Grow Your Freelance Career with YLLAAA",
+    description:
+      "Connect with European clients, earn in hard currencies, and work on exciting projects. Join our platform and work in an international marketplace.",
+    images: ["https://yllaaa.s3.ca-central-1.amazonaws.com/yllaaa.png"], // Replace with actual S3 image URL
+  },
+};
+
 async function forFreelancers() {
   const tp = getTranslations("proccess");
   const tb = getTranslations("freelancer");
   return (
     <>
+      <Head>
+        {/* General Meta Tags */}
+        <title>YLLAAA - Grow Your Freelance Career with YLLAAA</title>
+        <meta
+          name="description"
+          content="Connect with European clients, earn in hard currencies, and work on exciting projects. Join our platform and work in an international marketplace."
+        />
+
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Grow Your Freelance Career with YLLAAA"
+        />
+        <meta
+          property="og:description"
+          content="Connect with European clients, earn in hard currencies, and work on exciting projects. Join our platform and work in an international marketplace."
+        />
+        <meta property="og:url" content="https://yllaaa.com" />
+        <meta
+          property="og:image"
+          content="https://yllaaa.s3.ca-central-1.amazonaws.com/yllaaa.png"
+        />
+        <meta property="og:site_name" content="YLLAAA" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Grow Your Freelance Career with YLLAAA"
+        />
+        <meta
+          name="twitter:description"
+          content="Connect with European clients, earn in hard currencies, and work on exciting projects. Join our platform and work in an international marketplace."
+        />
+        <meta
+          name="twitter:image"
+          content="https://yllaaa.s3.ca-central-1.amazonaws.com/yllaaa.png"
+        />
+
+        {/* Snapchat & Instagram */}
+
+        <meta
+          property="og:image"
+          content="https://yllaaa.s3.ca-central-1.amazonaws.com/yllaaa.png"
+        />
+        <meta
+          property="og:title"
+          content="Grow Your Freelance Career with YLLAAA"
+        />
+        <meta
+          property="og:description"
+          content="Connect with European clients, earn in hard currencies, and work on exciting projects. Join our platform and work in an international marketplace."
+        />
+        {/* Slack */}
+        <meta
+          property="og:title"
+          content="Grow Your Freelance Career with YLLAAA"
+        />
+        <meta
+          property="og:description"
+          content="Connect with European clients, earn in hard currencies, and work on exciting projects. Join our platform and work in an international marketplace."
+        />
+        <meta
+          property="og:image"
+          content="https://yllaaa.s3.ca-central-1.amazonaws.com/yllaaa.png"
+        />
+        {/* WhatsApp */}
+        <meta
+          property="og:image"
+          content="https://yllaaa.s3.ca-central-1.amazonaws.com/yllaaa.png"
+        />
+        {/* Google (Search Engines)
+         */}
+
+        <meta name="title" content="Grow Your Freelance Career with YLLAAA" />
+        <meta
+          name="description"
+          content="Connect with European clients, earn in hard currencies, and work on exciting projects. Join our platform and work in an international marketplace."
+        />
+      </Head>
       <section style={{ overflowX: "hidden" }}>
         <div className={styles.heroContainer}>
           <ForHero
