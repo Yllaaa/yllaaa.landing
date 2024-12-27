@@ -43,43 +43,131 @@
   position: absolute;
   top: 196px;
   left: 8.8%;
+  width: 67.36px;
+  height: 67.36px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
+.user1::after,
+.user2::after,
+.user3::after,
+.user4::after,
+.user5::after,
+.user6::after,
+.user7::after,
+.user8::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #2a0468b9;
+  z-index: 100;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
 .user2 {
   position: absolute;
   top: 415px;
   left: 7.152vw;
+  width: 78.16px;
+  height: 78.16px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 .user3 {
   position: absolute;
   top: 457px;
   left: 20.69vw;
+  width: 59.16px;
+  height: 59.16px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 .user4 {
   position: absolute;
   top: 643px;
   left: 10.69vw;
+  width: 99.13px;
+  height: 99.13px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 .user5 {
   position: absolute;
   top: 152px;
   right: 12vw;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 .user6 {
   position: absolute;
   top: 294px;
   right: 3.95vw;
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 .user7 {
   position: absolute;
   top: 353px;
   right: 17.7vw;
+  width: 59px;
+  height: 59px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 .user8 {
   position: absolute;
   top: 567px;
   right: 11.74vw;
+  width: 107.13px;
+  height: 107.13px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
-
+.userImg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
 .heroHeader {
   position: absolute;
   top: 159px;
