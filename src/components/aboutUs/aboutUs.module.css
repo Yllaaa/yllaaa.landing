@@ -61,7 +61,7 @@
   align-items: center;
   justify-content: flex-start;
   gap: 50px;
-  margin: 18px auto;
+  margin: 18px 0;
   color: var(--Indigo-100);
 }
 .aboutHeader h2 {

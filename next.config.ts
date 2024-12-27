@@ -4,7 +4,9 @@ const withNextIntl = createNextIntlPlugin();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
- 
+  images: {
+    domains: ["drive.google.com", "googleusercontent.com"], // Add Google Drive domains
+  },
   async rewrites() {
     return [
       {
