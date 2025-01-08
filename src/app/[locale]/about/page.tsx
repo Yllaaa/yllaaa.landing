@@ -126,19 +126,21 @@ async function aboutPage() {
           content="YLLAAA is your trusted partner for building MVPs and scaling startups. We connect Egyptian freelancers with European clients to turn ideas into reality, empowering innovation and collaboration every step of the way."
         />
       </Head>
-      <Suspense fallback={<div>Loading...</div>}>
-        <section>
+      <section>
+        <Suspense fallback={<div>Loading...</div>}>
           <div className={styles.heroContainer}>
             {/* <AboutHero /> */}
             <HeroClouds />
           </div>
+        </Suspense>
+        <Suspense fallback={<div>Loading...</div>}>
           <div className={styles.marqueeContainer}>
             <WordMarquee />
           </div>
           <div className={styles.aboutUsContainer}>
             <Reason />
           </div>
-          
+
           <div className={styles.processContainer}>
             <Process
               sectionLable={(await tp)("sectionLable")}
@@ -174,8 +176,8 @@ async function aboutPage() {
           <div className={styles.teamSection}>
             <Team />
           </div>
-        </section>
-      </Suspense>
+        </Suspense>
+      </section>
     </>
   );
 }
