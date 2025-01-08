@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import styles from "./forHero.module.css";
 import dynamic from "next/dynamic";
 import background from "../../../../public/forHero/background16.png";
-import logo from "../../../../public/forHero/logo.svg";
+// import logo from "../../../../public/forHero/logo.svg";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { AOSInit } from "@/Utils/aos/aos";
@@ -45,7 +45,7 @@ function ForHero(props: Props) {
           <h2 data-aos="fade-up">
             {t("header")}{" "}
             <span>
-              <Image src={logo} alt="logo" />
+              <Image src={`https://yllaaa.s3.ca-central-1.amazonaws.com/logo.svg`} alt="logo" />
             </span>{" "}
             {t("header2")}
           </h2>
