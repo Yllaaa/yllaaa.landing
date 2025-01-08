@@ -54,9 +54,12 @@ function Navbar() {
                 <Link
                   href={`/${locale}`}
                   style={
-                    path === `/${locale}`
-                      ? { color: "var(--Indigo-300)" }
-                      : { color: "var(--neutral-1)" }
+                    path === `/${locale}` ? { color: "var(--Indigo-300)" } : {}
+                  }
+                  className={
+                    path === `/${locale}/about`
+                      ? styles.link
+                      : styles.regularLink
                   }
                 >
                   {t("home")}
@@ -68,7 +71,12 @@ function Navbar() {
                   style={
                     path === `/${locale}/about`
                       ? { color: "var(--Indigo-300)" }
-                      : { color: "var(--neutral-1)" }
+                      : {}
+                  }
+                  className={
+                    path === `/${locale}/about`
+                      ? styles.link
+                      : styles.regularLink
                   }
                 >
                   {t("about")}
@@ -80,7 +88,12 @@ function Navbar() {
                   style={
                     path === `/${locale}/for_business`
                       ? { color: "var(--Indigo-300)" }
-                      : { color: "var(--neutral-1)" }
+                      : {}
+                  }
+                  className={
+                    path === `/${locale}/about`
+                      ? styles.link
+                      : styles.regularLink
                   }
                 >
                   {t("forBusiness")}
@@ -92,7 +105,12 @@ function Navbar() {
                   style={
                     path === `/${locale}/for_freelancers`
                       ? { color: "var(--Indigo-300)" }
-                      : { color: "var(--neutral-1)" }
+                      : {}
+                  }
+                  className={
+                    path === `/${locale}/about`
+                      ? styles.link
+                      : styles.regularLink
                   }
                 >
                   {t("forFreelancers")}
@@ -104,7 +122,12 @@ function Navbar() {
                   style={
                     path === `/${locale}/for_managers`
                       ? { color: "var(--Indigo-300)" }
-                      : { color: "var(--neutral-1)" }
+                      : {}
+                  }
+                  className={
+                    path === `/${locale}/about`
+                      ? styles.link
+                      : styles.regularLink
                   }
                 >
                   {t("forManagers")}
@@ -269,7 +292,7 @@ function Navbar() {
                     path === `/${locale}/contact` ? `${styles.bgCurved}` : ""
                   }
                   style={
-                    path === `/${locale}/for_managers`
+                    path === `/${locale}/contact`
                       ? { background: "var(--Indigo-300)" }
                       : {}
                   }

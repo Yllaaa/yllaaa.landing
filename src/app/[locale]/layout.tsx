@@ -4,6 +4,7 @@ import { getMessages } from "next-intl/server";
 import Footer from "@/components/zFooter/Footer";
 import Navbar from "@/components/aaaNavbar/Navbar";
 
+
 export default async function RootLayout({
   children,
   params: { locale: locale },
@@ -16,6 +17,7 @@ export default async function RootLayout({
   return (
     <section lang="en">
       <NextIntlClientProvider messages={messages}>
+       
         <header>
           <Navbar />
         </header>

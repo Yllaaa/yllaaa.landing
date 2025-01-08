@@ -1,15 +1,36 @@
 .heroContainer {
   width: 100vw;
-  height: 1429px;
+  height: fit-content;
+  min-height: 1021px;
+  margin: 0 auto 17px auto;
+}
+.reasonContainer{
+  position: relative;
+  width: 100vw;
+  height: fit-content;
   min-height: fit-content;
-  margin: 0 auto 102px auto;
+  margin: 0 auto 150px auto;
+}
+.aboutUsContainer{
+  position: relative;
+  width: 100vw;
+  height: fit-content;
+  min-height: fit-content;
+  margin: 127px auto 189px auto;
+}
+.berriersContainer{
+  position: relative;
+  width: 100vw;
+  height: fit-content;
+  min-height: fit-content;
+  margin: 189px auto 150px auto;
 }
 .processContainer {
   position: relative;
   width: 100vw;
   min-height: fit-content;
   padding-bottom: 102px;
-  margin: 107px auto 130px auto;
+  margin: 150px auto 127px auto;
 }
 .forClientsContainer{
   position: relative;
@@ -25,11 +46,13 @@
   min-height: fit-content;
   margin: 72px auto 130px auto;
 }
-.aboutUsContainer {
+.earthContainer {
   position: relative;
   width: 100vw;
   min-height: fit-content;
-  margin: 107px auto 107px auto;
+  margin: 162px auto 137px auto;
+  overflow: hidden;
+  
 }
 .forTalentContainer{
   position: relative;

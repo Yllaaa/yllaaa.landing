@@ -1,0 +1,295 @@
+.earthSection {
+  width: 100%;
+  height: 882px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  overflow-x: hidden;
+  z-index: 10;
+  margin: auto;
+  padding: 0 102px;
+}
+.stars {
+  width: 300vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: flex;
+}
+.stars::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #2a0468;
+  opacity: 0.55;
+  overflow: hidden;
+  overflow-x: hidden;
+}
+.stars img {
+  overflow: hidden;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: scroll-stars 30s linear infinite;
+  -webkit-animation: scroll-stars 30s linear infinite;
+}
+
+.content {
+  width: 100%;
+  max-width: 680px;
+  height: 100%;
+  position: relative;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+}
+.content h5 {
+  font-family: var(--monta);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 27.12px;
+  text-align: left;
+  margin-bottom: 13.2px;
+}
+.content h3 {
+  font-family: var(--monta);
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 72.32px;
+  letter-spacing: -0.015em;
+  text-align: left;
+  color: var(--neutral-1);
+  margin-bottom: 31.1px;
+}
+.content h3 span {
+  color: var(--neutral-13);
+}
+.content p {
+  max-width: 650px;
+  font-family: var(--space);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22.88px;
+  color: var(--neutral-1);
+  margin-bottom: 34.2px;
+}
+.content a {
+  width: 154.35px;
+  height: 54px;
+  top: 566px;
+  left: 104px;
+  padding: 16px 24px;
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--Purple-500);
+  border-radius: 24px;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  -ms-border-radius: 24px;
+  -o-border-radius: 24px;
+  transition: gap 0.5s ease-in-out;
+  -webkit-transition: gap 0.5s ease-in-out;
+  -moz-transition: gap 0.5s ease-in-out;
+  -ms-transition: gap 0.5s ease-in-out;
+  -o-transition: gap 0.5s ease-in-out;
+}
+.content a .buttonText {
+  font-family: var(--space);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.94px;
+  color: var(--neutral-1);
+}
+.content a:hover {
+  gap: 15px;
+  transition: gap 0.5s ease-in-out;
+  -webkit-transition: gap 0.5s ease-in-out;
+  -moz-transition: gap 0.5s ease-in-out;
+  -ms-transition: gap 0.5s ease-in-out;
+  -o-transition: gap 0.5s ease-in-out;
+}
+.content a:hover span img {
+  transform: rotateZ(180deg);
+  -webkit-transform: rotateZ(180deg);
+  -moz-transform: rotateZ(180deg);
+  -ms-transform: rotateZ(180deg);
+  -o-transform: rotateZ(180deg);
+  transition: transform 0.5s ease-in-out;
+  -webkit-transition: transform 0.5s ease-in-out;
+  -moz-transition: transform 0.5s ease-in-out;
+  -ms-transition: transform 0.5s ease-in-out;
+  -o-transition: transform 0.5s ease-in-out;
+}
+.content a span img {
+  width: 19.35px;
+  height: 15.2px;
+  transition: transform 0.5s ease-in-out;
+  -webkit-transition: transform 0.5s ease-in-out;
+  -moz-transition: transform 0.5s ease-in-out;
+  -ms-transition: transform 0.5s ease-in-out;
+  -o-transition: transform 0.5s ease-in-out;
+}
+.earthContainerSection {
+  position: relative;
+  width: 100%;
+  min-width: 433px;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+.earthContainer {
+  width: calc(200%);
+  max-width: 433px;
+  height: 433px;
+  overflow: hidden;
+  display: flex;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  z-index: 5;
+  position: relative;
+}
+.earthContainer::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #591db9;
+  opacity: 0.85;
+}
+.earthContainer img {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+  animation: scroll-earth 30s linear infinite;
+  -webkit-animation: scroll-earth 30s linear infinite;
+}
+@keyframes scroll-earth {
+  0% {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+  }
+}
+@keyframes scroll-stars {
+  0% {
+    overflow: hidden;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+  }
+  100% {
+    overflow: hidden;
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .earthSection {
+    padding: 150px 32px;
+    height: fit-content;
+  }
+
+  .content {
+    max-width: none;
+  }
+  .content h5 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 7.5px;
+  }
+  .content h3 {
+    font-size: 34px;
+    line-height: 36.16px;
+    text-align: left;
+    margin-bottom: 15.05px;
+  }
+  .content h3 span {
+    color: var(--neutral-13);
+  }
+  .content p {
+    max-width: 80%;
+    font-size: 14px;
+    line-height: 16.44px;
+    text-align: left;
+    margin-bottom: 17.1px;
+    /* margin: 0 auto 17.1px auto; */
+  }
+  .content a {
+    /* width: 60%; */
+    height: 54px;
+
+    padding: 16px 24px;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .content a .buttonText {
+    font-size: 16px;
+    line-height: 18.94px;
+  }
+
+  .earthContainerSection {
+    position: absolute;
+    right: 0%;
+    z-index: -1;
+    transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+}
+}
+@media screen and (max-width: 430px) {
+  .earthContainerSection{
+    min-width: 320px;
+  }
+  .content a{
+    width: 100%;
+  }
+}

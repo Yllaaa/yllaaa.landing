@@ -4,6 +4,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "emailjs-com";
 import styles from "./contactUs.module.css";
+import { useTranslations } from "next-intl";
 
 function ContactUs() {
   const {
@@ -35,58 +36,79 @@ function ContactUs() {
         }
       );
   };
+  const t = useTranslations("contact");
 
   return (
     <>
       <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
         <div className={styles.container}>
           <div className={styles.title}>
-            <p>
-              Have questions or need assistance?{" "}
-              <span>
-                We’re here to help. Reach out through any of the channels below,
-                and our team will respond as soon as possible.
-              </span>
-            </p>
-            <p>Let’s Connect</p>
+            <p className={styles.header}>{t("header")}</p>
+            <p className={styles.subHeader}>{t("subHeader")}</p>
           </div>
           <div className={styles.inputs}>
-            <label htmlFor="name">Name*</label>
-            <input
-              id="name"
-              type="text"
-              {...register("Name", { required: true })}
-            />
-            {errors.Name && <span className={styles.error}>Name is required</span>}
-
-            <label htmlFor="email">Email*</label>
+            <div className={styles.name}>
+              <div className={styles.feild}>
+                <input
+                  id="firstName"
+                  type="text"
+                  placeholder={t("firstName")}
+                  {...register("firstName", { required: true })}
+                />
+                {errors.firstName && (
+                  <span className={styles.error}>{t("firstNameError")}</span>
+                )}
+              </div>
+              <div className={styles.feild}>
+                <input
+                  id="lastName"
+                  type="text"
+                  placeholder={t("lastName")}
+                  {...register("lastName", { required: true })}
+                />
+                {errors.lastName && (
+                  <span className={styles.error}>{t("lastNameError")}</span>
+                )}
+              </div>
+            </div>
+            {/* <label htmlFor="email">Email*</label> */}
             <input
               id="email"
               type="email"
+              placeholder={t("email")}
               {...register("Email", {
-                required: "Email is required",
+                required: true,
                 pattern: {
                   value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                  message: "Invalid email address",
+                  message: t("invalidEmailError"),
                 },
               })}
             />
-            {errors.Email && (
-              <span className={styles.error}>Faild</span>
+            {errors.email && (
+              <span className={styles.error}>{t("emailError")}</span>
+            )}
+            <input
+              id="phone"
+              type="tel"
+              placeholder={t("phone")}
+              {...register("phone", { required: true })}
+            />
+            {errors.phone && (
+              <span className={styles.error}>{t("phoneError")}</span>
             )}
 
-            <label htmlFor="message">Message*</label>
             <textarea
               rows={5}
               id="message"
+              placeholder={t("message")}
               {...register("message", { required: true })}
             />
             {errors.message && (
-              <span className={styles.error}>Message is required</span>
+              <span className={styles.error}>{t("messageError")}</span>
             )}
           </div>
         </div>
-        <button type="submit">Let’s talk!</button>
+        <button type="submit">{t("btn")}</button>
       </form>
     </>
   );

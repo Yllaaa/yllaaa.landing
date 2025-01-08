@@ -66,7 +66,13 @@
   min-height: fit-content;
   margin: 130px auto 260px auto;
 }
-
+.hiringContainer {
+  position: relative;
+  width: 100vw;
+  height: fit-content;
+  min-height: fit-content;
+  margin: 150px auto 223px auto;
+}
 @media screen and (max-width: 1024px) {
   .processContainer {
     margin: 40px auto 40px auto;

@@ -2,14 +2,19 @@ import React, { Suspense, lazy } from "react";
 import styles from "./aboutPage.module.css";
 import { getTranslations } from "next-intl/server";
 import Head from "next/head";
+// import About from "@/components/aboutUs/About";
 
 const WordMarquee = lazy(() =>
   import("@/components/marquee/words/WordMarquee")
 );
 const Process = lazy(() => import("@/components/process/process/Process"));
-const Team = lazy(() => import("@/components/team/Team"));
-const AboutUs = lazy(() => import("@/components/aboutUs/AboutUs"));
-const AboutHero = lazy(() => import("@/components/heroAbout/AboutHero"));
+const Team = lazy(() => import("@/components/team/new/Team"));
+const About = lazy(() => import("@/components/aboutUs/About"));
+const HeroClouds = lazy(() => import("@/components/heroAbout/HeroClouds"));
+const AboutUs = lazy(() => import("@/components/heroAbout/AboutHero"));
+const Reason = lazy(() => import("@/components/reason/Reason"));
+const Barriers = lazy(() => import("@/components/barriers/Barriers"));
+const World = lazy(() => import("@/components/world/World"));
 
 export const metadata = {
   title: "YLLAAA – You Will Never Start Up Alone",
@@ -124,17 +129,16 @@ async function aboutPage() {
       <Suspense fallback={<div>Loading...</div>}>
         <section>
           <div className={styles.heroContainer}>
-            <AboutHero />
-          </div>
-          <div className={styles.aboutUsContainer}>
-            <AboutUs />
+            {/* <AboutHero /> */}
+            <HeroClouds />
           </div>
           <div className={styles.marqueeContainer}>
             <WordMarquee />
           </div>
-          <div className={styles.teamSection}>
-            <Team />
+          <div className={styles.aboutUsContainer}>
+            <Reason />
           </div>
+          
           <div className={styles.processContainer}>
             <Process
               sectionLable={(await tp)("sectionLable")}
@@ -154,6 +158,21 @@ async function aboutPage() {
               card4Title={(await tp)("title4")}
               card4Description={(await tp)("paragraph4")}
             />
+          </div>
+          <div className={styles.aboutUsContainer}>
+            <About />
+          </div>
+          <div className={styles.aboutUsContainer}>
+            <AboutUs />
+          </div>
+          <div className={styles.aboutUsContainer}>
+            <Barriers />
+          </div>
+          <div className={styles.aboutUsContainer}>
+            <World />
+          </div>
+          <div className={styles.teamSection}>
+            <Team />
           </div>
         </section>
       </Suspense>

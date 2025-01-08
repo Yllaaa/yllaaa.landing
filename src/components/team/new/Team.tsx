@@ -1,0 +1,231 @@
+"use client";
+import React, { useState } from "react";
+import { useKeenSlider } from "keen-slider/react";
+import "keen-slider/keen-slider.min.css";
+import styles from "./team.module.css";
+
+import mohamedAbdelkader from "../../../../public/team/new/mohamedAbdelkader.png";
+import mohamedYasser from "../../../../public/team/new/mohamedYasser.png";
+import Moustafa from "../../../../public/team/new/moustafaAdel.png";
+import ziadSaleh from "../../../../public/team/new/ziadSaleh.png";
+import youssefAhmed from "../../../../public/team/new/youssefAhmed.png";
+import shaimaElfouly from "../../../../public/team/new/shaimaElfouly.png";
+import yehiaAbdelhamed from "../../../../public/team/new/yehiaAbdelhamed.png";
+import wiamOuafi from "../../../../public/team/new/wiamOuafi.png";
+import MohAshraf from "../../../../public/team/new/mohamedAshraf.png";
+import Vittorio from "../../../../public/team/new/vittorio.png";
+import linkedInIcon from "../../../../public/icons/linkedInTeam.svg";
+import { useTranslations } from "next-intl";
+import Image from "next/image";
+import Link from "next/link";
+import ButtonFlip from "@/components/aaabutton/ButtonFlip";
+
+function Team() {
+  const t = useTranslations("team");
+  const members = [
+    {
+      name: t("mohamedAbdelkader1"),
+      name2: t("mohamedAbdelkader2"),
+      position: t("positionMohamed"),
+      breif: t("breifMohamed"),
+      image: mohamedAbdelkader,
+      linkedin: "https://www.linkedin.com/in/mohamed-abdelkader-353bb3159/",
+    },
+    {
+      name: t("zeyadSaleh1"),
+      name2: t("zeyadSaleh2"),
+      position: t("positionZeyad"),
+      breif: t("breifZeyad"),
+      image: ziadSaleh,
+      linkedin: "https://www.linkedin.com/in/zeyad-saleh-612ab7124/",
+    },
+    {
+      name: t("vittorio1"),
+      name2: t("vittorio2"),
+      position: t("positionVittorio"),
+      breif: t("breifVittorio"),
+      image: Vittorio,
+      linkedin: "#",
+    },
+    {
+      name: t("wiamMouafi1"),
+      name2: t("wiamMouafi2"),
+      position: t("positionWiam"),
+      breif: t("breifWiam"),
+      image: wiamOuafi,
+      linkedin: "https://www.linkedin.com/in/mohamed-abdelkader-353bb3159/",
+    },
+    {
+      name: t("mohamedAshraf1"),
+      name2: t("mohamedAshraf2"),
+      position: t("positionMohamedAshraf"),
+      breif: t("breifMohamedAshraf"),
+      image: MohAshraf,
+      linkedin: "https://www.linkedin.com/in/mohamedashrafmarc/",
+    },
+    {
+      name: t("shaymaElFouly1"),
+      name2: t("shaymaElFouly2"),
+      position: t("positionShayma"),
+      breif: t("breifShayma"),
+      image: shaimaElfouly,
+      linkedin: "https://www.linkedin.com/in/shaimaa-elfoly-94a822192/",
+    },
+    {
+      name: t("yehia1"),
+      name2: t("yehia2"),
+      position: t("positionYehia"),
+      breif: t("breifYehia"),
+      image: yehiaAbdelhamed,
+      linkedin: "https://www.linkedin.com/in/yehia-abdelhamed-2768a528a/",
+    },
+    {
+      name: t("mohamedYasser1"),
+      name2: t("mohamedYasser2"),
+      position: t("positionMohamedYasser"),
+      breif: t("breifMohamedYasser"),
+      image: mohamedYasser,
+      linkedin: "https://www.linkedin.com/in/mohamedyasser14",
+    },
+    {
+      name: t("youssef1"),
+      name2: t("youssef2"),
+      position: t("positionYoussef"),
+      breif: t("breifYoussef"),
+      image: youssefAhmed,
+      linkedin: "www.linkedin.com/in/youssef-ahmed-aa483b206",
+    },
+    {
+      name: t("Moustafa1"),
+      name2: t("Moustafa2"),
+
+      position: t("positionMoustafa"),
+      breif: t("breifMoustafa"),
+      image: Moustafa,
+      linkedin: "https://www.linkedin.com/in/moustafa-adel-714616299/",
+    },
+  ];
+
+  const [currentSlide, setCurrentSlide] = React.useState(0);
+  const [loaded, setLoaded] = useState(false);
+  const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
+    initial: 0,
+    loop: true,
+
+    breakpoints: {
+      "(min-width: 430px)": {
+        slides: {
+          perView: 1,
+        },
+      },
+      "(min-width: 768px)": {
+        slides: {
+          perView: 2,
+          spacing: 21,
+        },
+      },
+      "(min-width: 1025px)": {
+        slides: {
+          perView: 3,
+          spacing: 21,
+        },
+      },
+    },
+    slideChanged(slider) {
+      setCurrentSlide(slider.track.details.rel);
+    },
+    created() {
+      setLoaded(true);
+    },
+  });
+
+  return (
+    <>
+      <div className={styles.teamContainer}>
+        <div className={styles.teamHeaderContent}>
+          <div className={styles.teamHeaderContentLine}>
+            <h2>{t("sectionTitle")}</h2>
+            <p>{t("description")}</p>
+          </div>
+          <div className={styles.teamHeaderContentBtn}>
+            <ButtonFlip lable={t("buttonText")} />
+          </div>
+        </div>
+        <div className={`${styles.navigation_wrapper}`}>
+          <div ref={sliderRef} className={`${styles.keenSlider} keen-slider`}>
+            {members.map((member, index) => (
+              <div
+                key={index}
+                style={{ width: "100%", height: "100%" }}
+                className={`keen-slider__slide ${styles.numberSlide}`}
+              >
+                <div
+                  // style={{ width: "100%", height: "100%" }}
+                  style={{ minHeight: "524px" }}
+                >
+                  {/* image */}
+                  <div className={styles.image}>
+                    <div
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        margin: "auto",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                      }}
+                    >
+                      <Image
+                        src={member.image}
+                        alt="image"
+                        width={100}
+                        height={100}
+                      />
+                    </div>
+                  </div>
+                  {/* top content */}
+                  <div className={styles.topContent}>
+                    <div className={styles.position}>
+                      <p>{member.position}</p>
+                    </div>
+                    <div className={styles.linkedin}>
+                      <Link href={member.linkedin}>
+                        <Image src={linkedInIcon} alt="linkedin" />
+                      </Link>
+                    </div>
+                  </div>
+                  {/* bottom content */}
+                  <div className={styles.bottomContent}>
+                    <h3>{member.name}</h3>
+                    <h3>{member.name2}</h3>
+                    <p>{member.breif}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        {loaded && instanceRef.current && (
+          <div className={styles.dots}>
+            {[
+              ...Array(instanceRef.current.track.details.slides.length).keys(),
+            ].map((idx) => {
+              return (
+                <button
+                  key={idx}
+                  onClick={() => {
+                    instanceRef.current?.moveToIdx(idx);
+                  }}
+                  className={`
+                    ${styles.dot} ${currentSlide === idx ? styles.active : ""}
+                    `}
+                ></button>
+              );
+            })}
+          </div>
+        )}
+      </div>
+    </>
+  );
+}
+export default Team;

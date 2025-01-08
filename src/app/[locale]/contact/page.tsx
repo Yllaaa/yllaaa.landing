@@ -2,7 +2,9 @@ import ContactUs from "@/components/contactUs/ContactUs";
 import React from "react";
 import styles from "./contact.module.css";
 import Head from "next/head";
-
+import hash from "../../../../public/forHero/background16.png";
+import pyramids from "../../../../public/contact/pyramids.png";
+import Image from "next/image";
 export const metadata = {
   title: "YLLAAA – Contact us",
   description:
@@ -105,10 +107,17 @@ function ContactPage() {
         />
       </Head>
       <section className={styles.section} style={{}}>
-        <div className={styles.bgShade}></div>
+        <div className={styles.lightBg1}></div>
+        <div className={styles.lightBg2}></div>
+        <div className={styles.hashBg}>
+          <Image src={hash} alt="background" width={1000} height={1000} />
+        </div>
         <div className={styles.contactUs}>
           <div className={styles.form}>
             <ContactUs />
+          </div>
+          <div className={styles.pyramids}>
+            <Image src={pyramids} alt="background" width={1000} height={1000} />
           </div>
         </div>
       </section>

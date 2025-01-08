@@ -1,0 +1,47 @@
+.smallCard {
+  width: 751.36px;
+  height: 121.71px;
+  padding: 31.42px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 39.3px;
+  opacity: 0.4px;
+  border: 1.96px solid #ffffff20;
+  border-radius: 9.82px;
+  -webkit-border-radius: 9.82px;
+  -moz-border-radius: 9.82px;
+  -ms-border-radius: 9.82px;
+  -o-border-radius: 9.82px;
+}
+.smallCard .image {
+  width: 47px;
+  height: 46.77px;
+  opacity: 0.2;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.smallCard .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.smallCard .text h4 {
+  font-family: var(--monta);
+  font-size: 23.57px;
+  font-weight: 500;
+  line-height: 28.73px;
+  text-align: left;
+  color: #ffffff20;
+}
+.smallCard .text p {
+  font-family: var(--monta);
+  font-size: 17.68px;
+  font-weight: 400;
+  line-height: 21.55px;
+  text-align: left;
+  color: #ffffff20;
+}

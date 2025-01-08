@@ -1,31 +1,27 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import styles from "./managers.module.css";
-import Process from "@/components/process/process/Process";
-import dynamic from "next/dynamic";
 import Head from "next/head";
-const ForHero = dynamic(() => import("@/components/forHero/ForHero"), {
-  ssr: true,
-});
-const CardMarquee = dynamic(
-  () => import("@/components/marquee/cards/CardMarquee"),
-  {
-    ssr: true,
-  }
-);
 
 import { getTranslations } from "next-intl/server";
 
-import people1 from "../../../../public/marquee/icons/devs/ai.svg";
-import people2 from "../../../../public/marquee/icons/devs/cloud.svg";
-import people3 from "../../../../public/marquee/icons/devs/css.svg";
-import people4 from "../../../../public/marquee/icons/devs/html.svg";
-import people5 from "../../../../public/marquee/icons/devs/figma.svg";
-import people6 from "../../../../public/marquee/icons/devs/js.svg";
-import people7 from "../../../../public/marquee/icons/devs/paython.svg";
-import people8 from "../../../../public/marquee/icons/devs/photoshop.svg";
+import people1 from "../../../../public/marquee/icons/people/img1.svg";
+import people2 from "../../../../public/marquee/icons/people/img2.svg";
+import people3 from "../../../../public/marquee/icons/people/img3.svg";
+import people4 from "../../../../public/marquee/icons/people/img4.svg";
+import people5 from "../../../../public/marquee/icons/people/img5.svg";
+import people6 from "../../../../public/marquee/icons/people/img6.svg";
+import people7 from "../../../../public/marquee/icons/people/img7.svg";
 import bigLogo from "../../../../public/icons/bigLogo.svg";
-import Mission from "@/components/mission/Mission";
-import Talent from "@/components/forTalent/Talent";
+
+
+const Process = lazy(() => import("@/components/process/process/Process"));
+const Build = lazy(() => import("@/components/build/Build"));
+const Mission = lazy(() => import("@/components/mission/Mission"));
+const ForHero = lazy(() => import("@/components/forHero/new/ForHero"));
+const CardMarquee = lazy(() =>
+  import("@/components/marquee/cards/CardMarquee")
+);
+const Earth = lazy(() => import("@/components/home/Earth/Earth"));
 
 export const metadata = {
   title: "YLLAAA – For Managers",
@@ -59,7 +55,44 @@ export const metadata = {
 async function forManagers() {
   const tp = getTranslations("proccess");
   const tb = getTranslations("manager");
-
+  const tt = getTranslations("forHero");
+  const people = [
+    {
+      name: "Ahmed Abdelmohsen",
+      role: "Founder & CEO",
+      img: people1,
+    },
+    {
+      name: "Ahmed Abdelmohsen",
+      role: "Founder & CEO",
+      img: people2,
+    },
+    {
+      name: "Ahmed Abdelmohsen",
+      role: "Founder & CEO",
+      img: people3,
+    },
+    {
+      name: "Ahmed Abdelmohsen",
+      role: "Founder & CEO",
+      img: people4,
+    },
+    {
+      name: "Ahmed Abdelmohsen",
+      role: "Founder & CEO",
+      img: people5,
+    },
+    {
+      name: "Ahmed Abdelmohsen",
+      role: "Founder & CEO",
+      img: people6,
+    },
+    {
+      name: "Ahmed Abdelmohsen",
+      role: "Founder & CEO",
+      img: people7,
+    },
+  ];
   return (
     <>
       <Head>
@@ -137,48 +170,22 @@ async function forManagers() {
         {/* Google (Search Engines)
          */}
 
-        <meta name="title" content="Connect European Clients with Egyptian Talent" />
+        <meta
+          name="title"
+          content="Connect European Clients with Egyptian Talent"
+        />
         <meta
           name="description"
           content="Play a key role in linking startups with talented professionals. Connect European clients with skilled Egyptian freelancers via YLLAAA. Our platform helps you achieve project goals, earn in hard currencies, and promote cultural exchange."
         />
       </Head>
+      <Suspense fallback={<div>Loading...</div>}>
       <section style={{ overflowX: "hidden" }}>
         <div className={styles.heroContainer}>
-          <ForHero
-            img1={people1}
-            img2={people2}
-            img3={people3}
-            img4={people4}
-            img5={people5}
-            img6={people6}
-            img7={people7}
-            img8={people8}
-            header={(await tb)("sectionLable")}
-            subHeader={(await tb)("subHeader")}
-            specialSubHeader={(await tb)("specialSubHeader")}
-            paragraph={(await tb)("paragraph")}
-            button={(await tb)("button")}
-          />
+          <ForHero title={(await tt)("manager")} people={people} />
         </div>
-        <div className={styles.marqueeContainer}>
-          <CardMarquee
-            card1Header={(await tb)("card1Header")}
-            card1SubHeader={(await tb)("card1SubHeader")}
-            card2Header={(await tb)("card2Header")}
-            card2SubHeader={(await tb)("card2SubHeader")}
-            card3Header={(await tb)("card3Header")}
-            card3SubHeader={(await tb)("card3SubHeader")}
-          />
-        </div>
-        <div className={styles.missionContainer}>
-          <Mission
-            row1={(await tb)("row1")}
-            row2={(await tb)("row2")}
-            btnLable={(await tb)("btnLable")}
-            logo={bigLogo}
-          />
-        </div>
+        
+        
         <div className={styles.processContainer}>
           <Process
             sectionLable={(await tp)("sectionLable")}
@@ -199,11 +206,32 @@ async function forManagers() {
             card4Description={(await tp)("paragraph4")}
           />
         </div>
-
+        <div className={styles.missionContainer}>
+          <Mission
+            row1={(await tb)("row1")}
+            row2={(await tb)("row2")}
+            btnLable={(await tb)("btnLable")}
+            logo={bigLogo}
+          />
+        </div>
         <div className={styles.forClientsContainer}>
-          <Talent />
+          <Build />
+        </div>
+        <div className={styles.marqueeContainer}>
+        <CardMarquee
+            card1Header={(await tb)("card1Header")}
+            card1SubHeader={(await tb)("card1SubHeader")}
+            card2Header={(await tb)("card2Header")}
+            card2SubHeader={(await tb)("card2SubHeader")}
+            card3Header={(await tb)("card3Header")}
+            card3SubHeader={(await tb)("card3SubHeader")}
+          />
+        </div>
+        <div className={styles.forClientsContainer}>
+          <Earth />
         </div>
       </section>
+      </Suspense>
     </>
   );
 }

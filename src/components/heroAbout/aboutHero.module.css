@@ -2,7 +2,6 @@
   position: relative;
   height: fit-content;
   min-height: 876px;
-  background: var(--Indigo-900);
   z-index: 1;
 }
 .heroContainer .heroImg1 {
@@ -43,7 +42,7 @@
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(56, 31, 102, 0.4);
+  /* background: rgba(56, 31, 102, 0.4); */
   z-index: 3;
 }
 .heroContent {
@@ -90,7 +89,7 @@
   margin-bottom: 18px;
 }
 .heroContent h2 span {
-  color: var(--neutral-12);
+  color: #8548F4;
 }
 .heroContent p {
   width: 75%;

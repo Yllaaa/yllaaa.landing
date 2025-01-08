@@ -1,3 +1,4 @@
+@import "aos/dist/aos.css";
 :root {
   /* Indigo */
   --Indigo-50: #f3edfe;
@@ -57,6 +58,7 @@
 html,
 body {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 body {
   overflow-x: hidden;

@@ -1,0 +1,5 @@
+.cardMarquee{
+    min-height: fit-content;
+    height: fit-content;
+    overflow-y: hidden;
+}
