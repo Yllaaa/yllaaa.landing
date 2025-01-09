@@ -111,6 +111,7 @@ function Team() {
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
     initial: 0,
     loop: true,
+    
 
     breakpoints: {
       "(min-width: 430px)": {
@@ -126,9 +127,10 @@ function Team() {
       },
       "(min-width: 1025px)": {
         slides: {
-          perView: 3,
-          spacing: 21,
+          perView: 3.07,
+          spacing: 25,
         },
+        
       },
     },
     slideChanged(slider) {
@@ -152,57 +154,59 @@ function Team() {
           </div>
         </div>
         <div className={`${styles.navigation_wrapper}`}>
-          <div ref={sliderRef} className={`${styles.keenSlider} keen-slider`}>
-            {members.map((member, index) => (
-              <div
-                key={index}
-                style={{ width: "100%", height: "100%" }}
-                className={`keen-slider__slide ${styles.numberSlide}`}
-              >
+          <div  ref={sliderRef} className={`${styles.keenSlider} keen-slider`}>
+            
+              {members.map((member, index) => (
                 <div
-                  // style={{ width: "100%", height: "100%" }}
-                  style={{ minHeight: "524px" }}
+                  key={index}
+                  style={{ width: "100%", height: "100%" }}
+                  className={`keen-slider__slide ${styles.numberSlide}`}
                 >
-                  {/* image */}
-                  <div className={styles.image}>
-                    <div
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        margin: "auto",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                      }}
-                    >
-                      <Image
-                        src={member.image}
-                        alt="image"
-                        width={1000}
-                        height={1000}
-                      />
+                  <div
+                    // style={{ width: "100%", height: "100%" }}
+                    style={{ minHeight: "524px", padding: "20px" }}
+                  >
+                    {/* image */}
+                    <div className={styles.image}>
+                      <div
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                          margin: "auto",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                        }}
+                      >
+                        <Image
+                          src={member.image}
+                          alt="image"
+                          width={1000}
+                          height={1000}
+                        />
+                      </div>
                     </div>
-                  </div>
-                  {/* top content */}
-                  <div className={styles.topContent}>
-                    <div className={styles.position}>
-                      <p>{member.position}</p>
+                    {/* top content */}
+                    <div className={styles.topContent}>
+                      <div className={styles.position}>
+                        <p>{member.position}</p>
+                      </div>
+                      <div className={styles.linkedin}>
+                        <Link href={member.linkedin}>
+                          <Image src={linkedInIcon} alt="linkedin" />
+                        </Link>
+                      </div>
                     </div>
-                    <div className={styles.linkedin}>
-                      <Link href={member.linkedin}>
-                        <Image src={linkedInIcon} alt="linkedin" />
-                      </Link>
+                    {/* bottom content */}
+                    <div className={styles.bottomContent}>
+                      <h3>{member.name}</h3>
+                      <h3>{member.name2}</h3>
+                      <p>{member.breif}</p>
                     </div>
-                  </div>
-                  {/* bottom content */}
-                  <div className={styles.bottomContent}>
-                    <h3>{member.name}</h3>
-                    <h3>{member.name2}</h3>
-                    <p>{member.breif}</p>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            
           </div>
         </div>
         {loaded && instanceRef.current && (

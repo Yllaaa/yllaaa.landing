@@ -76,7 +76,7 @@
     -ms-transform: scale(5);
     -o-transform: scale(5);
   }
-  50% {
+  80% {
     z-index: 5;
   }
   100% {
@@ -119,8 +119,8 @@
   justify-content: center;
   align-items: center;
   opacity: 1;
-  animation: clouds-text 3.5s linear 1;
-  -webkit-animation: clouds-text 3.5s linear 1;
+  animation: clouds-text 5s linear 1;
+  -webkit-animation: clouds-text 5s linear 1;
 }
 .textSection h6 {
   font-family: var(--monta);
@@ -128,7 +128,7 @@
   font-weight: 500;
   line-height: 32px;
   text-align: center;
-  color: #8548F4;
+  color: #8548f4;
 }
 .textSection h4 {
   font-family: var(--monta);
@@ -137,7 +137,7 @@
   line-height: 60px;
   text-align: center;
   margin-bottom: 25px;
-  color: #8548F4;
+  color: #8548f4;
 }
 .textSection p {
   width: 100%;
@@ -154,6 +154,9 @@
 @keyframes clouds-text {
   0% {
     opacity: 0;
+  }
+  50% {
+    opacity: 0.3;
   }
   100% {
     opacity: 1;

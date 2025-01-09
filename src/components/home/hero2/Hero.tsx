@@ -7,9 +7,12 @@ import playStore from "../../../../public/Hero/playStoreBtn.svg";
 import appStore from "../../../../public/Hero/appStoreBtn.svg";
 import Image from "next/image";
 import { AOSInit } from "@/Utils/aos/aos";
-import combined from "../../../../public/Hero/combinedUsers.svg";
+// import combined from "../../../../public/Hero/combinedUsers.svg";
 import "aos/dist/aos.css";
 import Link from "next/link";
+import people1 from "../../../../public/marquee/icons/people/img1.svg";
+import people2 from "../../../../public/marquee/icons/people/img2.svg";
+import people3 from "../../../../public/marquee/icons/people/img3.svg";
 
 function Hero() {
   useEffect(() => {
@@ -57,7 +60,29 @@ function Hero() {
             </p>
           </div>
           <div className={styles.combined}>
-            <Image src={combined} alt="combined" />
+            <div className={styles.combinedTop}>
+              <div className={styles.combinedUsers}>
+                <div className={styles.combinedUser1}>
+                  <Image src={people1} alt="people1" />
+                </div>
+                <div className={styles.combinedUser1}>
+                  <Image src={people2} alt="people1" />
+                </div>
+                <div className={styles.combinedUser1}>
+                  <Image src={people3} alt="people1" />
+                </div>
+              </div>
+              <div className={styles.combinedText}>
+                <p>+10K</p>
+              </div>
+            </div>
+            <div className={styles.combinedBottom}>
+              <div className={styles.combinedDot}></div>
+              <div className={styles.combinedText}>
+                <p>Your Next Freelancer is Here</p>
+              </div>
+            </div>
+            {/* <Image src={combined} alt="combined" /> */}
           </div>
         </div>
       </div>

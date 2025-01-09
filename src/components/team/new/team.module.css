@@ -7,19 +7,33 @@
   max-width: 1240px;
   padding: 0px 100px;
 }
+
+.navigation_wrapper {
+  position: relative;
+  min-height: 524px;
+}
+
 .keenSlider {
   display: flex;
   width: 100%;
   height: 100%;
-  min-height: 524px;
+  min-height: 624px;
   margin: auto;
   align-self: center;
+  padding: 0px 12px;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
 }
 
 .numberSlide {
+  padding: 20px 0px;
   width: 100%;
-  height: 100%;
-  min-height: 524px;
+  height: 524px;
+  margin: auto;
   position: relative;
   border-radius: 48.28px;
   -webkit-border-radius: 48.28px;
@@ -51,7 +65,6 @@
   position: absolute;
   height: 100%;
   width: 100%;
-  
   top: 0;
   left: 0;
   background: linear-gradient(
@@ -68,7 +81,6 @@
 }
 .numberSlide .image img {
   width: 100%;
-  /* max-width: 371px; */
   align-self: center;
   margin: auto;
   height: 100%;
@@ -82,15 +94,14 @@
 .numberSlide .topContent {
   z-index: 2;
   display: flex;
-
   align-items: center;
   justify-content: space-between;
   padding: 22px 21px;
-  transform: translateY(-100%);
-  -webkit-transform: translateY(-100%);
-  -moz-transform: translateY(-100%);
-  -ms-transform: translateY(-100%);
-  -o-transform: translateY(-100%);
+  transform: translateY(-120%);
+  -webkit-transform: translateY(-120%);
+  -moz-transform: translateY(-120%);
+  -ms-transform: translateY(-120%);
+  -o-transform: translateY(-120%);
   transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
@@ -121,12 +132,20 @@
   text-align: center;
   color: var(--neutral-1);
 }
+.numberSlide:hover {
+  box-shadow: 5px 5px 15px 0px #ca03ed, 0px 0px 15px 5px #df00ff;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
 .numberSlide:hover .topContent {
-  transform: translateY(0%);
-  -webkit-transform: translateY(0%);
-  -moz-transform: translateY(0%);
-  -ms-transform: translateY(0%);
-  -o-transform: translateY(0%);
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
@@ -157,12 +176,6 @@
   letter-spacing: -0.4825126528739929px;
   text-align: left;
   color: #ba94ff;
-}
-
-.navigation_wrapper {
-  position: relative;
-  /* padding: 0px 100px; */
-  min-height: 524px;
 }
 
 .dots {
@@ -295,6 +308,17 @@
   .numberSlide .image img {
     max-width: 413px;
   }
+  .keenSlider {
+    padding: 0px 0px;
+  }
+  .numberSlide:hover {
+    box-shadow: 0px 0px 0px 0px #ca03ed, 0px 0px 0px 0px #df00ff;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+  }
 }
 @media screen and (max-width: 432px) {
   .teamHeaderContent {
@@ -310,5 +334,10 @@
   .teamHeaderContentBtn {
     width: 157px;
     height: 60px;
+  }
+  .navigation_wrapper {
+    position: relative;
+    padding: 0px 10px;
+    min-height: 524px;
   }
 }

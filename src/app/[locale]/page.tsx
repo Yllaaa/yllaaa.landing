@@ -10,7 +10,7 @@ const Hero = lazy(() => import("@/components/home/hero2/Hero"));
 const Earth = lazy(() => import("@/components/home/Earth/Earth"));
 const Barriers = lazy(() => import("@/components/barriers/Barriers"));
 const ForClients = lazy(() => import("@/components/forClients/ForClients"));
-
+const Team = lazy(() => import("@/components/team/new/Team"));
 export const metadata = {
   title: "YLLAAA",
   description: "Start your startup now",
@@ -152,6 +152,9 @@ async function homePage() {
 
           <div className={styles.forTalentContainer}>
             <Cost />
+          </div>
+          <div className={styles.forTalentContainer}>
+            <Team />
           </div>
         </section>
       </Suspense>
