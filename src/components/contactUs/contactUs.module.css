@@ -37,6 +37,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  margin: 0 auto;
   align-self: center;
 }
 .form .name {
@@ -51,27 +52,29 @@
 }
 .form input {
   border: none;
-  border: 1px solid #6a2ec7;
+  height: 54px;
+  border: 1px solid #8b5cf6;
   background: transparent;
-  color: #6a2ec7;
-  padding: 15px 10px;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  color: #8b5cf6;
+  padding: 8px 24px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
 }
 .form textarea {
   border: none;
-  border: 1px solid #6a2ec7;
+  border: 1px solid #8b5cf6;
   background: transparent;
   resize: none;
-  color: #6a2ec7;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  color: #8b5cf6;
+  padding: 8px 24px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
 }
 .form label::selection {
   color: var(--Indigo-300);
@@ -109,12 +112,14 @@
 }
 @media screen and (max-width: 768px) {
   .form .name {
-    display: block;
-    /* align-items: center;
-    justify-content: space-between; */
+    flex-direction: column;
+    gap: 20px;
+    margin: 0;
+    width: 100%;
+    align-items: normal;
   }
   .form .name .feild {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
   }
   .container {
     width: 100%;

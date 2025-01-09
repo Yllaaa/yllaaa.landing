@@ -67,6 +67,32 @@
   min-width: 535px;
   height: 100%;
   min-height: 376px;
+  animation: pyramids 4s infinite;
+  -webkit-animation: pyramids 4s infinite;
+}
+@keyframes pyramids {
+  0% {
+    transform: translate(0px, 0px);
+    -webkit-transform: translate(0px, 0px);
+    -moz-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    -o-transform: translate(0px, 0px);
+}
+  50% {
+    transform: translate(0px, -10px);
+    -webkit-transform: translate(0px, -10px);
+    -moz-transform: translate(0px, -10px);
+    -ms-transform: translate(0px, -10px);
+    -o-transform: translate(0px, -10px);
+}
+  100% {
+    transform: translate(0px, 0px);
+    -webkit-transform: translate(0px, 0px);
+    -moz-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    -o-transform: translate(0px, 0px);
+}
+  
 }
 .contactUs .pyramids img {
   
