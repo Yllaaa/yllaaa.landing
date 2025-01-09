@@ -309,6 +309,9 @@
     -ms-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
   }
+  .numberSlide .bottomContent {
+    padding: 0px 10px 0px 20px;
+  }
 }
 @media screen and (max-width: 432px) {
   .teamHeaderContent {
