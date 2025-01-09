@@ -300,7 +300,7 @@ function Navbar() {
                   <Link
                     href={`/${locale}/contact`}
                     style={
-                      path === `/${locale}/for_managers`
+                      path === `/${locale}/contact`
                         ? { color: "var(--neutral-1)" }
                         : { color: "var(--Indigo-300)" }
                     }

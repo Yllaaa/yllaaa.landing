@@ -1,12 +1,7 @@
 // "use client";
 import React from "react";
 import styles from "./heroClouds.module.css";
-// import pyramids from "../../../public/Hero/about/pyramids.jpeg";
-// import clouds from "../../../public/Hero/about/Clouds.png";
-// import cloud2 from "../../../public/Hero/about/clouds01.png";
-// import cloud3 from "../../../public/Hero/about/clouds02.png";
 import Image from "next/image";
-// import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 async function HeroClouds() {
   const t = getTranslations("cloudHero");
@@ -20,6 +15,8 @@ async function HeroClouds() {
             alt="clouds"
             width={1000}
             height={1000}
+            loading="lazy"
+            decoding="async"
           />
           <Image
             className={styles.cloud2}
@@ -27,6 +24,8 @@ async function HeroClouds() {
             alt="clouds"
             width={1000}
             height={1000}
+            loading="lazy"
+            decoding="async"
           />
           <Image
             className={styles.cloud3}
@@ -34,6 +33,8 @@ async function HeroClouds() {
             alt="clouds"
             width={1000}
             height={1000}
+            loading="lazy"
+            decoding="async"
           />
         </div>
         <div className={styles.pyramidsSection}>
@@ -42,6 +43,8 @@ async function HeroClouds() {
             alt="pyramids"
             width={1000}
             height={1000}
+            loading="lazy"
+            decoding="async"
           />
         </div>
         <div className={styles.textSection}>

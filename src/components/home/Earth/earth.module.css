@@ -61,6 +61,7 @@
   line-height: 27.12px;
   text-align: left;
   margin-bottom: 13.2px;
+  color: var(--Indigo-500);
 }
 .content h3 {
   font-family: var(--monta);
@@ -73,7 +74,7 @@
   margin-bottom: 31.1px;
 }
 .content h3 span {
-  color: var(--neutral-13);
+  color: var(--Indigo-500);
 }
 .content p {
   max-width: 650px;
@@ -151,7 +152,6 @@
   margin: auto;
   display: flex;
   justify-content: flex-end;
-  justify-content: center;
   align-items: center;
   margin: 0;
 }
@@ -241,6 +241,7 @@
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 7.5px;
+    color: var(--Purple-800);
   }
   .content h3 {
     font-size: 34px;
@@ -249,7 +250,7 @@
     margin-bottom: 15.05px;
   }
   .content h3 span {
-    color: var(--neutral-13);
+    color: var(--Purple-800);
   }
   .content p {
     max-width: 80%;

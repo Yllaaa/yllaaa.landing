@@ -11,7 +11,7 @@
 .cloudsSection {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,10 +76,9 @@
     -ms-transform: scale(5);
     -o-transform: scale(5);
   }
-  80% {
-    z-index: 5;
-  }
+
   100% {
+    z-index: 5;
     transform: scale(1) translateY(-40%);
     -webkit-transform: scale(1) translateY(-40%);
     -moz-transform: scale(1) translateY(-40%);
@@ -155,10 +154,71 @@
   0% {
     opacity: 0;
   }
-  50% {
-    opacity: 0.3;
+  70% {
+    opacity: 0.6;
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    height: 868px;
+  }
+  .cloudsSection {
+    width: 100%;
+    height: 70%;
+    transform: scale(1) translateY(-45%);
+    -webkit-transform: scale(1) translateY(-45%);
+    -moz-transform: scale(1) translateY(-45%);
+    -ms-transform: scale(1) translateY(-45%);
+    -o-transform: scale(1) translateY(-45%);
+  }
+  @keyframes clouds {
+    0% {
+      z-index: 10;
+      transform: scale(5);
+      -webkit-transform: scale(5);
+      -moz-transform: scale(5);
+      -ms-transform: scale(5);
+      -o-transform: scale(5);
+    }
+
+    100% {
+      z-index: 5;
+      transform: scale(1) translateY(-45%);
+      -webkit-transform: scale(1) translateY(-45%);
+      -moz-transform: scale(1) translateY(-45%);
+      -ms-transform: scale(1) translateY(-45%);
+      -o-transform: scale(1) translateY(-45%);
+    }
+  }
+  .textSection {
+    bottom: auto;
+    top: 20%;
+    width: 93%;
+    z-index: 6;
+    animation: clouds-text 5s linear 1;
+    -webkit-animation: clouds-text 5s linear 1;
+  }
+  .textSection h6 {
+    font-size: 16px;
+
+    line-height: 20px;
+    margin-bottom: 10px;
+  }
+  .textSection h4 {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 40px;
+    margin-bottom: 12px;
+  }
+  .textSection p {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #12071c;
   }
 }

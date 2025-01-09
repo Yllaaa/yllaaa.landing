@@ -113,6 +113,9 @@
     /* align-items: center;
     justify-content: space-between; */
   }
+  .form .name .feild {
+    margin-bottom: 20px;
+  }
   .container {
     width: 100%;
     padding: 10px;
