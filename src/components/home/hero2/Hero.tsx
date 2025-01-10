@@ -28,7 +28,14 @@ function Hero() {
       <div className={styles.container}>
         <div className={styles.elipse}></div>
         <Image src={curve} alt="curve" className={styles.curve} />
-        <Image src={mockup} alt="mockup" className={styles.mockup} />
+        <Image
+          src={mockup}
+          alt="mockup"
+          className={styles.mockup}
+          loading="lazy"
+          decoding="async"
+          onWaiting={(e) => e.preventDefault()}
+        />
         <div className={styles.circle}>
           {locale === "en" && (
             <div className={styles.circleText}>

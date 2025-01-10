@@ -4,6 +4,7 @@ import Head from "next/head";
 import Reason from "@/components/reason/Reason";
 import Build from "@/components/build/Build";
 import Cost from "@/components/cost/Cost";
+import Loading from "./loading";
 const About = lazy(() => import("@/components/aboutUs/About"));
 const World = lazy(() => import("@/components/world/World"));
 const Hero = lazy(() => import("@/components/home/hero2/Hero"));
@@ -123,11 +124,13 @@ async function homePage() {
           content="Empowering freelancers and startups to thrive with YLLAAA, your ultimate platform for growth, collaboration, and success."
         />
       </Head>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loading />}>
         <section className={styles.section}>
-          <div className={styles.heroContainer}>
-            <Hero />
-          </div>
+          <Suspense fallback={<Loading />}>
+            <div className={styles.heroContainer}>
+              <Hero />
+            </div>
+          </Suspense>
           <div className={styles.forClientsContainer}>
             <ForClients />
           </div>

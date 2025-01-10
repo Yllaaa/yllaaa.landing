@@ -1,10 +1,12 @@
-// "use client";
+"use client";
 import React from "react";
 import styles from "./heroClouds.module.css";
 import Image from "next/image";
-import { getTranslations } from "next-intl/server";
-async function HeroClouds() {
-  const t = getTranslations("cloudHero");
+// import { getTranslations } from "next-intl/server";
+import { useTranslations } from "next-intl";
+// async
+function HeroClouds() {
+  const t = useTranslations("cloudHero");
   return (
     <>
       <div className={styles.container}>
@@ -17,6 +19,7 @@ async function HeroClouds() {
             height={1000}
             loading="lazy"
             decoding="async"
+            onWaiting={(e) => e.preventDefault()}
           />
           <Image
             className={styles.cloud2}
@@ -26,6 +29,7 @@ async function HeroClouds() {
             height={1000}
             loading="lazy"
             decoding="async"
+            onWaiting={(e) => e.preventDefault()}
           />
           <Image
             className={styles.cloud3}
@@ -35,6 +39,7 @@ async function HeroClouds() {
             height={1000}
             loading="lazy"
             decoding="async"
+            onWaiting={(e) => e.preventDefault()}
           />
         </div>
         <div className={styles.pyramidsSection}>
@@ -48,9 +53,9 @@ async function HeroClouds() {
           />
         </div>
         <div className={styles.textSection}>
-          <h6>{(await t)("yllaaa")}</h6>
-          <h4>{(await t)("title")}</h4>
-          <p>{(await t)("description")}</p>
+          <h6>{t("yllaaa")}</h6>
+          <h4>{t("title")}</h4>
+          <p>{t("description")}</p>
         </div>
       </div>
     </>

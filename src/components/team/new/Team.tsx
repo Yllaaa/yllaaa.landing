@@ -134,7 +134,6 @@ function Team() {
     },
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel);
-      console.log(slider.track.details.rel);
     },
     created() {
       setLoaded(true);

@@ -2,6 +2,7 @@ import React, { Suspense, lazy } from "react";
 import styles from "./aboutPage.module.css";
 import { getTranslations } from "next-intl/server";
 import Head from "next/head";
+import Loading from "../loading";
 // import About from "@/components/aboutUs/About";
 
 const WordMarquee = lazy(() =>
@@ -127,7 +128,7 @@ async function aboutPage() {
         />
       </Head>
       <section>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<Loading />}>
           <div className={styles.heroContainer}>
             {/* <AboutHero /> */}
             <HeroClouds />
