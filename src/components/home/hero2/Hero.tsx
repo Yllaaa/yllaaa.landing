@@ -13,12 +13,16 @@ import Link from "next/link";
 import people1 from "../../../../public/marquee/icons/people/img1.svg";
 import people2 from "../../../../public/marquee/icons/people/img2.svg";
 import people3 from "../../../../public/marquee/icons/people/img3.svg";
+import { useTranslations } from "use-intl";
+import { useLocale } from "next-intl";
 
 function Hero() {
+  const t = useTranslations("homeHero");
   useEffect(() => {
     AOSInit(1500);
   }, []);
-  const text = "Scroll down . Scroll down . Scroll down . ";
+  const text = t("roundText");
+  const locale = useLocale();
   return (
     <>
       <div className={styles.container}>
@@ -26,22 +30,24 @@ function Hero() {
         <Image src={curve} alt="curve" className={styles.curve} />
         <Image src={mockup} alt="mockup" className={styles.mockup} />
         <div className={styles.circle}>
-          <div className={styles.circleText}>
-            {text.split("").map((char, index) => (
-              <span
-                key={index}
-                style={{ transform: `rotate(${index * 9}deg)` }}
-              >
-                {char}
-              </span>
-            ))}
-          </div>
+          {locale === "en" && (
+            <div className={styles.circleText}>
+              {text.split("").map((char, index) => (
+                <span
+                  key={index}
+                  style={{
+                    transform: `rotate(${(index * text.length) / 4.66667}deg)`,
+                  }}
+                >
+                  {char}
+                </span>
+              ))}
+            </div>
+          )}
         </div>
         <div className={styles.content}>
           <div className={styles.contentHeader}>
-            <h1 className={styles.title}>
-              Bring your ideas to life with success
-            </h1>
+            <h1 className={styles.title}>{t("title")}</h1>
           </div>
           <div className={styles.storeBtns}>
             <Link
@@ -55,9 +61,7 @@ function Hero() {
             </Link>
           </div>
           <div className={styles.contentDescription}>
-            <p className={styles.description}>
-              Turn your idea into successful product
-            </p>
+            <p className={styles.description}>{t("subTitle")}</p>
           </div>
           <div className={styles.combined}>
             <div className={styles.combinedTop}>
@@ -79,7 +83,7 @@ function Hero() {
             <div className={styles.combinedBottom}>
               <div className={styles.combinedDot}></div>
               <div className={styles.combinedText}>
-                <p>Your Next Freelancer is Here</p>
+                <p>{t("next")}</p>
               </div>
             </div>
             {/* <Image src={combined} alt="combined" /> */}

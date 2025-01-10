@@ -128,20 +128,21 @@ async function homePage() {
           <div className={styles.heroContainer}>
             <Hero />
           </div>
-          <div className={styles.reasonContainer}>
-            <Reason />
-          </div>
           <div className={styles.forClientsContainer}>
             <ForClients />
           </div>
+          <div className={styles.teamSection}>
+            <Build />
+          </div>
+
           <div className={styles.aboutUsContainer}>
             <About />
           </div>
           <div className={styles.forTalentContainer}>
             <Barriers />
           </div>
-          <div className={styles.teamSection}>
-            <Build />
+          <div className={styles.forTalentContainer}>
+            <Cost />
           </div>
           <div className={styles.earthContainer}>
             <Earth />
@@ -149,12 +150,11 @@ async function homePage() {
           <div className={styles.aboutUsContainer}>
             <World />
           </div>
-
-          <div className={styles.forTalentContainer}>
-            <Cost />
-          </div>
           <div className={styles.forTalentContainer}>
             <Team />
+          </div>
+          <div className={styles.reasonContainer}>
+            <Reason />
           </div>
         </section>
       </Suspense>
