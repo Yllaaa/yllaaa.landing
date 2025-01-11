@@ -7,7 +7,6 @@ import playStore from "../../../../public/Hero/playStoreBtn.svg";
 import appStore from "../../../../public/Hero/appStoreBtn.svg";
 import Image from "next/image";
 import { AOSInit } from "@/Utils/aos/aos";
-// import combined from "../../../../public/Hero/combinedUsers.svg";
 import "aos/dist/aos.css";
 import Link from "next/link";
 import people1 from "../../../../public/marquee/icons/people/img1.svg";
@@ -23,6 +22,17 @@ function Hero() {
   }, []);
   const text = t("roundText");
   const locale = useLocale();
+  const [counter, setCounter] = React.useState(0);
+
+  useEffect(() => {
+    if (counter < 10000) {
+      const timer = setInterval(() => {
+        setCounter((prevCount) => prevCount + 100);
+      }, 0.1);
+      return () => clearInterval(timer);
+    }
+  }, [counter]);
+
   return (
     <>
       <div className={styles.container}>
@@ -84,7 +94,7 @@ function Hero() {
                 </div>
               </div>
               <div className={styles.combinedText}>
-                <p>+10K</p>
+                <p> {counter < 10000 ? counter : "+10K"}</p>
               </div>
             </div>
             <div className={styles.combinedBottom}>

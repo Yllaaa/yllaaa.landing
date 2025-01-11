@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import React, { useEffect } from "react";
 import styles from "./barriers.module.css";
@@ -16,9 +17,60 @@ function Barriers() {
     AOSInit(2000);
   }, []);
   const t = useTranslations("barriers");
+
+  const sectionRef = React.useRef<HTMLElement | HTMLDivElement | any>(null);
+  const [position, setPosition] = React.useState(0);
+
+  // Function to update the position value
+  const updatePosition = () => {
+    if (sectionRef.current) {
+      const rect = sectionRef.current.getBoundingClientRect();
+      setPosition(rect.top);
+    }
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      requestAnimationFrame(updatePosition);
+    };
+
+    // Attach scroll event listener
+    window.addEventListener("scroll", handleScroll);
+
+    // Run once on mount
+    updatePosition();
+
+    // Cleanup event listener
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  // Dynamic style for animation
+  const translateY = Math.max(0, 100 - position / 5); // Adjust values to fit your animation
+
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 1024px)");
+
+    // Initial check
+    setIsMobile(mediaQuery.matches);
+
+    // Listener for changes
+    const handleMediaChange = (e: MediaQueryListEvent) => {
+      setIsMobile(e.matches);
+    };
+
+    mediaQuery.addEventListener("change", handleMediaChange);
+
+    // Cleanup listener
+    return () => mediaQuery.removeEventListener("change", handleMediaChange);
+  }, []);
+
   return (
     <>
-      <div className={styles.barriersContainer}>
+      <div ref={sectionRef} className={styles.barriersContainer}>
         <div data-aos="fade-up" className={styles.barriersHeader}>
           <p>{t("yllaaa")}</p>
           <h2>{t("header")}</h2>
@@ -50,9 +102,16 @@ function Barriers() {
               <p>{t("globalP")}</p>
             </div>
           </div>
-        </div>
-        <div className={styles.centerImage}>
-          <Image src={mobile} alt="mobile" />
+          <div
+            style={{
+              transform: !isMobile
+                ? ` translateX(-50%) rotate(-9.39deg) translateY(${translateY}px)`
+                : `translateX(-50%) rotate(-9.39deg)`,
+            }}
+            className={styles.centerImage}
+          >
+            <Image src={mobile} alt="mobile" />
+          </div>
         </div>
       </div>
     </>

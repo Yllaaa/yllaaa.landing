@@ -11,10 +11,16 @@ import "aos/dist/aos.css";
 import { AOSInit } from "@/Utils/aos/aos";
 
 function Reason() {
+ 
+
   const t = useTranslations("reason");
   useEffect(() => {
     AOSInit(2000);
   }, []);
+
+
+  
+
   return (
     <>
       <div className={styles.reasonContainer}>
