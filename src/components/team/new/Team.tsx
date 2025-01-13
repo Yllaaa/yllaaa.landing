@@ -145,7 +145,7 @@ function Team() {
   const startAutoSlide = () => {
     timer.current = setInterval(() => {
       instanceRef.current?.next();
-    }, 1500);
+    }, 2500);
   };
 
   const stopAutoSlide = () => {
