@@ -23,7 +23,8 @@ function Hero() {
   const text = t("roundText");
   const locale = useLocale();
   const [counter, setCounter] = React.useState(0);
-
+  const [mockupLoaded, setMockupLoaded] = React.useState(false);
+  const [curveLoaded, setCurveLoaded] = React.useState(false);
   useEffect(() => {
     if (counter < 10000) {
       const timer = setInterval(() => {
@@ -36,8 +37,13 @@ function Hero() {
   return (
     <>
       <div className={styles.container}>
-        <div className={styles.elipse}></div>
-        <Image src={curve} alt="curve" className={styles.curve} />
+        {mockupLoaded && curveLoaded && <div className={styles.elipse}></div>}
+        <Image
+          src={curve}
+          alt="curve"
+          className={styles.curve}
+          onLoadingComplete={() => setCurveLoaded(true)}
+        />
         <Image
           src={mockup}
           alt="mockup"
@@ -45,67 +51,78 @@ function Hero() {
           loading="lazy"
           decoding="async"
           onWaiting={(e) => e.preventDefault()}
+          onLoadingComplete={() => setMockupLoaded(true)}
         />
-        <div className={styles.circle}>
-          {locale === "en" && (
-            <div className={styles.circleText}>
-              {text.split("").map((char, index) => (
-                <span
-                  key={index}
-                  style={{
-                    transform: `rotate(${(index * text.length) / 4.66667}deg)`,
-                  }}
-                >
-                  {char}
-                </span>
-              ))}
+        {mockupLoaded && curveLoaded && (
+          <div className={styles.circle}>
+            {locale === "en" && (
+              <div className={styles.circleText}>
+                {text.split("").map((char, index) => (
+                  <span
+                    key={index}
+                    style={{
+                      transform: `rotate(${
+                        (index * text.length) / 4.66667
+                      }deg)`,
+                    }}
+                  >
+                    {char}
+                  </span>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
+        {mockupLoaded && curveLoaded && (
+          <div className={styles.content}>
+            <div className={styles.contentHeader}>
+              <h1 className={styles.title}>{t("title")}</h1>
             </div>
-          )}
-        </div>
-        <div className={styles.content}>
-          <div className={styles.contentHeader}>
-            <h1 className={styles.title}>{t("title")}</h1>
-          </div>
-          <div className={styles.storeBtns}>
-            <Link
-              href="https://play.google.com/store/apps/details?id=com.yllaaa"
-              target="_blank"
-            >
-              <Image src={playStore} alt="google" className={styles.storeBtn} />
-            </Link>
-            <Link href="https://www.apple.com/app-store/" target="_blank">
-              <Image src={appStore} alt="apple" className={styles.storeBtn} />
-            </Link>
-          </div>
-          <div className={styles.contentDescription}>
-            <p className={styles.description}>{t("subTitle")}</p>
-          </div>
-          <div className={styles.combined}>
-            <div className={styles.combinedTop}>
-              <div className={styles.combinedUsers}>
-                <div className={styles.combinedUser1}>
-                  <Image src={people1} alt="people1" />
+            <div className={styles.storeBtns}>
+              <Link
+                href="https://play.google.com/store/apps/details?id=com.yllaaa"
+                target="_blank"
+              >
+                <Image
+                  src={playStore}
+                  alt="google"
+                  className={styles.storeBtn}
+                />
+              </Link>
+              <Link href="https://www.apple.com/app-store/" target="_blank">
+                <Image src={appStore} alt="apple" className={styles.storeBtn} />
+              </Link>
+            </div>
+            <div className={styles.contentDescription}>
+              <p className={styles.description}>{t("subTitle")}</p>
+            </div>
+            <div className={styles.combined}>
+              <div className={styles.combinedTop}>
+                <div className={styles.combinedUsers}>
+                  <div className={styles.combinedUser1}>
+                    <Image src={people1} alt="people1" />
+                  </div>
+                  <div className={styles.combinedUser1}>
+                    <Image src={people2} alt="people1" />
+                  </div>
+                  <div className={styles.combinedUser1}>
+                    <Image src={people3} alt="people1" />
+                  </div>
                 </div>
-                <div className={styles.combinedUser1}>
-                  <Image src={people2} alt="people1" />
-                </div>
-                <div className={styles.combinedUser1}>
-                  <Image src={people3} alt="people1" />
+                <div className={styles.combinedText}>
+                  <p> {counter < 10000 ? counter : "+10K"}</p>
                 </div>
               </div>
-              <div className={styles.combinedText}>
-                <p> {counter < 10000 ? counter : "+10K"}</p>
+              <div className={styles.combinedBottom}>
+                <div className={styles.combinedDot}></div>
+                <div className={styles.combinedText}>
+                  <p>{t("next")}</p>
+                </div>
               </div>
+              {/* <Image src={combined} alt="combined" /> */}
             </div>
-            <div className={styles.combinedBottom}>
-              <div className={styles.combinedDot}></div>
-              <div className={styles.combinedText}>
-                <p>{t("next")}</p>
-              </div>
-            </div>
-            {/* <Image src={combined} alt="combined" /> */}
           </div>
-        </div>
+        )}
       </div>
     </>
   );
