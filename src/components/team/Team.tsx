@@ -49,7 +49,7 @@ function Team() {
   const team = [
     {
       name: "Mohamed Abdelkader",
-      position: "CEO and CO-Founder",
+      position: "🚀 CEO and CO-Founder",
       // breif:
       //   "10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy",
       image: mohamedAbdelkader,
@@ -57,7 +57,7 @@ function Team() {
     },
     {
       name: "Zeyad Saleh",
-      position: "CTO and Co-Founder",
+      position: "👔 CTO and Co-Founder",
       // breif: `2+ years of experience in writing and editing ${(
       //   <br />
       // )} Skilled in creating compelling, SEO-optimized content for various industries`,
@@ -66,7 +66,7 @@ function Team() {
     },
     {
       name: "Wiam Ouafi",
-      position: "Marketing Executive",
+      position: "💡 Marketing Executive",
       // breif:
       //   "3+ years of experience in paid search advertising. Skilled in campaign management and performance analysis",
       image: wiamOuafi,
@@ -74,7 +74,7 @@ function Team() {
     },
     {
       name: "Mohamed Ashraf",
-      position: "Content Creator",
+      position: "📝 Content Creator",
       // breif:
       //   "3+ years of experience in paid search advertising. Skilled in campaign management and performance analysis",
       image: MohAshraf,
@@ -82,7 +82,7 @@ function Team() {
     },
     {
       name: "Shaima Elfouly",
-      position: "Designer",
+      position: "🎨 Designer",
       // breif:
       //   "4+ years of experience in social media marketing. Proficient in creating and scheduling content, analyzing metrics, and building engagement",
       image: shaimaElfouly,
@@ -90,7 +90,7 @@ function Team() {
     },
     {
       name: "Yehia Abdelhamed",
-      position: "Designer",
+      position: "🎨 Designer",
       // breif: `2+ years of experience in writing and editing ${(
       //   <br />
       // )} Skilled in creating compelling, SEO-optimized content for various industries`,
@@ -99,7 +99,7 @@ function Team() {
     },
     {
       name: "Mohamed Yasser",
-      position: "Back-End Developer",
+      position: "💻 Back-End Developer",
       // breif:
       //   "7+ years of experience in project management and team leadership. Strong organizational and communication skills",
       image: mohamedYasser,
@@ -107,7 +107,7 @@ function Team() {
     },
     {
       name: "Youssef Ahmed",
-      position: "Flutter Developer",
+      position: "💻 Flutter Developer",
       // breif: `2+ years of experience in writing and editing ${(
       //   <br />
       // )} Skilled in creating compelling, SEO-optimized content for various industries`,
@@ -116,7 +116,7 @@ function Team() {
     },
     {
       name: "Mostafa Adel",
-      position: "Front-End Developer",
+      position: "💻 Front-End Developer",
       // breif:
       //   "5+ years of experience in SEO and content creation. Proficient in keyword research and on-page optimization",
       image: Moustafa,

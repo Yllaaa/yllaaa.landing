@@ -47,7 +47,8 @@ function Barriers() {
   }, []);
 
   // Dynamic style for animation
-  const translateY = Math.max(0, 100 - position / 5); // Adjust values to fit your animation
+  const translateY = Math.max(0, 100 - position / 10); // Adjust values to fit your animation
+  const translateYContent = Math.max(0, 100 - position / 5); // Adjust values to fit your animation
 
   const [isMobile, setIsMobile] = React.useState(false);
 
@@ -76,7 +77,12 @@ function Barriers() {
           <h2>{t("header")}</h2>
           <h2>{t("header2")}</h2>
         </div>
-        <div className={styles.barriersBody}>
+        <div
+          style={{
+            transform: !isMobile ? ` translateY(${translateYContent}px)` : ``,
+          }}
+          className={styles.barriersBody}
+        >
           <div data-aos="fade-right" className={styles.items1}>
             <div data-aos="fade-down-right" className={styles.item1}>
               <Image src={visa} alt="visa" />
@@ -102,6 +108,7 @@ function Barriers() {
               <p>{t("globalP")}</p>
             </div>
           </div>
+        </div>
           <div
             style={{
               transform: !isMobile
@@ -112,7 +119,6 @@ function Barriers() {
           >
             <Image src={mobile} alt="mobile" />
           </div>
-        </div>
       </div>
     </>
   );

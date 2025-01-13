@@ -27,7 +27,7 @@ function Team() {
     {
       name: t("mohamedAbdelkader1"),
       name2: t("mohamedAbdelkader2"),
-      position: t("positionMohamed"),
+      position: `🚀 ${t("positionMohamed")}`,
       breif: t("breifMohamed"),
       image: mohamedAbdelkader,
       linkedin: "https://www.linkedin.com/in/mohamed-abdelkader-353bb3159/",
@@ -35,7 +35,7 @@ function Team() {
     {
       name: t("zeyadSaleh1"),
       name2: t("zeyadSaleh2"),
-      position: t("positionZeyad"),
+      position: `👔 ${t("positionZeyad")}`,
       breif: t("breifZeyad"),
       image: ziadSaleh,
       linkedin: "https://www.linkedin.com/in/zeyad-saleh-612ab7124/",
@@ -43,7 +43,7 @@ function Team() {
     {
       name: t("vittorio1"),
       name2: t("vittorio2"),
-      position: t("positionVittorio"),
+      position: `📦 ${t("positionVittorio")}`,
       breif: t("breifVittorio"),
       image: Vittorio,
       linkedin: "#",
@@ -51,7 +51,7 @@ function Team() {
     {
       name: t("wiamMouafi1"),
       name2: t("wiamMouafi2"),
-      position: t("positionWiam"),
+      position: `💡 ${t("positionWiam")}`,
       breif: t("breifWiam"),
       image: wiamOuafi,
       linkedin: "https://www.linkedin.com/in/mohamed-abdelkader-353bb3159/",
@@ -59,7 +59,7 @@ function Team() {
     {
       name: t("mohamedAshraf1"),
       name2: t("mohamedAshraf2"),
-      position: t("positionMohamedAshraf"),
+      position: `📝 ${t("positionMohamedAshraf")}`,
       breif: t("breifMohamedAshraf"),
       image: MohAshraf,
       linkedin: "https://www.linkedin.com/in/mohamedashrafmarc/",
@@ -67,7 +67,7 @@ function Team() {
     {
       name: t("shaymaElFouly1"),
       name2: t("shaymaElFouly2"),
-      position: t("positionShayma"),
+      position: `🎨 ${t("positionShayma")}`,
       breif: t("breifShayma"),
       image: shaimaElfouly,
       linkedin: "https://www.linkedin.com/in/shaimaa-elfoly-94a822192/",
@@ -75,7 +75,7 @@ function Team() {
     {
       name: t("yehia1"),
       name2: t("yehia2"),
-      position: t("positionYehia"),
+      position: `🎨 ${t("positionYehia")}`,
       breif: t("breifYehia"),
       image: yehiaAbdelhamed,
       linkedin: "https://www.linkedin.com/in/yehia-abdelhamed-2768a528a/",
@@ -83,7 +83,7 @@ function Team() {
     {
       name: t("mohamedYasser1"),
       name2: t("mohamedYasser2"),
-      position: t("positionMohamedYasser"),
+      position: `💻 ${t("positionMohamedYasser")}`,
       breif: t("breifMohamedYasser"),
       image: mohamedYasser,
       linkedin: "https://www.linkedin.com/in/mohamedyasser14",
@@ -91,7 +91,7 @@ function Team() {
     {
       name: t("youssef1"),
       name2: t("youssef2"),
-      position: t("positionYoussef"),
+      position: `💻 ${t("positionYoussef")}`,
       breif: t("breifYoussef"),
       image: youssefAhmed,
       linkedin: "www.linkedin.com/in/youssef-ahmed-aa483b206",
@@ -100,7 +100,7 @@ function Team() {
       name: t("Moustafa1"),
       name2: t("Moustafa2"),
 
-      position: t("positionMoustafa"),
+      position: `💻 ${t("positionMoustafa")}`,
       breif: t("breifMoustafa"),
       image: Moustafa,
       linkedin: "https://www.linkedin.com/in/moustafa-adel-714616299/",

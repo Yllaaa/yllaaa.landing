@@ -87,11 +87,11 @@
   align-items: center;
   justify-content: space-between;
   padding: 22px 21px;
-  transform: translateY(-120%);
-  -webkit-transform: translateY(-120%);
-  -moz-transform: translateY(-120%);
-  -ms-transform: translateY(-120%);
-  -o-transform: translateY(-120%);
+  transform: translateY(-25%);
+  -webkit-transform: translateY(-25%);
+  -moz-transform: translateY(-25%);
+  -ms-transform: translateY(-25%);
+  -o-transform: translateY(-25%);
   transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
