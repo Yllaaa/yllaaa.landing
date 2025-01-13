@@ -4,7 +4,7 @@
     "header2": " EXPERT RESUTLS",
     "subHeader": "€10,000 Could Be Yours – Take Your Startup to the Next Level!",
     "title": "Bring your ideas to life with success",
-    "subTitle": "Turn your idea into successful product",
+    "subTitle": "Turn your idea into a successful product",
     "roundText": "Scroll down . Scroll down . Scroll down . ",
     "next":"Your Next Freelancer is Here"
   },
@@ -22,13 +22,13 @@
     "title": "Want to work beyond borders?",
     "header": "Why Freelancers Love",
     "header2": "YLLAAA?",
-    "description": "YLLAAA gives you the chance to work globally, collaborate with international startups, and earn in hard currency. Gain amazing experience creating top-tier MVPs. Grow your skills,widen your network and unleash new possibilities of your career within global market",
+    "description": "YLLAAA gives you the chance to work globally, collaborate with international startups, and earn in hard currency. Gain amazing experience creating top-tier MVPs. Grow your skills, widen your network and unleash new possibilities of your career within global market",
     "buttonText": "YLLAAA"
   },
   "reason": {
     "title": "Features",
     "header": "Top Reasons to Trust YLLAAA",
-    "description": "YLLAAA gives you the chance to work globally, collaborate with international startups, and earn in hard currency. Gain amazing experience creating top-tier MVPs. Grow your skills,widen your network and unleash new possibilities of your career within global market",
+    "description": "YLLAAA gives you the chance to work globally, collaborate with international startups, and earn in hard currency. Gain amazing experience creating top-tier MVPs. Grow your skills, widen your network and unleash new possibilities of your career within global market",
     "buttonText": "About us",
     "lableSheild": "Protection",
     "descriptionSheild": "We prioritize security and confidentiality.",
@@ -45,9 +45,9 @@
     "header2": "YLLAAA",
     "description": "At YLLAAA, we connect startups with the top 1% of talent in Egypt. We believe in helping startups succeed by finding them the right talent and resources. Unlike traditional freelancing, our platform goes beyond just offering the matching process; we have dedicated support through experienced account managers, seamless matching process and focused collaboration!",
     "buttonText": "About us",
-    "lableCard1": "MONTH",
+    "lableCard1": "MONTHS",
     "numberCard1": "+6",
-    "lableCard2": "CLIENT",
+    "lableCard2": "CLIENTS",
     "numberCard2": "+14",
     "lableCard3": "PROJECTS",
     "numberCard3": "+20"
@@ -55,7 +55,7 @@
   "cloudHero": {
     "yllaaa": "YLLAAA",
     "title": "From the Land of the Pyramids to the World!",
-    "description": "Visionaries who once built the pyramids are now revolutionizing startups worldwide! The top1% of Egyptian talent is now shaping the future with modern ideas, global impact, and world-class MVPs."
+    "description": "Visionaries who once built the pyramids are now revolutionizing startups worldwide! The top 1% of Egyptian talent is now shaping the future with modern ideas, global impact, and world-class MVPs."
   },
   "build": {
     "01": "01",
@@ -66,7 +66,7 @@
     "analyzeText": "Our system identifies the best freelance talent for your needs.",
     "03": "03",
     "yllaaa": "YLLAAA",
-    "yllaaaText": "Instantly connect with the top 1% Egyptian freelancers",
+    "yllaaaText": "Instantly connect with the top 1% Egyptian freelancers.",
     "04": "04",
     "approve": "Approve",
     "approveText": "Explore profiles, pricing, and choose your perfect match.",
@@ -77,7 +77,7 @@
   "world": {
     "yllaaa": "YLLAAA",
     "text": "From the Land of the Pyramids to the World!",
-    "paragraph": "Visionaries who once built the pyramids are now revolutionizing startups worldwide! The top1% of Egyptian talent is now shaping the future with modern ideas, global impact, and world-class MVPs."
+    "paragraph": "Visionaries who once built the pyramids are now revolutionizing startups worldwide! The top 1% of Egyptian talent is now shaping the future with modern ideas, global impact, and world-class MVPs."
   },
   "cost": {
     "title": "Cut Costs?",
@@ -92,11 +92,11 @@
     "sectionLable": "OUR PROCESS",
     "sectionTitle": "Our Process to Empower Your",
     "sectionTitleSpecialWord": "Vision",
-    "description": "Yalla embraces a dynamic and flexible process, prioritizing collaboration and tailored solutions for every client.",
+    "description": "YLLAAA embraces a dynamic and flexible process, prioritizing collaboration and tailored solutions for every client.",
     "title1": "Choose your business body",
     "paragraph1": "Choose an account manager who speaks your language and understands your business culture.",
     "title2": "Dive deep",
-    "paragraph2": "Grab a virtual or real coffe with your account manager, we listen, we strategize, and we craft a plan that ressonate with your vision",
+    "paragraph2": "Grab a virtual or real coffee with your account manager, we listen, we strategize, and we craft a plan that ressonate with your vision.",
     "title3": " AI-Powered Planning.",
     "paragraph3": "Ditch the guesswork. Our AI-powered tool presents a tailored, transparent plan with recommended budgets and timelines.",
     "title4": "World-Class Team",
@@ -105,7 +105,7 @@
   "clients": {
     "sectionLable": "For Startups",
     "sectionTitle": "Validate Your Idea with YLLAAA",
-    "description": "Building an MVP efficiently is the best way to accelerate Your Idea to Reality. Our app is designed to be the most affordable, rapid, and top-quality solution for MVP development in the market.",
+    "description": "Building an MVP efficiently is the best way to accelerate Your Idea into Reality. Our app is designed to be the most affordable, rapid, and top-quality solution for MVP development in the market.",
     "buttonText1": "Time Efficiency",
     "buttonSubtext1": "Start Hiring",
     "buttonText2": "Cost-Effectiveness",
@@ -231,7 +231,7 @@
     "card1Header": "Digital Marketing Experts",
     "card1SubHeader": "Leverage data-driven strategies and targeted campaigns to maximize project visibility and user engagement",
     "card2Header": "Product Design",
-    "card2SubHeader": "ransform concepts into user-centric designs that elevate product appeal and usability.",
+    "card2SubHeader": "Transform concepts into user-centric designs that elevate product appeal and usability.",
     "card3Header": "Software Development",
     "card3SubHeader": "Deliver scalable, reliable software solutions tailored to project requirements and user needs",
 
@@ -240,7 +240,7 @@
     "btnLable": "Start now"
   },
   "forHero": {
-    "buisiness": "For Business",
+    "buisiness": "For Businesses",
     "freelancer": "For Freelancers",
     "manager": "For Managers",
     "header": "It is time to make the",
@@ -256,9 +256,9 @@
     "rewardH": "Rewarding Opportunities",
     "rewardP": "Earn more with premium projects designed to help you grow and achieve your goals.",
     "diveH": "Dive Deep",
-    "diveP": "Grab . virtual or real coffee with your with your account manager we listen, we stratigized and we craft a planthat resonate",
+    "diveP": "Grab. virtual or real coffee with your account manager, we listen, we stratigize and we craft a plan that resonate with your business need.",
     "globalH": "Global Collaboration Made Easy",
-    "globalP": "Work with clients and teams worldwide, fostering growth and impactful results."
+    "globalP": "Work with clients and teams worldwide, foster growth and make impactful results."
   },
   "headerFooter": {
     "home": "Home",

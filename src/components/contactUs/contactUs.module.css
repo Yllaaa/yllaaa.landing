@@ -99,9 +99,9 @@
   border: none;
   color: var(--neutral-1);
   font-family: var(--monta);
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
-  line-height: 27.6px;
+  line-height: 30px;
   cursor: pointer;
   margin-top: 24px;
   border-radius: 10px;
