@@ -290,7 +290,7 @@
   .earthContainerSection{
     min-width: 320px;
   }
-  .content a{
-    width: 100%;
-  }
+  /* .content a{ */
+    /* width: 100%; */
+  /* } */
 }
