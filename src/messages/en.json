@@ -322,7 +322,9 @@
     "manager": "For Managers",
     "header": "It is time to make the",
     "header2": "switch.",
-    "description": "Enhance your experience with a wide variety of add-ons and integrations. From essentials to powerful workflows."
+    "descriptionF": "Build the future, one MVP at a time. At YLLAAA, you'll connect with innovative startups and turn their dreams into reality while growing your own career.",
+    "descriptionB": "Turn your startup vision into a reality with YLLAAA. Get a high-quality MVP developed rapidly, validate your market, and attract investors.",
+    "descriptionM": "Be the bridge that turns startup dreams into reality. As an YLLAAA account manager, you'll empower innovators, guide projects, and drive success."
   },
   "barriers": {
     "yllaaa": "YLLAAA",
@@ -383,5 +385,13 @@
 
     "xavierarola": "XAVIER AROLA",
     "xavierarolaPosition": "ENTREPRENER"
+  },
+  "hiring":{
+    "title":"Benefits of hiring with",
+    "yllaaa":"YLLAAA",
+    "scale":"Scale with flexibility",
+    "safe":"Ultra Safe",
+    "fast":"Hire fast",
+    "prices":"Affordable prices"
   }
 }

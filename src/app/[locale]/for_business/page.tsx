@@ -183,7 +183,7 @@ async function forBusiness() {
       <Suspense fallback={<div>Loading...</div>}>
         <section style={{ overflowX: "hidden" }}>
           <div className={styles.heroContainer}>
-            <ForHero title={(await tt)("buisiness")} people={people} />
+            <ForHero title={(await tt)("buisiness")} desc={(await tt)("descriptionF")} people={people} />
           </div>
           <div className={styles.processContainer}>
             <Process

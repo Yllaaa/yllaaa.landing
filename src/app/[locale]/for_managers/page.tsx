@@ -182,7 +182,7 @@ async function forManagers() {
       <Suspense fallback={<div>Loading...</div>}>
       <section style={{ overflowX: "hidden" }}>
         <div className={styles.heroContainer}>
-          <ForHero title={(await tt)("manager")} people={people} />
+          <ForHero title={(await tt)("manager")} desc={(await tt)("descriptionM")} people={people} />
         </div>
         
         

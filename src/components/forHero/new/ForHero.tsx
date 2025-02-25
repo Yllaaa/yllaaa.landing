@@ -22,11 +22,13 @@ type Props = {
     role: string;
   }[];
   title: string;
+  desc: string;
 };
 
 function ForHero(props: Props) {
   const people = props.people;
   const title = props.title;
+  const desc = props.desc;
   const t = useTranslations("forHero");
   useEffect(() => {
     AOSInit(1500);
@@ -49,7 +51,7 @@ function ForHero(props: Props) {
             </span>{" "}
             {t("header2")}
           </h2>
-          <p data-aos="fade-up">{t("description")}</p>
+          <p data-aos="fade-up">{desc}</p>
         </div>
         <div className={styles.marqueeContainer}>
           <div className={styles.leftMarquee}>

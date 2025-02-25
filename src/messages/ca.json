@@ -322,7 +322,9 @@
     "manager": "Per a gestors",
     "header": "És hora de fer el",
     "header2": "canvi.",
-    "description": "Millora la teva experiència amb una àmplia varietat d'afegits i integracions. Des dels essencials fins a fluxos de treball potents."
+    "descriptionF": "Construeix el futur, un MVP a la vegada. A YLLAAA, et connectaràs amb startups innovadores i transformaràs els seus somnis en realitat mentre fas créixer la teva carrera.",
+    "descriptionB": "Converteix la teva visió de startup en realitat amb YLLAAA. Obtén un MVP d'alta qualitat desenvolupat ràpidament, valida el teu mercat i atrau inversors.",
+    "descriptionM": "Sigues el pont que converteix els somnis de les startups en realitat. Com a gestor de comptes de YLLAAA, empoderaràs els innovadors, guiaràs projectes i impulsaràs l'èxit."
   },
   "barriers": {
     "yllaaa": "YLLAAA",

@@ -322,7 +322,9 @@
     "manager": "Para gestores",
     "header": "Es hora de hacer el",
     "header2": "cambio.",
-    "description": "Mejora tu experiencia con una amplia variedad de complementos e integraciones. Desde lo esencial hasta flujos de trabajo potentes."
+    "descriptionF": "Construye el futuro, un MVP a la vez. En YLLAAA, te conectarás con startups innovadoras y convertirás sus sueños en realidad mientras haces crecer tu propia carrera.",
+    "descriptionB": "Convierte tu visión de startup en realidad con YLLAAA. Obtén un MVP de alta calidad desarrollado rápidamente, valida tu mercado y atrae inversores.",
+    "descriptionM": "Sé el puente que convierte los sueños de las startups en realidad. Como gerente de cuentas en YLLAAA, empoderarás a los innovadores, guiarás proyectos e impulsarás el éxito."
   },
   "barriers": {
     "yllaaa": "YLLAAA",
