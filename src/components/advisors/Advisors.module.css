@@ -1,0 +1,141 @@
+.container {
+  display: flex;
+  flex-direction: column;
+
+  height: fit-content;
+  min-height: 541px;
+  gap: 50px;
+  width: 86.1%;
+  margin: 0 auto;
+  position: relative;
+}
+.headerText {
+  margin-bottom: 50px;
+}
+.headerText h6 {
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 14.45px;
+  line-height: 18.54px;
+  letter-spacing: 0.31px;
+
+  margin-bottom: 16px;
+  color: var(--Indigo-700);
+}
+.headerText h3 {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 72px;
+  letter-spacing: 0%;
+  margin-bottom: 16px;
+  color: var(--Indigo-300);
+}
+.headerText p {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0%;
+  max-width: 40%;
+  margin-bottom: 40px;
+  color: var(--Indigo-300);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+  column-gap: 18px;
+}
+.card {
+  grid-column: span 4;
+  position: relative;
+  height: 441px;
+  max-width: 397px;
+  min-height: 310px;
+  margin-bottom: 20px;
+  justify-self: center;
+}
+.card .image {
+  position: relative;
+  width: 100%;
+  height: 441px;
+}
+.card .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+.card .text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(
+    0deg,
+    #19191b 27.08%,
+    rgba(25, 25, 27, 0.49) 72.4%,
+    rgba(25, 25, 27, 0) 100%
+  );
+  text-align: center;
+}
+.text h4 {
+  font-family: Inter;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0%;
+  text-align: center;
+  color: var(--Indigo-200);
+}
+.text h5 {
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 25px;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #eaebec;
+  margin-bottom: 16px;
+}
+@media screen and (max-width: 768px) {
+  .container {
+    gap: 25px;
+    width: 93%;
+  }
+  .headerText {
+    margin-bottom: 50px;
+  }
+  .headerText h6 {
+    font-size: 12px;
+    line-height: 14.54px;
+
+    margin-bottom: 8px;
+  }
+  .headerText h3 {
+    font-size: 30px;
+    line-height: 35.52px;
+    margin-bottom: 8px;
+  }
+  .headerText p {
+    font-size: 16px;
+    line-height: 24px;
+
+    max-width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .card {
+    grid-column: span 6;
+    max-width: 397px;
+    min-height: 310px;
+    margin-bottom: 20px;
+    justify-self: center;
+  }
+}

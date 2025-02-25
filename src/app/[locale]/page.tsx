@@ -5,6 +5,8 @@ import Reason from "@/components/reason/Reason";
 import Build from "@/components/build/Build";
 import Cost from "@/components/cost/Cost";
 import Loading from "./loading";
+import Partners from "@/components/partners/Partners";
+import Advisors from "@/components/advisors/Advisors";
 const About = lazy(() => import("@/components/aboutUs/About"));
 const World = lazy(() => import("@/components/world/World"));
 const Hero = lazy(() => import("@/components/home/hero2/Hero"));
@@ -158,6 +160,12 @@ async function homePage() {
           </div>
           <div className={styles.reasonContainer}>
             <Reason />
+          </div>
+          <div className={styles.reasonContainer}>
+            <Advisors />
+          </div>
+          <div className={styles.reasonContainer}>
+            <Partners />
           </div>
         </section>
       </Suspense>

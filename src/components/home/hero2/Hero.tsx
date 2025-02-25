@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import styles from "./hero.module.css";
 import mockup from "../../../../public/Hero/Mockup.png";
 import curve from "../../../../public/Hero/heroBg.svg";
-import playStore from "../../../../public/Hero/playStoreBtn.svg";
+// import playStore from "../../../../public/Hero/playStoreBtn.svg";
 import appStore from "../../../../public/Hero/appStoreBtn.svg";
 import Image from "next/image";
 import { AOSInit } from "@/Utils/aos/aos";
@@ -79,7 +79,7 @@ function Hero() {
               <h1 className={styles.title}>{t("title")}</h1>
             </div>
             <div className={styles.storeBtns}>
-              <Link
+              {/* <Link
                 href="https://play.google.com/store/apps/details?id=com.yllaaa"
                 target="_blank"
               >
@@ -88,7 +88,7 @@ function Hero() {
                   alt="google"
                   className={styles.storeBtn}
                 />
-              </Link>
+              </Link> */}
               <Link href="https://www.apple.com/app-store/" target="_blank">
                 <Image src={appStore} alt="apple" className={styles.storeBtn} />
               </Link>

@@ -24,7 +24,6 @@
     "header2": "YLLAAA?",
     "description": "YLLAAA te da la oportunidad de trabajar globalmente, colaborar con startups internacionales y ganar en moneda fuerte. Gana una experiencia increíble creando MVPs de primer nivel. Desarrolla tus habilidades, amplía tu red y desata nuevas posibilidades en tu carrera dentro del mercado global",
     "buttonText": "YLLAAA"
-    
   },
   "reason": {
     "title": "Características",
@@ -78,7 +77,8 @@
   "world": {
     "yllaaa": "YLLAAA",
     "text": "¡Desde La Tierra De Las Pirámides Al Mundo!",
-    "paragraph": "¡Los visionarios que una vez construyeron las pirámides ahora están revolucionando las startups de todo el mundo! El 1% superior del talento egipcio está dando forma al futuro con ideas modernas, impacto global y MVPs de clase mundial."
+    "paragraph": "¡Los visionarios que una vez construyeron las pirámides ahora están revolucionando las startups de todo el mundo! El 1% superior del talento egipcio está dando forma al futuro con ideas modernas, impacto global y MVPs de clase mundial.",
+    "powered": "Desarrollado por"
   },
   "cost": {
     "title": "¿Reducir Costos?",
@@ -275,5 +275,19 @@
     "message": "Deja un mensaje",
     "messageError": "El mensaje es obligatorio",
     "btn": "Enviar mensaje"
+  },
+  "advisor": {
+    "yllaaa": "YLLAAA",
+    "header": "Conoce a nuestros asesores",
+    "subheader": "Nuestro equipo de profesionales experimentados está dedicado a ayudarte a navegar tu camino con conocimientos, estrategias y apoyo personalizado.",
+
+    "mohamedelsonbaty": "Mohamed Elsonbaty",
+    "mohamedelsonbatyPosition": "FUNDADOR Y CEO",
+
+    "joseluis": "JOSE LUIS",
+    "joseluisPosition": "COFUNDADOR MODO SIGILOSO",
+
+    "xavierarola": "XAVIER AROLA",
+    "xavierarolaPosition": "EMPRENDIMIENTO"
   }
 }

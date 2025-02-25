@@ -6,7 +6,7 @@
     "title": "Bring your ideas to life with success",
     "subTitle": "Turn your idea into a successful product",
     "roundText": "Scroll down . Scroll down . Scroll down . ",
-    "next":"Your Next Freelancer is Here"
+    "next": "Your Next Freelancer is Here"
   },
   "aboutUs": {
     "title": "About Us",
@@ -77,7 +77,8 @@
   "world": {
     "yllaaa": "YLLAAA",
     "text": "From the Land of the Pyramids to the World!",
-    "paragraph": "Visionaries who once built the pyramids are now revolutionizing startups worldwide! The top 1% of Egyptian talent is now shaping the future with modern ideas, global impact, and world-class MVPs."
+    "paragraph": "Visionaries who once built the pyramids are now revolutionizing startups worldwide! The top 1% of Egyptian talent is now shaping the future with modern ideas, global impact, and world-class MVPs.",
+    "powered": "Powered by"
   },
   "cost": {
     "title": "Cut Costs?",
@@ -290,5 +291,21 @@
     "message": "Leave A Message",
     "messageError": "Message is required",
     "btn": "Send A Message"
+  },
+  "advisor": {
+    "yllaaa": "YLLAAA",
+    "header": "Meet our Advisors",
+    "subheader": "Our team of experienced professionals is dedicated to helping you navigate your journey with insights, strategies, and personalized support.",
+
+
+    "mohamedelsonbaty":"Mohamed Elsonbaty",
+    "mohamedelsonbatyPosition":"FOUNDER&CEO",
+
+    "joseluis":"JOSE LUIS",
+    "joseluisPosition":"CO-FOUNDER STEALTH MODE",
+
+    "xavierarola":"XAVIER AROLA",
+    "xavierarolaPosition":"ENTREPRENERUSHIP"
+
   }
 }

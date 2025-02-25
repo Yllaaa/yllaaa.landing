@@ -77,7 +77,8 @@
   "world": {
     "yllaaa": "YLLAAA",
     "text": "Des De La Terra De Les Piràmides Fins Al Món!",
-    "paragraph": "Els visionaris que un cop van construir les piràmides ara estan revolucionant les startups de tot el món! El millor 1% del talent egipci ara està modelant el futur amb idees modernes, impacte global i MVPs de classe mundial."
+    "paragraph": "Els visionaris que un cop van construir les piràmides ara estan revolucionant les startups de tot el món! El millor 1% del talent egipci ara està modelant el futur amb idees modernes, impacte global i MVPs de classe mundial.",
+    "powered": "Impulsat per"
   },
   "cost": {
     "title": "Reduir Costos?",
@@ -274,5 +275,20 @@
     "message": "Deixa un missatge",
     "messageError": "El missatge és obligatori",
     "btn": "Enviar un missatge"
-  }
+  },
+  "advisor": {
+    "yllaaa": "YLLAAA",
+    "header": "Coneix els nostres assessors",
+    "subheader": "El nostre equip de professionals experimentats està dedicat a ajudar-te a navegar pel teu camí amb coneixements, estratègies i suport personalitzat.",
+
+    "mohamedelsonbaty": "Mohamed Elsonbaty",
+    "mohamedelsonbatyPosition": "FUNDADOR I CEO",
+
+    "joseluis": "JOSE LUIS",
+    "joseluisPosition": "COFUNDADOR EN MODE STEALTH",
+
+    "xavierarola": "XAVIER AROLA",
+    "xavierarolaPosition": "EMPRENEDORIA"
+}
+
 }

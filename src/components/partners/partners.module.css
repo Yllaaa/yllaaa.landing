@@ -1,0 +1,136 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  min-height: 541px;
+  gap: 122px;
+  background: #b38bfd;
+  z-index: 10;
+  position: relative;
+}
+.bg {
+  position: absolute;
+  top: -5%;
+  left: 0;
+  width: 100%;
+  height: 110%;
+  z-index: -5;
+  background: var(--Indigo-900);
+  transform: skewY(-2deg);
+  -webkit-transform: skewY(-2deg);
+  -moz-transform: skewY(-2deg);
+  -ms-transform: skewY(-2deg);
+  -o-transform: skewY(-2deg);
+}
+.text h6 {
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 14.45px;
+  line-height: 18.54px;
+  letter-spacing: 0.31px;
+  text-align: center;
+  color: var(--Indigo-700);
+}
+.text h3 {
+  text-transform: uppercase;
+  font-family: var(--monta);
+  font-weight: 700;
+  font-size: 36.62px;
+  line-height: 46.34px;
+  letter-spacing: 0.77px;
+  text-align: center;
+
+  color: #12071c;
+}
+.logosMarquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.marqueeContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: inline-block;
+  animation: marquee 30s linear infinite;
+  -webkit-animation: marquee 30s linear infinite;
+}
+
+/* Pause animation on hover */
+.logosMarquee:hover .marqueeContent {
+  animation-play-state: paused;
+}
+
+.logoItem {
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 50px;
+  text-align: center;
+}
+.logoItem img {
+  filter: brightness(0.2);
+  -webkit-filter: brightness(0.2);
+}
+.logoItem:hover img {
+  filter: brightness(1);
+  -webkit-filter: brightness(1);
+}
+.european {
+  width: 334px;
+  height: 98px;
+}
+
+.european img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.catalania {
+  width: 334px;
+  height: 82px;
+}
+.catalania img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gbsb {
+  width: 245px;
+  height: 107px;
+}
+.gbsb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.activa {
+  width: 289px;
+  height: 82px;
+}
+.activa img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

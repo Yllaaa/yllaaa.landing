@@ -16,13 +16,16 @@ import wiamOuafi from "../../../../public/team/new/wiamOuafi.png";
 import MohAshraf from "../../../../public/team/new/mohamedAshraf.png";
 import Vittorio from "../../../../public/team/new/vittorio.png";
 import linkedInIcon from "../../../../public/icons/linkedInTeam.svg";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import ButtonFlip from "@/components/aaabutton/ButtonFlip";
+import { useRouter } from "next/navigation";
 
 function Team() {
   const t = useTranslations("team");
+  const router = useRouter();
+  const locale = useLocale();
   const members = [
     {
       name: t("mohamedAbdelkader1"),
@@ -168,7 +171,10 @@ function Team() {
             <h2>{t("sectionTitle")}</h2>
             <p>{t("description")}</p>
           </div>
-          <div className={styles.teamHeaderContentBtn}>
+          <div
+            onClick={() => router.push(`/${locale}/about`)}
+            className={styles.teamHeaderContentBtn}
+          >
             <ButtonFlip lable={t("buttonText")} />
           </div>
         </div>

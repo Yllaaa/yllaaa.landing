@@ -5,7 +5,6 @@ import React from "react";
 
 import styles from "./iconMarquee.module.css";
 
-
 type Props = {
   img1?: string | any;
   img2?: string | any;
@@ -22,53 +21,29 @@ function IconMarquee(props: Props) {
   return (
     <>
       <div className={styles.iconMarquee}>
-        <div
-          className={`${styles.iconMarqueeItem} ${styles.iconMarqueeItem1}`}
-          // style={{ margin: "auto 40px" }}
-        >
+        <div className={`${styles.iconMarqueeItem} ${styles.iconMarqueeItem1}`}>
           <Image src={img1} alt="1" />
         </div>
-        <div
-          className={`${styles.iconMarqueeItem} ${styles.iconMarqueeItem2}`}
-          // style={{ margin: "auto 40px" }}
-        >
+        <div className={`${styles.iconMarqueeItem} ${styles.iconMarqueeItem2}`}>
           <Image src={img2} alt="1" />
         </div>
-        <div
-          className={`${styles.iconMarqueeItem} ${styles.iconMarqueeItem3}`}
-          // style={{ margin: "auto 40px" }}
-        >
+        <div className={`${styles.iconMarqueeItem} ${styles.iconMarqueeItem3}`}>
           <Image src={img3} alt="1" />
         </div>
-        <div
-          className={`${styles.iconMarqueeItem} ${styles.iconMarqueeItem4}`}
-          // style={{ margin: "auto 40px" }}
-        >
+        <div className={`${styles.iconMarqueeItem} ${styles.iconMarqueeItem4}`}>
           <Image src={img4} alt="1" />
         </div>
-        <div
-          className={`${styles.iconMarqueeItem} ${styles.iconMarqueeItem5}`}
-          // style={{ margin: "auto 40px" }}
-        >
+        <div className={`${styles.iconMarqueeItem} ${styles.iconMarqueeItem5}`}>
           <Image src={img5} alt="1" />
         </div>
-        <div
-          className={`${styles.iconMarqueeItem} ${styles.iconMarqueeItem6}`}
-          // style={{ margin: "auto 40px" }}
-        >
+        <div className={`${styles.iconMarqueeItem} ${styles.iconMarqueeItem6}`}>
           <Image src={img6} alt="1" />
         </div>
-        <div
-          className={`${styles.iconMarqueeItem} ${styles.iconMarqueeItem7}`}
-          // style={{ margin: "auto 40px" }}
-        >
+        <div className={`${styles.iconMarqueeItem} ${styles.iconMarqueeItem7}`}>
           <Image src={img7} alt="1" />
         </div>
 
-        <div
-          className={`${styles.iconMarqueeItem} ${styles.iconMarqueeItem8}`}
-          // style={{ margin: "auto 0px" }}
-        >
+        <div className={`${styles.iconMarqueeItem} ${styles.iconMarqueeItem8}`}>
           <Image src={img8 ? img8 : img4} alt="1" />
         </div>
       </div>
