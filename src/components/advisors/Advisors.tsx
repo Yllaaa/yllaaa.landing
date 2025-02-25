@@ -37,7 +37,7 @@ function Advisors() {
         <div data-aos="fade-up" className={styles.headerText}>
           <h6 data-aos="fade-down">{t("yllaaa")}</h6>
           <h3 data-aos="fade-right">{t("header")}</h3>
-          <p data-aos="fade-left">{t("subheader")}</p>
+          {/* <p data-aos="fade-left">{t("subheader")}</p> */}
         </div>
         <div data-aos="fade-up" className={styles.cards}>
           {advisorsList.map((advisor, index) => (

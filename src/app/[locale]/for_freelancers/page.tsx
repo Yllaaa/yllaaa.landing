@@ -7,11 +7,11 @@ import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 
 import people1 from "../../../../public/marquee/icons/people/img1.svg";
-import people2 from "../../../../public/marquee/icons/people/img2.svg";
+import people2F from "../../../../public/marquee/icons/people/img2.svg";
 import people3 from "../../../../public/marquee/icons/people/img3.svg";
-import people4 from "../../../../public/marquee/icons/people/img4.svg";
-import people5 from "../../../../public/marquee/icons/people/img5.svg";
-import people6 from "../../../../public/marquee/icons/people/img6.svg";
+import people4F from "../../../../public/marquee/icons/people/img4.svg";
+import people5F from "../../../../public/marquee/icons/people/img5.svg";
+import people6F from "../../../../public/marquee/icons/people/img6.svg";
 import people7 from "../../../../public/marquee/icons/people/img7.svg";
 import bigLogo from "../../../../public/icons/bigLogo.svg";
 import dev1 from "../../../../public/marquee/appDevTeam/dev1.png";
@@ -71,40 +71,41 @@ async function forFreelancers() {
   const tp = getTranslations("proccessF");
   const tb = getTranslations("freelancer");
   const tt = getTranslations("forHero");
+  const tbl = getTranslations("buildF");
   const people = [
     {
-      name: "Ahmed Abdelmohsen",
-      role: "Founder & CEO",
+      name: "Khaled Mahmoud",
+      role: "UI/UX Designer",
       img: people1,
     },
     {
-      name: "Ahmed Abdelmohsen",
-      role: "Founder & CEO",
-      img: people2,
+      name: "Christtine Nasser",
+      role: "Frontend Developer",
+      img: people2F,
     },
     {
-      name: "Ahmed Abdelmohsen",
-      role: "Founder & CEO",
+      name: "Mark Youssef",
+      role: "Software Engineer",
       img: people3,
     },
     {
-      name: "Ahmed Abdelmohsen",
-      role: "Founder & CEO",
-      img: people4,
+      name: "Fayrouz Sameh",
+      role: "Graphic Designer",
+      img: people4F,
     },
     {
-      name: "Ahmed Abdelmohsen",
-      role: "Founder & CEO",
-      img: people5,
+      name: "Sara Ahmed",
+      role: "Content Creator",
+      img: people5F,
     },
     {
-      name: "Ahmed Abdelmohsen",
-      role: "Founder & CEO",
-      img: people6,
+      name: "Noha Shokry",
+      role: "Digital Marketer",
+      img: people6F,
     },
     {
-      name: "Ahmed Abdelmohsen",
-      role: "Founder & CEO",
+      name: "Fares Maarouf",
+      role: "Backend Developer",
       img: people7,
     },
   ];
@@ -232,7 +233,18 @@ async function forFreelancers() {
             />
           </div>
           <div className={styles.forClientsContainer}>
-            <Build />
+          <Build 
+            title1={(await tbl)("submit")} 
+            desc1={(await tbl)("submitText")} 
+            title2={(await tbl)("analyze")} 
+            desc2={(await tbl)("analyzeText")} 
+            title3={(await tbl)("yllaaa")} 
+            desc3={(await tbl)("yllaaaText")} 
+            title4={(await tbl)("approve")} 
+            desc4={(await tbl)("approveText")} 
+            title5={(await tbl)("build")} 
+            desc5={(await tbl)("buildText")} 
+            />
           </div>
           <div className={styles.marqueeContainer}>
             <CardMarquee

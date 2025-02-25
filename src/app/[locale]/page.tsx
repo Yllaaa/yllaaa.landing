@@ -7,6 +7,7 @@ import Cost from "@/components/cost/Cost";
 import Loading from "./loading";
 import Partners from "@/components/partners/Partners";
 import Advisors from "@/components/advisors/Advisors";
+import { getTranslations } from "next-intl/server";
 const About = lazy(() => import("@/components/aboutUs/About"));
 // const World = lazy(() => import("@/components/world/World"));
 const Hero = lazy(() => import("@/components/home/hero2/Hero"));
@@ -43,6 +44,7 @@ export const metadata = {
 };
 
 async function homePage() {
+  const t = getTranslations("build");
   return (
     <>
       <Head>
@@ -137,7 +139,18 @@ async function homePage() {
             <ForClients />
           </div>
           <div className={styles.teamSection}>
-            <Build />
+            <Build 
+            title1={(await t)("submit")} 
+            desc1={(await t)("submitText")} 
+            title2={(await t)("analyze")} 
+            desc2={(await t)("analyzeText")} 
+            title3={(await t)("yllaaa")} 
+            desc3={(await t)("yllaaaText")} 
+            title4={(await t)("approve")} 
+            desc4={(await t)("approveText")} 
+            title5={(await t)("build")} 
+            desc5={(await t)("buildText")} 
+            />
           </div>
 
           <div className={styles.aboutUsContainer}>

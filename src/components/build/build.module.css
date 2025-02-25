@@ -101,7 +101,7 @@
 .card5 h4 {
   font-family: var(--monta);
 
-  font-size: 120px;
+  font-size: 80px;
   font-weight: 500;
   line-height: 120px;
   text-align: center;
@@ -137,6 +137,7 @@
   -ms-transition: all 0.4s;
   -o-transition: all 0.4s;
 }
+
 @media screen and (max-width: 1310px) {
   .card5 img {
     height: 50%;
@@ -150,12 +151,13 @@
     font-size: 24px;
   }
   .card5 h4 {
-    font-size: 80px;
+    font-size: 70px;
   }
   .card5 p {
     font-size: 24px;
   }
 }
+
 /* small cards */
 .card {
   position: relative;
@@ -217,7 +219,8 @@
   font-weight: 400;
   line-height: 29.26px;
   text-align: center;
-  color: var(--neutral-8);
+  color: var(--neutral-5);
+  opacity: 0.8;
 }
 .card1 {
   grid-area: card1;

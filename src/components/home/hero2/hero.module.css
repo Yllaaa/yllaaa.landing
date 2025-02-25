@@ -142,7 +142,7 @@
   position: relative;
   z-index: 15;
   width: 100%;
-  height: 500px;
+  height: 600px;
 }
 .content .contentHeader {
   position: absolute;
@@ -163,6 +163,14 @@
   letter-spacing: -0.015em;
   text-align: left;
   margin-bottom: 20px;
+}
+/*  */
+.content .contentHeader .description {
+  font-family: var(--monta);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21.33px;
+  color: var(--neutral-1);
 }
 .content .storeBtns {
   grid-area: appBtns;
@@ -313,9 +321,10 @@
 
 @media screen and (max-width: 1350px) {
   .content {
-    height: 650px;
+    height: 550px;
   }
   .content .storeBtns {
+    
     flex-direction: column;
   }
   .content .combined {
@@ -328,7 +337,7 @@
 }
 @media screen and (max-width: 1210px) {
   .content {
-    height: 650px;
+    height: 550px;
   }
   .container .mockup {
     width: 80%;
@@ -361,7 +370,7 @@
     left: 25px;
   }
   .contentDescription {
-    top: 50%;
+    top: 70%;
     right: 75px;
   }
   .content .combined {
@@ -376,9 +385,10 @@
     flex-direction: row;
   }
   .contentDescription {
-    top: 65%;
+    top: 70%;
   }
   .content .combined {
+    top: 90%;
     right: 25px;
     transform: translateY(50%);
     -webkit-transform: translateY(50%);
@@ -406,7 +416,8 @@
     max-width: 720px;
     max-height: 571px;
   }
-  .content .contentHeader .storeBtns {
+  .content  .storeBtns {
+    top: 100%;
     flex-direction: row;
   }
 }
@@ -438,6 +449,7 @@
     left: auto;
     margin: auto;
     min-height: fit-content;
+    height: auto;
   }
   .content .contentHeader .title {
     grid-area: header;
@@ -452,9 +464,13 @@
     margin: auto;
     margin-bottom: 16px;
   }
+  .content .contentHeader  .description{
+    text-align: center;
+  }
   .content .storeBtns {
     grid-area: appBtns;
     position: relative;
+    top: -140%;
     bottom: auto;
     left: auto;
     display: flex;
@@ -495,6 +511,7 @@
     width: fit-content;
     height: fit-content;
     margin-bottom: 18px;
+    text-align: center;
   }
   .description {
     font-family: var(--monta);

@@ -3,6 +3,8 @@ import styles from "./aboutPage.module.css";
 import { getTranslations } from "next-intl/server";
 import Head from "next/head";
 import Loading from "../loading";
+import Advisors from "@/components/advisors/Advisors";
+import Partners from "@/components/partners/Partners";
 // import About from "@/components/aboutUs/About";
 
 const WordMarquee = lazy(() =>
@@ -15,7 +17,7 @@ const HeroClouds = lazy(() => import("@/components/heroAbout/HeroClouds"));
 const AboutUs = lazy(() => import("@/components/heroAbout/AboutHero"));
 const Reason = lazy(() => import("@/components/reason/Reason"));
 const Barriers = lazy(() => import("@/components/barriers/Barriers"));
-const World = lazy(() => import("@/components/world/World"));
+// const World = lazy(() => import("@/components/world/World"));
 
 export const metadata = {
   title: "YLLAAA – You Will Never Start Up Alone",
@@ -46,7 +48,7 @@ export const metadata = {
   },
 };
 async function aboutPage() {
-  const tp = getTranslations("proccess");
+  const tp = getTranslations("proccessA");
   return (
     <>
       <Head>
@@ -171,11 +173,17 @@ async function aboutPage() {
           <div className={styles.aboutUsContainer}>
             <Barriers />
           </div>
-          <div className={styles.aboutUsContainer}>
+          {/* <div className={styles.aboutUsContainer}>
             <World />
-          </div>
+          </div> */}
           <div className={styles.teamSection}>
             <Team />
+          </div>
+          <div className={styles.teamSection}>
+            <Advisors />
+          </div>
+          <div className={styles.teamSection}>
+            <Partners />
           </div>
         </Suspense>
       </section>

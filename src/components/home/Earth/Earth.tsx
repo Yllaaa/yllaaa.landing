@@ -9,7 +9,11 @@ import Link from "next/link";
 import arrow from "../../../../public/icons/arrowBtnPurple.svg";
 import "aos/dist/aos.css";
 import { AOSInit } from "@/Utils/aos/aos";
+import { usePathname } from "next/navigation";
 function Earth() {
+  const pathname = usePathname();
+  console.log(pathname.includes("for_freelancers"));
+
   // const [scroll, setScroll] = React.useState(0);
   const t = useTranslations("earth");
   const locale = useLocale();
@@ -26,7 +30,7 @@ function Earth() {
   //   }
   // }, []);
   // console.log(scroll);
-  
+
   return (
     <>
       <div ref={earth} className={styles.earthSection}>
@@ -39,47 +43,51 @@ function Earth() {
 
         <div data-aos="fade-down-right" className={styles.content}>
           <h5
-            // style={
-            //   scroll >= 6525
-            //     ? { transform: `translateY(${(scroll - 6525) * 0.3}px)` }
-            //     : {}
-            // }
+          // style={
+          //   scroll >= 6525
+          //     ? { transform: `translateY(${(scroll - 6525) * 0.3}px)` }
+          //     : {}
+          // }
           >
             {t("title")}
           </h5>
           <h3
-            // style={
-            //   scroll >= 6525
-            //     ? { transform: `translateY(${(scroll - 6525) * 0.3}px)` }
-            //     : {}
-            // }
+          // style={
+          //   scroll >= 6525
+          //     ? { transform: `translateY(${(scroll - 6525) * 0.3}px)` }
+          //     : {}
+          // }
           >
             {t("header")}
             <span> {t("header2")}</span>
           </h3>
           <p
-            // style={
-            //   scroll >= 6525
-            //     ? { transform: `translateY(${(scroll - 6525) * 0.3}px)` }
-            //     : {}
-            // }
+          // style={
+          //   scroll >= 6525
+          //     ? { transform: `translateY(${(scroll - 6525) * 0.3}px)` }
+          //     : {}
+          // }
           >
             {t("description")}
           </p>
-          <Link
-            // style={
-            //   scroll >= 6525
-            //     ? { transform: `translateY(${(scroll - 6525) * 0.3}px)` }
-            //     : {}
-            // }
-            href={`${locale}/about`}
-            className={styles.button}
-          >
-            <span className={styles.buttonText}>{t("buttonText")}</span>
-            <span>
-              <Image src={arrow} alt="arrow" />
-            </span>
-          </Link>
+          {pathname.includes("for_freelancers") ||
+            pathname.includes("for_business") ||
+            (pathname.includes("for_managers") || (
+              <Link
+                // style={
+                //   scroll >= 6525
+                //     ? { transform: `translateY(${(scroll - 6525) * 0.3}px)` }
+                //     : {}
+                // }
+                href={`${locale}/about`}
+                className={styles.button}
+              >
+                <span className={styles.buttonText}>{t("buttonText")}</span>
+                <span>
+                  <Image src={arrow} alt="arrow" />
+                </span>
+              </Link>
+            ))}
         </div>
         {/* earth */}
         <div

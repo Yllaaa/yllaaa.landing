@@ -77,6 +77,7 @@ function Hero() {
           <div className={styles.content}>
             <div className={styles.contentHeader}>
               <h1 className={styles.title}>{t("title")}</h1>
+              <p className={styles.description}>{t("subTitle")}</p>
             </div>
             <div className={styles.storeBtns}>
               {/* <Link
@@ -94,7 +95,7 @@ function Hero() {
               </Link>
             </div>
             <div className={styles.contentDescription}>
-              <p className={styles.description}>{t("subTitle")}</p>
+              
             </div>
             <div className={styles.combined}>
               <div className={styles.combinedTop}>

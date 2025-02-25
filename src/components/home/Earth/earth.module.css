@@ -284,13 +284,21 @@
     -moz-transform: translateX(0%);
     -ms-transform: translateX(0%);
     -o-transform: translateX(0%);
-}
+  }
 }
 @media screen and (max-width: 430px) {
-  .earthContainerSection{
+  .earthContainerSection {
     min-width: 320px;
   }
-  /* .content a{ */
-    /* width: 100%; */
-  /* } */
+  .content {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+  .content h3 {
+    text-align: center;
+  }
+  /* .content a{
+    width: 100%;
+  } */
 }

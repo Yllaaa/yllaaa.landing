@@ -5,17 +5,17 @@ import Head from "next/head";
 import { getTranslations } from "next-intl/server";
 
 import people1 from "../../../../public/marquee/icons/people/img1.svg";
-import people2 from "../../../../public/marquee/icons/people/img2.svg";
+import people2F from "../../../../public/marquee/icons/people/img2.svg";
 import people3 from "../../../../public/marquee/icons/people/img3.svg";
-import people4 from "../../../../public/marquee/icons/people/img4.svg";
-import people5 from "../../../../public/marquee/icons/people/img5.svg";
-import people6 from "../../../../public/marquee/icons/people/img6.svg";
+import people4F from "../../../../public/marquee/icons/people/img4.svg";
+import people5F from "../../../../public/marquee/icons/people/img5.svg";
+import people6F from "../../../../public/marquee/icons/people/img6.svg";
 import people7 from "../../../../public/marquee/icons/people/img7.svg";
 import bigLogo from "../../../../public/icons/bigLogo.svg";
 
 
 const Process = lazy(() => import("@/components/process/process/Process"));
-const Build = lazy(() => import("@/components/build/Build"));
+// const Build = lazy(() => import("@/components/build/Build"));
 const Mission = lazy(() => import("@/components/mission/Mission"));
 const ForHero = lazy(() => import("@/components/forHero/new/ForHero"));
 const CardMarquee = lazy(() =>
@@ -53,43 +53,43 @@ export const metadata = {
 };
 
 async function forManagers() {
-  const tp = getTranslations("proccess");
+  const tp = getTranslations("proccessM");
   const tb = getTranslations("manager");
   const tt = getTranslations("forHero");
   const people = [
     {
-      name: "Ahmed Abdelmohsen",
-      role: "Founder & CEO",
+      name: "Hossam Salah",
+      role: "Account Manager",
       img: people1,
     },
     {
-      name: "Ahmed Abdelmohsen",
-      role: "Founder & CEO",
-      img: people2,
+      name: "Asmaa Ezz",
+      role: "Team Leader",
+      img: people2F,
     },
     {
-      name: "Ahmed Abdelmohsen",
-      role: "Founder & CEO",
+      name: "Nader Elsayed",
+      role: "Account Manager",
       img: people3,
     },
     {
-      name: "Ahmed Abdelmohsen",
-      role: "Founder & CEO",
-      img: people4,
+      name: "Mariem Taha",
+      role: "Art Director",
+      img: people4F,
     },
     {
-      name: "Ahmed Abdelmohsen",
-      role: "Founder & CEO",
-      img: people5,
+      name: "Suzaan Hani",
+      role: "Architectural Team Leader",
+      img: people5F,
     },
     {
-      name: "Ahmed Abdelmohsen",
-      role: "Founder & CEO",
-      img: people6,
+      name: "Salma Awad",
+      role: "Business Manager",
+      img: people6F,
     },
     {
-      name: "Ahmed Abdelmohsen",
-      role: "Founder & CEO",
+      name: "Bassem Elsayed",
+      role: "Floor Manager",
       img: people7,
     },
   ];
@@ -214,9 +214,9 @@ async function forManagers() {
             logo={bigLogo}
           />
         </div>
-        <div className={styles.forClientsContainer}>
+        {/* <div className={styles.forClientsContainer}>
           <Build />
-        </div>
+        </div> */}
         <div className={styles.marqueeContainer}>
         <CardMarquee
             card1Header={(await tb)("card1Header")}

@@ -61,7 +61,7 @@ function About() {
     <>
       <div className={styles.container}>
         <div className={styles.numberbg}>
-          <h2>02</h2>
+          <h2>01</h2>
         </div>
         <div className={styles.sectionTitle}>
           <h6>{t("title")}</h6>

@@ -3,11 +3,11 @@ import styles from "./forBusiness.module.css";
 import Head from "next/head";
 
 import people1 from "../../../../public/marquee/icons/people/img1.svg";
-import people2 from "../../../../public/marquee/icons/people/img2.svg";
+import people2F from "../../../../public/marquee/icons/people/img2.svg";
 import people3 from "../../../../public/marquee/icons/people/img3.svg";
-import people4 from "../../../../public/marquee/icons/people/img4.svg";
-import people5 from "../../../../public/marquee/icons/people/img5.svg";
-import people6 from "../../../../public/marquee/icons/people/img6.svg";
+import people4F from "../../../../public/marquee/icons/people/img4.svg";
+import people5F from "../../../../public/marquee/icons/people/img5.svg";
+import people6F from "../../../../public/marquee/icons/people/img6.svg";
 import people7 from "../../../../public/marquee/icons/people/img7.svg";
 import bigLogo from "../../../../public/icons/bigLogo.svg";
 
@@ -55,9 +55,10 @@ export const metadata = {
 };
 
 async function forBusiness() {
-  const tp = getTranslations("proccess");
+  const tp = getTranslations("proccessB");
   const tb = getTranslations("business");
   const tt = getTranslations("forHero");
+  const tbl = getTranslations("buildB");
   const people = [
     {
       name: "Ahmed Abdelmohsen",
@@ -65,29 +66,29 @@ async function forBusiness() {
       img: people1,
     },
     {
-      name: "Ahmed Abdelmohsen",
-      role: "Founder & CEO",
-      img: people2,
+      name: "Zeianb Mostafa",
+      role: "CTO",
+      img: people2F,
     },
     {
-      name: "Ahmed Abdelmohsen",
-      role: "Founder & CEO",
+      name: "Youssef Moahmed",
+      role: "Business Developer",
       img: people3,
     },
     {
-      name: "Ahmed Abdelmohsen",
-      role: "Founder & CEO",
-      img: people4,
+      name: "Marie Fahim",
+      role: "HR Manager",
+      img: people4F,
     },
     {
-      name: "Ahmed Abdelmohsen",
-      role: "Founder & CEO",
-      img: people5,
+      name: "Omnia Fathy",
+      role: "Marketing Manager",
+      img: people5F,
     },
     {
-      name: "Ahmed Abdelmohsen",
-      role: "Founder & CEO",
-      img: people6,
+      name: "Rozette Fathy",
+      role: "Team Leader",
+      img: people6F,
     },
     {
       name: "Ahmed Abdelmohsen",
@@ -222,7 +223,18 @@ async function forBusiness() {
             />
           </div>
           <div className={styles.buildContainer}>
-            <Build />
+          <Build 
+            title1={(await tbl)("submit")} 
+            desc1={(await tbl)("submitText")} 
+            title2={(await tbl)("analyze")} 
+            desc2={(await tbl)("analyzeText")} 
+            title3={(await tbl)("yllaaa")} 
+            desc3={(await tbl)("yllaaaText")} 
+            title4={(await tbl)("approve")} 
+            desc4={(await tbl)("approveText")} 
+            title5={(await tbl)("build")} 
+            desc5={(await tbl)("buildText")} 
+            />
           </div>
           <div className={styles.teamSection}>
             <Cost />

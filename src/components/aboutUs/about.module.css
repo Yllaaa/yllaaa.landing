@@ -15,7 +15,7 @@
 }
 .numberbg {
   position: absolute;
-  top: -15%;
+  top: -7%;
   left: 0;
   object-fit: cover;
   z-index: -1;
@@ -23,7 +23,7 @@
 .numberbg h2 {
   height: 428px;
   width: 414px;
-  font-family: var(--play);
+  font-family: var(--monta);
   font-size: 379.19px;
   font-weight: 600;
   line-height: 428.48px;
@@ -74,7 +74,7 @@
   font-family: var(--monta);
   font-size: 18px;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 25px;
   color: var(--Indigo-100);
   margin-bottom: 24px;
 }
@@ -181,7 +181,7 @@
 .sectionCard p {
   font-family: var(--monta);
   font-size: 96px;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 117.02px;
   text-align: center;
 }

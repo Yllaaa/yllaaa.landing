@@ -25,7 +25,7 @@ function Reason() {
     <>
       <div className={styles.reasonContainer}>
         <div className={styles.numberbg}>
-          <h2>01</h2>
+          <h2>02</h2>
         </div>
         <div className={styles.container}>
           <div className={styles.header}>
