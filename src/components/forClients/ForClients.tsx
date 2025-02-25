@@ -25,10 +25,11 @@ function ForClients() {
         </div>
         <div className={styles.forClientsBtns}>
           <div
+            onClick={() => route.push(`${locale}/contact`)}
             className={`${styles.forClientsBtn} ${styles.forClientsBtnDark}`}
           >
             <h5>{t("buttonText1")}</h5>
-            <p onClick={() => route.push(`${locale}/contact`)}>
+            <p>
               {t("buttonSubtext1")}{" "}
               <span>
                 <Image src={arrowWhite} alt="arrowRight" />{" "}
@@ -36,10 +37,11 @@ function ForClients() {
             </p>
           </div>
           <div
+            onClick={() => route.push(`${locale}/contact`)}
             className={`${styles.forClientsBtn} ${styles.forClientsBtnDark}`}
           >
             <h5>{t("buttonText2")}</h5>
-            <p onClick={() => route.push(`${locale}/contact`)}>
+            <p>
               {t("buttonSubtext2")}{" "}
               <span>
                 <Image src={arrowWhite} alt="arrowRight" />{" "}
@@ -47,10 +49,11 @@ function ForClients() {
             </p>
           </div>
           <div
+            onClick={() => route.push(`${locale}/contact`)}
             className={`${styles.forClientsBtn} ${styles.forClientsBtnLight}`}
           >
             <h5>{t("buttonText3")}</h5>
-            <p onClick={() => route.push(`${locale}/contact`)}>
+            <p>
               {t("buttonSubtext3")}{" "}
               <span>
                 <Image src={arrowPurple} alt="arrowRight" />{" "}

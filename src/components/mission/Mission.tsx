@@ -1,8 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+"use client";
 import Image from "next/image";
 import React from "react";
 import ButtonFlip from "../aaabutton/ButtonFlip";
 import styles from "./mission.module.css";
+import { useRouter } from "next/navigation";
+import { useLocale } from "next-intl";
 type Props = {
   row1?: string;
   row2?: string;
@@ -10,6 +13,8 @@ type Props = {
   btnLable?: string;
 };
 function Mission(props: Props) {
+  const router = useRouter();
+  const locale = useLocale();
   const { row1, row2, logo, btnLable } = props;
   return (
     <>
@@ -23,7 +28,7 @@ function Mission(props: Props) {
         <div className={styles.logo}>
           <Image src={logo} alt="" />
         </div>
-        <div className={styles.btn}>
+        <div onClick={() => router.push(`/${locale}/contact`)} className={styles.btn}>
           <ButtonFlip lable={`${btnLable}`} />
         </div>
       </div>

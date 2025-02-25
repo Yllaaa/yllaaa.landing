@@ -8,7 +8,7 @@ import Loading from "./loading";
 import Partners from "@/components/partners/Partners";
 import Advisors from "@/components/advisors/Advisors";
 const About = lazy(() => import("@/components/aboutUs/About"));
-const World = lazy(() => import("@/components/world/World"));
+// const World = lazy(() => import("@/components/world/World"));
 const Hero = lazy(() => import("@/components/home/hero2/Hero"));
 const Earth = lazy(() => import("@/components/home/Earth/Earth"));
 const Barriers = lazy(() => import("@/components/barriers/Barriers"));
@@ -152,9 +152,9 @@ async function homePage() {
           <div className={styles.earthContainer}>
             <Earth />
           </div>
-          <div className={styles.aboutUsContainer}>
+          {/* <div className={styles.aboutUsContainer}>
             <World />
-          </div>
+          </div> */}
           <div className={styles.forTalentContainer}>
             <Team />
           </div>

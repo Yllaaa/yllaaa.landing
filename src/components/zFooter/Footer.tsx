@@ -7,16 +7,19 @@ import logoWhite from "../../../public/footer/logoWhite.svg";
 import arrowCircle from "../../../public/icons/arrowWithCircle.svg";
 import Link from "next/link";
 import { ScreenBreakpoints } from "@/Utils/screenBreakPoints/ScreenBreakPoints";
-import message from "../../../public/icons/message.svg";
+
+import apple from "../../../public/icons/apple.svg";
 import mail from "../../../public/icons/mail.svg";
 import facebook from "../../../public/icons/facebook.svg";
 import instagram from "../../../public/icons/instagram.svg";
 import linkedIn from "../../../public/icons/linkedIn.svg";
 import smallArrow from "../../../public/icons/smallArrow.svg";
 import { useLocale, useTranslations } from "next-intl";
+import { useRouter } from "next/navigation";
 
 function Footer() {
   const locale = useLocale();
+  const router = useRouter();
   const [siteMapOpen, setSiteMapOpen] = React.useState(false);
   const { isDesktop } = ScreenBreakpoints();
 
@@ -28,10 +31,10 @@ function Footer() {
     `${t("text2")}`,
   ];
 
-   const [mounted, setMounted] = React.useState(false);
-    React.useEffect(() => {
-      setMounted(true);
-    }, []);
+  const [mounted, setMounted] = React.useState(false);
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
     <>
@@ -40,7 +43,10 @@ function Footer() {
         <div className={styles.shaddow1}></div>
         <div className={styles.shaddow2}></div>
         <div className={styles.textAndLogo}>
-          <div className={styles.logoContainer}>
+          <div
+            onClick={() => router.push(`/${locale}/`)}
+            className={styles.logoContainer}
+          >
             <Image src={bgLogo} alt="yllaaaLogo" />
           </div>
           <div className={styles.textContainer}>
@@ -58,7 +64,10 @@ function Footer() {
                 </span>
               ))}
             </div>
-            <div className={styles.getStarted}>
+            <div
+              onClick={() => router.push(`/${locale}/contact`)}
+              className={styles.getStarted}
+            >
               <span>{t("btn")}</span>
               <Image src={arrowCircle} alt="yllaaaLogo" />
             </div>
@@ -112,9 +121,14 @@ function Footer() {
             <div className={styles.betweenLine}></div>
             <div className={styles.lowerContainerContact}>
               <div className={styles.download}>
-                <p>
+                <p
+                  onClick={() =>
+                    window.open("https://apps.apple.com/app/id6740632183")
+                  }
+                  style={{ cursor: "pointer" }}
+                >
                   <span>
-                    <Image src={message} alt="yllaaaLogo" />
+                    <Image src={apple} alt="yllaaaLogo" />
                   </span>{" "}
                   {t("download")}
                 </p>
@@ -170,31 +184,31 @@ function Footer() {
                     href="/"
                     className={`${styles.lightLink} ${styles.link}`}
                   >
-                    <li>Home</li>
+                    <li>{t("Home")}</li>
                   </Link>
                   <Link
                     href={`/${locale}/about`}
                     className={`${styles.lightLink} ${styles.link}`}
                   >
-                    <li>About us</li>
+                    <li>{t("about")}</li>
                   </Link>
                   <Link
                     href={`/${locale}/for_business`}
                     className={`${styles.lightLink} ${styles.link}`}
                   >
-                    <li>For business</li>
+                    <li>{t("forBusiness")}</li>
                   </Link>
                   <Link
                     href={`/${locale}/for_freelancers`}
                     className={`${styles.darkLink} ${styles.link}`}
                   >
-                    <li>For freelancers</li>
+                    <li>{t("forFreelancers")}</li>
                   </Link>
                   <Link
                     href={`/${locale}/contact`}
                     className={`${styles.darkLink} ${styles.link}`}
                   >
-                    <li>Contact us</li>
+                    <li>{t("contact")}</li>
                   </Link>
                 </ul>
               </div>
@@ -216,47 +230,3 @@ function Footer() {
 }
 
 export default Footer;
-
-//   const words = ["Hello", "World", "React", "Next.js"];
-//   const words2 = ["Hello", "World", "React", "Next.js"];
-
-//   const [currentWordIndex, setCurrentWordIndex] = useState(0);
-//   const [isAnimating, setIsAnimating] = useState(false);
-
-//   useEffect(() => {
-//     const interval = setInterval(() => {
-//       setIsAnimating(true);
-//       setTimeout(() => {
-//         setCurrentWordIndex((prevIndex) => (prevIndex + 1) % words.length);
-//         setIsAnimating(false);
-//       }, 500); // Animation duration (matches CSS)
-//     }, 1500); // Change every 2 seconds
-
-//     const interval2 = setInterval(() => {
-//       setIsAnimating(true);
-//       setTimeout(() => {
-//         setCurrentWordIndex((prevIndex) => (prevIndex + 1) % words2.length);
-//         setIsAnimating(false);
-//       }, 500); // Animation duration (matches CSS)
-//     }, 10000); // Change every 2 seconds
-//     //   return () => clearInterval(interval2);
-//     return () => {
-//       clearInterval(interval);
-//       clearInterval(interval2);
-//     };
-//   }, [words.length, words2.length]);
-
-//   return (
-//     <div className={styles.container}>
-//       <div
-//         className={`${styles.word_container} ${
-//           isAnimating ? `${styles.animate}` : ""
-//         }`}
-//       >
-//         {words[currentWordIndex]}
-//         {words2[currentWordIndex]}
-
-//       </div>
-//     </div>
-//   );
-// }

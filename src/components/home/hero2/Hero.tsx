@@ -89,7 +89,7 @@ function Hero() {
                   className={styles.storeBtn}
                 />
               </Link> */}
-              <Link href="https://www.apple.com/app-store/" target="_blank">
+              <Link href="https://apps.apple.com/app/id6740632183" target="_blank">
                 <Image src={appStore} alt="apple" className={styles.storeBtn} />
               </Link>
             </div>

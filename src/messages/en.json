@@ -89,7 +89,7 @@
     "description": "At YLLAAA, we connect you to the top 1% of Egypt’s freelance talent, providing you with world-class MVP development at a fraction of the cost. We handle everything so you can focus on growing your business without the stress!",
     "buttonText": "YLLAAA"
   },
-  "proccess": {
+  "proccessB": {
     "sectionLable": "OUR PROCESS",
     "sectionTitle": "Our Process to Empower Your",
     "sectionTitleSpecialWord": "Vision",
@@ -98,10 +98,38 @@
     "paragraph1": "Choose an account manager who speaks your language and understands your business culture.",
     "title2": "Dive deep",
     "paragraph2": "Grab a virtual or real coffee with your account manager, we listen, we strategize, and we craft a plan that ressonate with your vision.",
-    "title3": " AI-Powered Planning.",
+    "title3": "AI-Powered Planning.",
     "paragraph3": "Ditch the guesswork. Our AI-powered tool presents a tailored, transparent plan with recommended budgets and timelines.",
     "title4": "World-Class Team",
     "paragraph4": "Our advanced algorithm pairs you with a World-Class team of Egyptian talents, ensuring your venture reaches new heights."
+  },
+  "proccessF": {
+    "sectionLable": "OUR PROCESS",
+    "sectionTitle": "Find Your Ideal Way to Work and Grow with",
+    "sectionTitleSpecialWord": "Yllaaa",
+    "description": "YLLAAA embraces a dynamic and flexible process, prioritizing collaboration and tailored solutions for every client.",
+    "title1": "Freelancer",
+    "paragraph1": "Empowering freelancers to connect with high-impact projects and reputable clients. Get personalized support from dedicated account managers who guide you in project management and client communication.",
+    "title2": "Support from managers",
+    "paragraph2": "Get guidance from experienced managers at every step. From project planning to final delivery, our managers are here to help you succeed.",
+    "title3": "New to Freelancing?",
+    "paragraph3": "Embark on your freelancing journey with ease. Yllaaa helps you navigate the process, providing a steady flow of quality projects and professional growth resources.",
+    "title4": "Client Partnerships",
+    "paragraph4": "Our platform connects you with clients ready to invest in your expertise. With account managers on standby, Yllaaa enhances client relationships, giving you more time to focus on delivering excellence."
+  },
+  "proccessM": {
+    "sectionLable": "OUR PROCESS",
+    "sectionTitle": "Shape your career path and manage impactful projects with",
+    "sectionTitleSpecialWord": "Yllaaa",
+    "description": "YLLAAA embraces a dynamic and flexible process, prioritizing collaboration and tailored solutions for every client.",
+    "title1": "Manage projects",
+    "paragraph1": "Effortlessly oversee all your projects in one place. Our platform helps you stay organized and in control from start to finish",
+    "title2": "select your expertise",
+    "paragraph2": "Showcase your unique skills and expertise, and let us match you with projects that suit your strengths.",
+    "title3": "simple project tracking",
+    "paragraph3": "Track progress with ease. Keep tabs on every project detail to ensure smooth delivery and timely updates.",
+    "title4": "increase your income",
+    "paragraph4": "Unlock more opportunities and boost your earnings by connecting with clients who need your expertise."
   },
   "clients": {
     "sectionLable": "For Startups",
@@ -274,7 +302,9 @@
     "text3": "STARTUP",
     "text4": "VISION",
     "download": "Download the app",
-    "btn": "GET STARTED"
+    "btn": "GET STARTED",
+    "sitemap": "SITE MAP",
+    "Home": "Home"
   },
   "contact": {
     "header": "Contact Us",
@@ -297,15 +327,13 @@
     "header": "Meet our Advisors",
     "subheader": "Our team of experienced professionals is dedicated to helping you navigate your journey with insights, strategies, and personalized support.",
 
+    "mohamedelsonbaty": "Mohamed Elsonbaty",
+    "mohamedelsonbatyPosition": "FOUNDER&CEO",
 
-    "mohamedelsonbaty":"Mohamed Elsonbaty",
-    "mohamedelsonbatyPosition":"FOUNDER&CEO",
+    "joseluis": "JOSE LUIS",
+    "joseluisPosition": "CO-FOUNDER STEALTH MODE",
 
-    "joseluis":"JOSE LUIS",
-    "joseluisPosition":"CO-FOUNDER STEALTH MODE",
-
-    "xavierarola":"XAVIER AROLA",
-    "xavierarolaPosition":"ENTREPRENERUSHIP"
-
+    "xavierarola": "XAVIER AROLA",
+    "xavierarolaPosition": "ENTREPRENER"
   }
 }

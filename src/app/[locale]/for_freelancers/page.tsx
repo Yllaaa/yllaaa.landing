@@ -68,7 +68,7 @@ export const metadata = {
 };
 
 async function forFreelancers() {
-  const tp = getTranslations("proccess");
+  const tp = getTranslations("proccessF");
   const tb = getTranslations("freelancer");
   const tt = getTranslations("forHero");
   const people = [
