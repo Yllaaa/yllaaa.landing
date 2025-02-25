@@ -141,7 +141,7 @@ async function aboutPage() {
             <WordMarquee />
           </div>
           <div className={styles.aboutUsContainer}>
-            <Reason />
+            <About />
           </div>
 
           <div className={styles.processContainer}>
@@ -165,8 +165,9 @@ async function aboutPage() {
             />
           </div>
           <div className={styles.aboutUsContainer}>
-            <About />
+            <Reason />
           </div>
+
           <div className={styles.aboutUsContainer}>
             <AboutUs />
           </div>

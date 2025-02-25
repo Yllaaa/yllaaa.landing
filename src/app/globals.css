@@ -130,9 +130,45 @@ a {
   line-height: 20px;
   color: var(--Indigo-100);
 }
+
+/* For Chrome, Edge, and Safari */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: var(--Purple-800);
+  border-radius: 10px;
+
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--Indigo-500);
+  border-radius: 10px;
+  border: 3px solid var(--Purple-500);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--Indigo-500); /* Color of the thumb on hover */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-color: var(--Indigo-500) var(--Purple-800); /* Thumb and track color */
+}
+
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes error {
