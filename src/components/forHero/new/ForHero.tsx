@@ -1,5 +1,5 @@
 "use client";
-import React, {  useEffect } from "react";
+import React, { useEffect } from "react";
 import styles from "./forHero.module.css";
 // import dynamic from "next/dynamic";
 import background from "../../../../public/forHero/background16.png";
@@ -43,9 +43,9 @@ function ForHero(props: Props) {
           <h2 data-aos="fade-up">
             {t("header")}{" "}
             <span>
-              <span>{t("the")}</span>
+              {t("the")}
               <Image src={logo} alt="logo" />
-              <span>{t("header2")}</span>
+              {t("header2")}
             </span>{" "}
           </h2>
           <p data-aos="fade-up">{desc}</p>
