@@ -5,10 +5,12 @@ import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 
 import { useInView } from "react-intersection-observer";
+import { usePathname } from "next/navigation";
 
 function About() {
   const locale = useLocale();
   const t = useTranslations("about");
+  const pathname = usePathname();
 
   // start counter
   const { ref, inView } = useInView({
@@ -55,8 +57,6 @@ function About() {
     }
   }, [counter20, inView]);
 
-  
-  
   return (
     <>
       <div className={styles.container}>
@@ -74,12 +74,14 @@ function About() {
         <div className={styles.sectionDescription}>
           <p>{t("description")}</p>
         </div>
-        <div className={styles.sectionBtn}>
-          <Link href={`/${locale}/about`}>
-            <span>{t("buttonText")}</span>
-            <div className={styles.arrow}></div>
-          </Link>
-        </div>
+        {pathname.includes("about") || (
+          <div className={styles.sectionBtn}>
+            <Link href={`/${locale}/about`}>
+              <span>{t("buttonText")}</span>
+              <div className={styles.arrow}></div>
+            </Link>
+          </div>
+        )}
         <div ref={ref} className={styles.sectionCards}>
           <div className={`${styles.sectionCard} ${styles.card1}`}>
             <p className={counter6 === 6 ? styles.notNata : ""}>

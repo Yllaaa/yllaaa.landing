@@ -9,17 +9,15 @@ import graph from "../../../public/reason/graph.svg";
 import Image from "next/image";
 import "aos/dist/aos.css";
 import { AOSInit } from "@/Utils/aos/aos";
+import { usePathname } from "next/navigation";
 
 function Reason() {
- 
+  const pathname = usePathname();
 
   const t = useTranslations("reason");
   useEffect(() => {
     AOSInit(2000);
   }, []);
-
-
-  
 
   return (
     <>
@@ -35,9 +33,11 @@ function Reason() {
               <p>{t("description")}</p>
             </div>
           </div>
-          <div data-aos="fade-up" className={styles.btn}>
-            <button>{t("buttonText")}</button>
-          </div>
+          {pathname.includes("about") || (
+            <div data-aos="fade-up" className={styles.btn}>
+              <button>{t("buttonText")}</button>
+            </div>
+          )}
           <div className={styles.images}>
             <div className={styles.imageRow1}>
               <div

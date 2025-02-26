@@ -15,12 +15,14 @@ import yehiaAbdelhamed from "../../../../public/team/new/yehiaAbdelhamed.png";
 import wiamOuafi from "../../../../public/team/new/wiamOuafi.png";
 import MohAshraf from "../../../../public/team/new/mohamedAshraf.png";
 import Vittorio from "../../../../public/team/new/vittorio.png";
+import karma from "../../../../public/team/new/karma.png";
+import ahmed from "../../../../public/team/new/ahmed.png";
 import linkedInIcon from "../../../../public/icons/linkedInTeam.svg";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import ButtonFlip from "@/components/aaabutton/ButtonFlip";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 function Team() {
   const t = useTranslations("team");
@@ -108,6 +110,24 @@ function Team() {
       image: Moustafa,
       linkedin: "https://www.linkedin.com/in/moustafa-adel-714616299/",
     },
+    {
+      name: t("karma1"),
+      name2: t("karma2"),
+
+      position: `💻 ${t("positionKarma")}`,
+      breif: t("breifKarma"),
+      image: karma,
+      linkedin: "",
+    },
+    {
+      name: t("ahmed1"),
+      name2: t("ahmed2"),
+
+      position: `💻 ${t("positionAhmed")}`,
+      breif: t("breifAhmed"),
+      image: ahmed,
+      linkedin: "",
+    },
   ];
 
   const [currentSlide, setCurrentSlide] = React.useState(0);
@@ -163,6 +183,8 @@ function Team() {
     return () => stopAutoSlide();
   }, []);
 
+  const pathname = usePathname();
+
   return (
     <>
       <div className={styles.teamContainer}>
@@ -171,12 +193,14 @@ function Team() {
             <h2>{t("sectionTitle")}</h2>
             <p>{t("description")}</p>
           </div>
-          <div
-            onClick={() => router.push(`/${locale}/about`)}
-            className={styles.teamHeaderContentBtn}
-          >
-            <ButtonFlip lable={t("buttonText")} />
-          </div>
+          {pathname.includes("about") || (
+            <div
+              onClick={() => router.push(`/${locale}/about`)}
+              className={styles.teamHeaderContentBtn}
+            >
+              <ButtonFlip lable={t("buttonText")} />
+            </div>
+          )}
         </div>
         <div className={`${styles.navigation_wrapper}`}>
           <div

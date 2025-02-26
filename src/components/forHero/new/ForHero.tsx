@@ -47,9 +47,10 @@ function ForHero(props: Props) {
           <h2 data-aos="fade-up">
             {t("header")}{" "}
             <span>
+              {t("the")}
               <Image src={logo} alt="logo" />
+              {t("header2")}
             </span>{" "}
-            {t("header2")}
           </h2>
           <p data-aos="fade-up">{desc}</p>
         </div>

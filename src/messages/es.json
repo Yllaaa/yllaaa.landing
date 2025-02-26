@@ -108,6 +108,23 @@
     "build": "YLLAAA",
     "buildText": "Construye una carrera gratificante mientras haces un impacto real en el mundo."
   },
+  "buildM": {
+    "01": "01",
+    "submit": "Comprender",
+    "submitText": "Conoce en profundidad las necesidades y objetivos únicos de cada startup.",
+    "02": "02",
+    "analyze": "Comunicar",
+    "analyzeText": "Facilita una comunicación efectiva entre clientes y freelancers.",
+    "03": "03",
+    "yllaaa": "Entregar",
+    "yllaaaText": "Asegúrate de cumplir con los hitos del proyecto y mantener la satisfacción del cliente.",
+    "04": "04",
+    "approve": "Cultivar",
+    "approveText": "Construye y mantén relaciones a largo plazo con clientes startups.",
+    "05": "05",
+    "build": "YLLAAA",
+    "buildText": "Construye una carrera gratificante mientras impactas positivamente en el mundo."
+  },
   "world": {
     "yllaaa": "YLLAAA",
     "text": "¡Desde la tierra de las pirámides hasta el mundo!",
@@ -167,18 +184,18 @@
   },
   "proccessM": {
     "sectionLable": "NUESTRO PROCESO",
-    "sectionTitle": "Da forma a tu carrera y gestiona proyectos impactantes con",
+    "sectionTitle": "Diseña tu trayectoria profesional y gestiona proyectos impactantes con",
     "sectionTitleSpecialWord": "Yllaaa",
     "description": "YLLAAA adopta un proceso dinámico y flexible, priorizando la colaboración y soluciones personalizadas para cada cliente.",
-    "title1": "Gestiona proyectos",
-    "paragraph1": "Supervisa todos tus proyectos sin esfuerzo en un solo lugar. Nuestra plataforma te ayuda a mantenerte organizado y en control desde el inicio hasta el final.",
-    "title2": "Selecciona tu especialidad",
-    "paragraph2": "Muestra tus habilidades y conocimientos únicos, y déjanos emparejarte con proyectos que se adapten a tus fortalezas.",
-    "title3": "Seguimiento sencillo de proyectos",
-    "paragraph3": "Realiza un seguimiento del progreso con facilidad. Controla cada detalle del proyecto para garantizar una entrega fluida y actualizaciones puntuales.",
-    "title4": "Aumenta tus ingresos",
+    "title1": "APRENDE",
+    "paragraph1": "Obtendrás experiencia práctica en la gestión de relaciones con clientes y trabajarás con startups, ayudándote a desarrollar habilidades valiosas.",
+    "title2": "GANA",
+    "paragraph2": "Comisión fija y bonificaciones basadas en tu desempeño, como qué tan bien gestionas cuentas o traes nuevos clientes.",
+    "title3": "CONECTA",
+    "paragraph3": "Conocerás a muchos emprendedores y profesionales de la industria, lo que te ayudará a construir una red profesional sólida para futuras oportunidades.",
+    "title4": "aumenta tus ingresos",
     "paragraph4": "Desbloquea más oportunidades y aumenta tus ganancias conectándote con clientes que necesitan tu experiencia."
-  },
+},
   "clients": {
     "sectionLable": "Para startups",
     "sectionTitle": "Valida tu idea con YLLAAA",
@@ -193,7 +210,7 @@
   "team": {
     "sectionTitle": "Equipo",
     "description": "Mentes apasionadas, soluciones creativas. Descubre al equipo detrás de YLLAAA.",
-    "buttonText": "Nuestro equipo",
+    "buttonText": "Nuestro Equipo",
 
     "mohamedAbdelkader1": "Mohamed",
     "mohamedAbdelkader2": "Abdelkader",
@@ -207,8 +224,8 @@
 
     "vittorio1": "Vittorio",
     "vittorio2": "Badia",
-    "positionVittorio": "Propietario del Producto",
-    "breifVittorio": "Estratega orientado a objetivos, pensador",
+    "positionVittorio": "Product Owner",
+    "breifVittorio": "Estrategista orientado a objetivos, pensador",
 
     "wiamMouafi1": "Wiam",
     "wiamMouafi2": "Mouafi",
@@ -222,8 +239,8 @@
 
     "shaymaElFouly1": "Shaimaa",
     "shaymaElFouly2": "El Fouly",
-    "positionShayma": "Diseñadora",
-    "breifShayma": "Pensadora original y artística",
+    "positionShayma": "Diseñador",
+    "breifShayma": "Pensador original y artístico",
 
     "yehia1": "Yehia",
     "yehia2": "Abdelhamed",
@@ -233,17 +250,27 @@
     "mohamedYasser1": "Mohamed",
     "mohamedYasser2": "Yasser",
     "positionMohamedYasser": "Desarrollador de Software",
-    "breifMohamedYasser": "Pensador confiable, estable y hábil",
+    "breifMohamedYasser": "Pensador confiable, constante y hábil",
 
     "youssef1": "Youssef",
     "youssef2": "Ahmed",
     "positionYoussef": "Desarrollador de Software",
-    "breifYoussef": "Constructor ingenioso, determinado y agudo",
+    "breifYoussef": "Constructor ingenioso, decidido y agudo",
 
     "Moustafa1": "Moustafa",
     "Moustafa2": "Adel",
     "positionMoustafa": "Desarrollador de Software",
-    "breifMoustafa": "Programador adaptable, inteligente"
+    "breifMoustafa": "Programador adaptable, inteligente",
+
+    "karma1": "Karma",
+    "karma2": "Ahmed",
+    "positionKarma": "Ejecutivo de Marketing",
+    "breifKarma": "Inteligente",
+
+    "ahmed1": "Ahmed",
+    "ahmed2": "Mostafa",
+    "positionAhmed": "Desarrollador de Software",
+    "breifAhmed": "Programador rápido, inteligente"
   },
   "talent": {
     "sectionLable": "Para talentos",
@@ -317,14 +344,15 @@
     "btnLable": "Comienza ahora"
   },
   "forHero": {
-    "buisiness": "Para negocios",
-    "freelancer": "Para freelancers",
-    "manager": "Para gestores",
-    "header": "Es hora de hacer el",
+    "buisiness": "Para Empresas",
+    "freelancer": "Para Freelancers",
+    "manager": "Para Gerentes",
+    "header": "Es hora de hacer",
+    "the": "el",
     "header2": "cambio.",
     "descriptionF": "Construye el futuro, un MVP a la vez. En YLLAAA, te conectarás con startups innovadoras y convertirás sus sueños en realidad mientras haces crecer tu propia carrera.",
-    "descriptionB": "Convierte tu visión de startup en realidad con YLLAAA. Obtén un MVP de alta calidad desarrollado rápidamente, valida tu mercado y atrae inversores.",
-    "descriptionM": "Sé el puente que convierte los sueños de las startups en realidad. Como gerente de cuentas en YLLAAA, empoderarás a los innovadores, guiarás proyectos e impulsarás el éxito."
+    "descriptionB": "Convierte la visión de tu startup en realidad con YLLAAA. Obtén un MVP de alta calidad desarrollado rápidamente, valida tu mercado y atrae inversores.",
+    "descriptionM": "Sé el puente que convierte los sueños de las startups en realidad. Como gerente de cuentas de YLLAAA, empoderarás a los innovadores, guiarás proyectos y impulsarás el éxito."
   },
   "barriers": {
     "yllaaa": "YLLAAA",

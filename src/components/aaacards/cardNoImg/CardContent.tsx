@@ -10,6 +10,7 @@ interface Props {
 }
 function CardContent(props: Props) {
   const { image, number, title, description } = props;
+  
   return (
     <>
       <div className={styles.cardContent}>

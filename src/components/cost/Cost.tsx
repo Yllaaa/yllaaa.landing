@@ -10,14 +10,15 @@ import arrow from "../../../public/icons/arrowBtnBlack.svg";
 import { useLocale, useTranslations } from "next-intl";
 import { AOSInit } from "@/Utils/aos/aos";
 import "aos/dist/aos.css";
+import { usePathname } from "next/navigation";
 
 function Cost() {
   const locale = useLocale();
   const t = useTranslations("cost");
-  useEffect(()=>
-    {
-      AOSInit(2000);
-    },[])
+  const pathname = usePathname();
+  useEffect(() => {
+    AOSInit(2000);
+  }, []);
   return (
     <>
       <div data-aos="fade-up" className={styles.container}>
@@ -31,12 +32,20 @@ function Cost() {
             <span>{t("headerAffordable")}</span>
           </h4>
           <p data-aos="fade-right">{t("description")}</p>
-          <Link data-aos="fade-up" href={`${locale}/about`} className={styles.button}>
-            <span className={styles.buttonText}>{t("buttonText")}</span>
-            <span>
-              <Image src={arrow} alt="arrow" />
-            </span>
-          </Link>
+          {pathname.includes("for_freelancers") ||
+            pathname.includes("for_business") ||
+            pathname.includes("for_managers") || (
+              <Link
+                data-aos="fade-up"
+                href={`${locale}/for_business`}
+                className={styles.button}
+              >
+                <span className={styles.buttonText}>{t("buttonText")}</span>
+                <span>
+                  <Image src={arrow} alt="arrow" />
+                </span>
+              </Link>
+            )}
         </div>
         <div className={styles.image}>
           <Image src={card} alt="card" />

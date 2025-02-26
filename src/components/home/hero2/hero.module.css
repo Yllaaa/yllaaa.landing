@@ -162,13 +162,13 @@
   line-height: 108.48px;
   letter-spacing: -0.015em;
   text-align: left;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 /*  */
 .content .contentHeader .description {
   font-family: var(--monta);
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 24px;
+  font-weight: 500;
   line-height: 21.33px;
   color: var(--neutral-1);
 }
@@ -265,7 +265,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  background: rgba(77, 0, 128, 0.498);
+  background: #2a0468c1;
   width: 100%;
   height: 100%;
   z-index: 1;
@@ -280,13 +280,14 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-
   z-index: 1;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
+  filter: grayscale(100%) brightness(1.5);
+  -webkit-filter: grayscale(100%) brightness(1.5);
 }
 .combined .combinedBottom {
   width: 100%;
@@ -397,9 +398,12 @@
     -o-transform: translateY(50%);
   }
   .content .contentHeader {
+    min-height: fit-content;
     width: 100%;
+    
   }
   .content .contentHeader .title {
+    min-height: fit-content;
     font-family: var(--monta);
     font-size: 66px;
     font-weight: 600;
@@ -408,7 +412,7 @@
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
   .container .mockup {
     width: 80%;
@@ -470,7 +474,7 @@
   .content .storeBtns {
     grid-area: appBtns;
     position: relative;
-    top: -140%;
+    top: -190%;
     bottom: auto;
     left: auto;
     display: flex;
@@ -529,11 +533,11 @@
     height: 130px;
     margin: auto;
     margin-bottom: 40px;
-    transform: translateY(-25px);
-    -webkit-transform: translateY(-25px);
-    -moz-transform: translateY(-25px);
-    -ms-transform: translateY(-25px);
-    -o-transform: translateY(-25px);
+    transform: translateY(-50px);
+    -webkit-transform: translateY(-50px);
+    -moz-transform: translateY(-50px);
+    -ms-transform: translateY(-50px);
+    -o-transform: translateY(-50px);
 }
 
   .container .mockup {

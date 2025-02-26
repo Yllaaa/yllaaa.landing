@@ -45,3 +45,33 @@
   text-align: left;
   color: #ffffff20;
 }
+@media screen and (max-width:768px) {
+  .smallCard {
+    width: fit-content;
+    height: 74px;
+    padding: 31.42px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 39.3px;
+    opacity: 0.4px;
+    border: 1.96px solid #ffffff20;
+    border-radius: 9.82px;
+    -webkit-border-radius: 9.82px;
+    -moz-border-radius: 9.82px;
+    -ms-border-radius: 9.82px;
+    -o-border-radius: 9.82px;
+  }
+  .smallCard .image {
+    width: 47px;
+    height: 46.77px;
+    opacity: 0.2;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+  
+  
+}

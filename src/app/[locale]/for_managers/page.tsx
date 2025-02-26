@@ -13,9 +13,8 @@ import people6F from "../../../../public/marquee/icons/people/img6.svg";
 import people7 from "../../../../public/marquee/icons/people/img7.svg";
 import bigLogo from "../../../../public/icons/bigLogo.svg";
 
-
 const Process = lazy(() => import("@/components/process/process/Process"));
-// const Build = lazy(() => import("@/components/build/Build"));
+const Build = lazy(() => import("@/components/build/Build"));
 const Mission = lazy(() => import("@/components/mission/Mission"));
 const ForHero = lazy(() => import("@/components/forHero/new/ForHero"));
 const CardMarquee = lazy(() =>
@@ -56,6 +55,7 @@ async function forManagers() {
   const tp = getTranslations("proccessM");
   const tb = getTranslations("manager");
   const tt = getTranslations("forHero");
+  const tbl = getTranslations("buildM");
   const people = [
     {
       name: "Hossam Salah",
@@ -180,57 +180,71 @@ async function forManagers() {
         />
       </Head>
       <Suspense fallback={<div>Loading...</div>}>
-      <section style={{ overflowX: "hidden" }}>
-        <div className={styles.heroContainer}>
-          <ForHero title={(await tt)("manager")} desc={(await tt)("descriptionM")} people={people} />
-        </div>
-        
-        
-        <div className={styles.processContainer}>
-          <Process
-            sectionLable={(await tp)("sectionLable")}
-            title={(await tp)("sectionTitle")}
-            titleSpecialWord={(await tp)("sectionTitleSpecialWord")}
-            description={(await tp)("description")}
-            card1Number="01"
-            card1Title={(await tp)("title1")}
-            card1Description={(await tp)("paragraph1")}
-            card2Number="02"
-            card2Title={(await tp)("title2")}
-            card2Description={(await tp)("paragraph2")}
-            card3Number="03"
-            card3Title={(await tp)("title3")}
-            card3Description={(await tp)("paragraph3")}
-            card4Number="04"
-            card4Title={(await tp)("title4")}
-            card4Description={(await tp)("paragraph4")}
-          />
-        </div>
-        <div className={styles.missionContainer}>
-          <Mission
-            row1={(await tb)("row1")}
-            row2={(await tb)("row2")}
-            btnLable={(await tb)("btnLable")}
-            logo={bigLogo}
-          />
-        </div>
-        {/* <div className={styles.forClientsContainer}>
-          <Build />
-        </div> */}
-        <div className={styles.marqueeContainer}>
-        <CardMarquee
-            card1Header={(await tb)("card1Header")}
-            card1SubHeader={(await tb)("card1SubHeader")}
-            card2Header={(await tb)("card2Header")}
-            card2SubHeader={(await tb)("card2SubHeader")}
-            card3Header={(await tb)("card3Header")}
-            card3SubHeader={(await tb)("card3SubHeader")}
-          />
-        </div>
-        <div className={styles.forClientsContainer}>
-          <Earth />
-        </div>
-      </section>
+        <section style={{ overflowX: "hidden" }}>
+          <div className={styles.heroContainer}>
+            <ForHero
+              title={(await tt)("manager")}
+              desc={(await tt)("descriptionM")}
+              people={people}
+            />
+          </div>
+
+          <div className={styles.processContainer}>
+            <Process
+              sectionLable={(await tp)("sectionLable")}
+              title={(await tp)("sectionTitle")}
+              titleSpecialWord={(await tp)("sectionTitleSpecialWord")}
+              description={(await tp)("description")}
+              card1Number="01"
+              card1Title={(await tp)("title1")}
+              card1Description={(await tp)("paragraph1")}
+              card2Number="02"
+              card2Title={(await tp)("title2")}
+              card2Description={(await tp)("paragraph2")}
+              card3Number="03"
+              card3Title={(await tp)("title3")}
+              card3Description={(await tp)("paragraph3")}
+              card4Number="04"
+              card4Title={(await tp)("title4")}
+              card4Description={(await tp)("paragraph4")}
+            />
+          </div>
+          <div className={styles.missionContainer}>
+            <Mission
+              row1={(await tb)("row1")}
+              row2={(await tb)("row2")}
+              btnLable={(await tb)("btnLable")}
+              logo={bigLogo}
+            />
+          </div>
+          <div className={styles.forClientsContainer}>
+            <Build
+              title1={(await tbl)("submit")}
+              desc1={(await tbl)("submitText")}
+              title2={(await tbl)("analyze")}
+              desc2={(await tbl)("analyzeText")}
+              title3={(await tbl)("yllaaa")}
+              desc3={(await tbl)("yllaaaText")}
+              title4={(await tbl)("approve")}
+              desc4={(await tbl)("approveText")}
+              title5={(await tbl)("build")}
+              desc5={(await tbl)("buildText")}
+            />
+          </div>
+          <div className={styles.marqueeContainer}>
+            <CardMarquee
+              card1Header={(await tb)("card1Header")}
+              card1SubHeader={(await tb)("card1SubHeader")}
+              card2Header={(await tb)("card2Header")}
+              card2SubHeader={(await tb)("card2SubHeader")}
+              card3Header={(await tb)("card3Header")}
+              card3SubHeader={(await tb)("card3SubHeader")}
+            />
+          </div>
+          <div className={styles.forClientsContainer}>
+            <Earth />
+          </div>
+        </section>
       </Suspense>
     </>
   );

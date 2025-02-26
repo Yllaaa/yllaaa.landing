@@ -108,6 +108,23 @@
     "build": "YLLAAA",
     "buildText": "Build a rewarding career while making a real impact on the world."
   },
+  "buildM": {
+    "01": "01",
+    "submit": "Understand",
+    "submitText": "Get to know each startup's unique needs and goals deeply.",
+    "02": "02",
+    "analyze": "Communicate",
+    "analyzeText": "Facilitate effective communication between clients and freelancers.",
+    "03": "03",
+    "yllaaa": "Deliver",
+    "yllaaaText": "Ensure project milestones are met and client satisfaction is maintained.",
+    "04": "04",
+    "approve": "Nurture",
+    "approveText": "Build and maintain long-term relationships with startup clients.",
+    "05": "05",
+    "build": "YLLAAA",
+    "buildText": "Build a rewarding career while making a real impact on the world."
+  },
   "world": {
     "yllaaa": "YLLAAA",
     "text": "From the Land of the Pyramids to the World!",
@@ -170,12 +187,12 @@
     "sectionTitle": "Shape your career path and manage impactful projects with",
     "sectionTitleSpecialWord": "Yllaaa",
     "description": "YLLAAA embraces a dynamic and flexible process, prioritizing collaboration and tailored solutions for every client.",
-    "title1": "Manage projects",
-    "paragraph1": "Effortlessly oversee all your projects in one place. Our platform helps you stay organized and in control from start to finish",
-    "title2": "select your expertise",
-    "paragraph2": "Showcase your unique skills and expertise, and let us match you with projects that suit your strengths.",
-    "title3": "simple project tracking",
-    "paragraph3": "Track progress with ease. Keep tabs on every project detail to ensure smooth delivery and timely updates.",
+    "title1": "LEARN",
+    "paragraph1": "You’ll gain hands-on experience in managing client relationships and working with startups, helping you build valuable skills.",
+    "title2": "EARN",
+    "paragraph2": "Fixed commission and bonuses based on your performance, such as how well you manage accounts or bring in new clients.",
+    "title3": "CONNECT",
+    "paragraph3": "You’ll meet many entrepreneurs and industry professionals, which can help you build a strong professional network for future opportunities.",
     "title4": "increase your income",
     "paragraph4": "Unlock more opportunities and boost your earnings by connecting with clients who need your expertise."
   },
@@ -243,7 +260,17 @@
     "Moustafa1": "Moustafa",
     "Moustafa2": "Adel",
     "positionMoustafa": "Software Developer",
-    "breifMoustafa": "Adaptable Coder, Clever"
+    "breifMoustafa": "Adaptable Coder, Clever",
+    
+    "karma1": "Karma",
+    "karma2": "Ahmed",
+    "positionKarma": "Marketing Executive",
+    "breifKarma": "Clever",
+
+    "ahmed1": "Ahmed",
+    "ahmed2": "Mostafa",
+    "positionAhmed": "Software Developer",
+    "breifAhmed": "Fast coder, smart"
   },
   "talent": {
     "sectionLable": "For Talent",
@@ -320,7 +347,8 @@
     "buisiness": "For Businesses",
     "freelancer": "For Freelancers",
     "manager": "For Managers",
-    "header": "It is time to make the",
+    "header": "It is time to make",
+    "the": "the",
     "header2": "switch.",
     "descriptionF": "Build the future, one MVP at a time. At YLLAAA, you'll connect with innovative startups and turn their dreams into reality while growing your own career.",
     "descriptionB": "Turn your startup vision into a reality with YLLAAA. Get a high-quality MVP developed rapidly, validate your market, and attract investors.",

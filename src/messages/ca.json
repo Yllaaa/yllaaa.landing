@@ -108,6 +108,23 @@
     "build": "YLLAAA",
     "buildText": "Construeix una carrera gratificant mentre fas un impacte real al món."
   },
+  "buildM": {
+    "01": "01",
+    "submit": "Comprendre",
+    "submitText": "Coneix profundament les necessitats i objectius únics de cada startup.",
+    "02": "02",
+    "analyze": "Comunicar",
+    "analyzeText": "Facilita una comunicació efectiva entre clients i freelancers.",
+    "03": "03",
+    "yllaaa": "Lliurar",
+    "yllaaaText": "Assegura't de complir amb els fites del projecte i mantenir la satisfacció del client.",
+    "04": "04",
+    "approve": "Nutrir",
+    "approveText": "Construeix i manté relacions a llarg termini amb clients startups.",
+    "05": "05",
+    "build": "YLLAAA",
+    "buildText": "Construeix una carrera gratificant mentre impactes positivament en el món."
+  },
   "world": {
     "yllaaa": "YLLAAA",
     "text": "Des de la terra de les piràmides fins al món!",
@@ -167,16 +184,16 @@
   },
   "proccessM": {
     "sectionLable": "EL NOSTRE PROCÉS",
-    "sectionTitle": "Dona forma a la teva carrera i gestiona projectes impactants amb",
+    "sectionTitle": "Dissenya la teva trajectòria professional i gestiona projectes impactants amb",
     "sectionTitleSpecialWord": "Yllaaa",
-    "description": "YLLAAA adopta un procés dinàmic i flexible, prioritzant la col·laboració i les solucions personalitzades per a cada client.",
-    "title1": "Gestiona projectes",
-    "paragraph1": "Supervisa tots els teus projectes sense esforç en un sol lloc. La nostra plataforma t'ajuda a mantenir-te organitzat i en control des de l'inici fins al final.",
-    "title2": "Selecciona la teva especialitat",
-    "paragraph2": "Mostra les teves habilitats i coneixements únics, i deixa'ns emparellar-te amb projectes que s'adaptin als teus punts forts.",
-    "title3": "Seguiment senzill de projectes",
-    "paragraph3": "Fes un seguiment del progrés amb facilitat. Controla cada detall del projecte per garantir una lliurament fluid i actualitzacions puntuals.",
-    "title4": "Augmenta els teus ingressos",
+    "description": "YLLAAA adopta un procés dinàmic i flexible, prioritzant la col·laboració i solucions personalitzades per a cada client.",
+    "title1": "APREN",
+    "paragraph1": "Guanyaràs experiència pràctica en la gestió de relacions amb clients i treballaràs amb startups, ajudant-te a desenvolupar habilitats valuoses.",
+    "title2": "GUANYA",
+    "paragraph2": "Comissió fixa i bonificacions basades en el teu rendiment, com ara com de bé gestiones comptes o portes nous clients.",
+    "title3": "CONNECTA",
+    "paragraph3": "Coneixeràs molts emprenedors i professionals de la indústria, cosa que t'ajudarà a construir una xarxa professional sòlida per a futures oportunitats.",
+    "title4": "augmenta els teus ingressos",
     "paragraph4": "Desbloqueja més oportunitats i augmenta els teus guanys connectant-te amb clients que necessiten la teva experiència."
   },
   "clients": {
@@ -193,22 +210,22 @@
   "team": {
     "sectionTitle": "Equip",
     "description": "Ments apassionades, solucions creatives. Descobreix l'equip darrere de YLLAAA.",
-    "buttonText": "El nostre equip",
+    "buttonText": "El Nostre Equip",
 
     "mohamedAbdelkader1": "Mohamed",
     "mohamedAbdelkader2": "Abdelkader",
-    "positionMohamed": "CEO i Co-Fundador",
+    "positionMohamed": "CEO i Co-fundador",
     "breifMohamed": "Somniador ambiciós, sempre pensant en gran",
 
     "zeyadSaleh1": "Zeyad",
     "zeyadSaleh2": "Saleh",
-    "positionZeyad": "CTO i Co-Fundador",
+    "positionZeyad": "CTO i Co-fundador",
     "breifZeyad": "Solucionador de problemes tranquil, entusiasta de la tecnologia",
 
     "vittorio1": "Vittorio",
     "vittorio2": "Badia",
-    "positionVittorio": "Propietari del Producte",
-    "breifVittorio": "Estrateg orientat a objectius, pensador",
+    "positionVittorio": "Product Owner",
+    "breifVittorio": "Estrategista orientat a objectius, pensador",
 
     "wiamMouafi1": "Wiam",
     "wiamMouafi2": "Mouafi",
@@ -222,8 +239,8 @@
 
     "shaymaElFouly1": "Shaimaa",
     "shaymaElFouly2": "El Fouly",
-    "positionShayma": "Dissenyadora",
-    "breifShayma": "Pensadora original i artística",
+    "positionShayma": "Dissenyador",
+    "breifShayma": "Pensador original i artístic",
 
     "yehia1": "Yehia",
     "yehia2": "Abdelhamed",
@@ -233,17 +250,27 @@
     "mohamedYasser1": "Mohamed",
     "mohamedYasser2": "Yasser",
     "positionMohamedYasser": "Desenvolupador de Software",
-    "breifMohamedYasser": "Pensador fiable, estable i hàbil",
+    "breifMohamedYasser": "Pensador fiable, constant i hàbil",
 
     "youssef1": "Youssef",
     "youssef2": "Ahmed",
     "positionYoussef": "Desenvolupador de Software",
-    "breifYoussef": "Constructor recursiu, determinat i agut",
+    "breifYoussef": "Constructor enginyós, decidit i agut",
 
     "Moustafa1": "Moustafa",
     "Moustafa2": "Adel",
     "positionMoustafa": "Desenvolupador de Software",
-    "breifMoustafa": "Programador adaptable, intel·ligent"
+    "breifMoustafa": "Programador adaptable, intel·ligent",
+
+    "karma1": "Karma",
+    "karma2": "Ahmed",
+    "positionKarma": "Executiu de Màrqueting",
+    "breifKarma": "Intel·ligent",
+
+    "ahmed1": "Ahmed",
+    "ahmed2": "Mostafa",
+    "positionAhmed": "Desenvolupador de Software",
+    "breifAhmed": "Programador ràpid, intel·ligent"
   },
   "talent": {
     "sectionLable": "Per al talent",
@@ -317,14 +344,15 @@
     "btnLable": "Comença ara"
   },
   "forHero": {
-    "buisiness": "Per a negocis",
-    "freelancer": "Per a freelancers",
-    "manager": "Per a gestors",
-    "header": "És hora de fer el",
+    "buisiness": "Per a Empreses",
+    "freelancer": "Per a Freelancers",
+    "manager": "Per a Gestors",
+    "header": "És hora de fer",
+    "the": "el",
     "header2": "canvi.",
-    "descriptionF": "Construeix el futur, un MVP a la vegada. A YLLAAA, et connectaràs amb startups innovadores i transformaràs els seus somnis en realitat mentre fas créixer la teva carrera.",
-    "descriptionB": "Converteix la teva visió de startup en realitat amb YLLAAA. Obtén un MVP d'alta qualitat desenvolupat ràpidament, valida el teu mercat i atrau inversors.",
-    "descriptionM": "Sigues el pont que converteix els somnis de les startups en realitat. Com a gestor de comptes de YLLAAA, empoderaràs els innovadors, guiaràs projectes i impulsaràs l'èxit."
+    "descriptionF": "Construeix el futur, un MVP a la vegada. A YLLAAA, et connectaràs amb startups innovadores i convertiràs els seus somnis en realitat mentre fas créixer la teva carrera.",
+    "descriptionB": "Converteix la visió de la teva startup en realitat amb YLLAAA. Obtén un MVP d'alta qualitat desenvolupat ràpidament, valida el teu mercat i atrau inversors.",
+    "descriptionM": "Sigues el pont que converteix els somnis de les startups en realitat. Com a gestor de comptes de YLLAAA, empoderaràs als innovadors, guiaràs projectes i impulsaràs l'èxit."
   },
   "barriers": {
     "yllaaa": "YLLAAA",

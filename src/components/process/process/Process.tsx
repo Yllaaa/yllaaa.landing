@@ -3,6 +3,7 @@ import React from "react";
 import styles from "./process.module.css";
 import { ScreenBreakpoints } from "@/Utils/screenBreakPoints/ScreenBreakPoints";
 import CardContent from "@/components/aaacards/cardNoImg/CardContent";
+import { usePathname } from "next/navigation";
 
 interface Props {
   sectionLable?: string;
@@ -55,6 +56,8 @@ function Process(props: Props) {
   React.useEffect(() => {
     setMounted(true);
   }, []);
+
+  const pathname = usePathname();
   return (
     <>
       <div
@@ -89,30 +92,42 @@ function Process(props: Props) {
           </div>
         </div>
         <div className={styles.processBodyCards}>
-          <CardContent
-            number={card1Number}
-            image={card1Image}
-            title={card1Title}
-            description={card1Description}
-          />
-          <CardContent
-            number={card2Number}
-            image={card2Image}
-            title={card2Title}
-            description={card2Description}
-          />
-          <CardContent
-            number={card3Number}
-            image={card3Image}
-            title={card3Title}
-            description={card3Description}
-          />
-          <CardContent
-            number={card4Number}
-            image={card4Image}
-            title={card4Title}
-            description={card4Description}
-          />
+          <div>
+            <CardContent
+              number={card1Number}
+              image={card1Image}
+              title={card1Title}
+              description={card1Description}
+            />
+          </div>
+          <div>
+            <CardContent
+              number={card2Number}
+              image={card2Image}
+              title={card2Title}
+              description={card2Description}
+            />
+          </div>
+          <div
+            className={pathname.includes("for_managers") ? styles.card3 : ""}
+          >
+            <CardContent
+              number={card3Number}
+              image={card3Image}
+              title={card3Title}
+              description={card3Description}
+            />
+          </div>
+          {pathname.includes("for_managers") || (
+            <div>
+              <CardContent
+                number={card4Number}
+                image={card4Image}
+                title={card4Title}
+                description={card4Description}
+              />
+            </div>
+          )}
         </div>
       </div>
     </>

@@ -1,5 +1,6 @@
-.cardMarquee{
-    min-height: fit-content;
-    height: fit-content;
-    overflow-y: hidden;
+.cardMarquee {
+  min-height: fit-content;
+  height: fit-content;
+  overflow-y: hidden;
+  width: fit-content;
 }
