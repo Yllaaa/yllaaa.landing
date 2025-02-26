@@ -8,7 +8,7 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { AOSInit } from "@/Utils/aos/aos";
 
-// import CardMarquee2 from "@/components/marquee/cards/CardMarquee2";
+import CardMarquee2 from "@/components/marquee/cards/CardMarquee2";
 import "aos/dist/aos.css";
 
 type Props = {
@@ -22,7 +22,7 @@ type Props = {
 };
 
 function ForHero(props: Props) {
-  // const people = props.people;
+  const people = props.people;
   const title = props.title;
   const desc = props.desc;
   const t = useTranslations("forHero");
@@ -50,14 +50,14 @@ function ForHero(props: Props) {
           </h2>
           <p data-aos="fade-up">{desc}</p>
         </div>
-        {/* <div className={styles.marqueeContainer}>
+        <div className={styles.marqueeContainer}>
           <div className={styles.leftMarquee}>
             <CardMarquee2 people={people} direction="left" />
           </div>
           <div className={styles.rightMarquee}>
             <CardMarquee2 people={people} direction="right" />
           </div>
-        </div> */}
+        </div>
       </div>
     </>
   );
