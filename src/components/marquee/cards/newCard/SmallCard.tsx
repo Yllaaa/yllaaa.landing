@@ -5,9 +5,9 @@ import styles from "./smallCard.module.css";
 import Image, { StaticImageData } from "next/image";
 
 type Props = {
-  name: string;
-  description: string;
-  image: string | StaticImageData | any;
+  name?: string;
+  description?: string;
+  image?: string | StaticImageData | any;
 };
 function SmallCard(props: Props) {
   const { name, description, image } = props;
@@ -15,7 +15,7 @@ function SmallCard(props: Props) {
     <>
       <div className={styles.smallCard}>
         <div className={styles.image}>
-          <Image src={image} alt="image" width={100} height={100} />
+          <Image src={image} alt="image" width={100} height={100} loading="lazy" />
         </div>
         <div className={styles.text}>
           <h4>{name}</h4>

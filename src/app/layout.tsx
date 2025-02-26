@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   description: "YLLAAA landing page",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;

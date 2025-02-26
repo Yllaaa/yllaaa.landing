@@ -183,7 +183,11 @@ async function forBusiness() {
       <Suspense fallback={<div>Loading...</div>}>
         <section style={{ overflowX: "hidden" }}>
           <div className={styles.heroContainer}>
-            <ForHero title={(await tt)("buisiness")} desc={(await tt)("descriptionB")} people={people} />
+            <ForHero
+              title={(await tt)("buisiness")}
+              desc={(await tt)("descriptionB")}
+              people={people}
+            />
           </div>
           <div className={styles.processContainer}>
             <Process
@@ -223,17 +227,17 @@ async function forBusiness() {
             />
           </div>
           <div className={styles.buildContainer}>
-          <Build 
-            title1={(await tbl)("submit")} 
-            desc1={(await tbl)("submitText")} 
-            title2={(await tbl)("analyze")} 
-            desc2={(await tbl)("analyzeText")} 
-            title3={(await tbl)("yllaaa")} 
-            desc3={(await tbl)("yllaaaText")} 
-            title4={(await tbl)("approve")} 
-            desc4={(await tbl)("approveText")} 
-            title5={(await tbl)("build")} 
-            desc5={(await tbl)("buildText")} 
+            <Build
+              title1={(await tbl)("submit")}
+              desc1={(await tbl)("submitText")}
+              title2={(await tbl)("analyze")}
+              desc2={(await tbl)("analyzeText")}
+              title3={(await tbl)("yllaaa")}
+              desc3={(await tbl)("yllaaaText")}
+              title4={(await tbl)("approve")}
+              desc4={(await tbl)("approveText")}
+              title5={(await tbl)("build")}
+              desc5={(await tbl)("buildText")}
             />
           </div>
           <div className={styles.teamSection}>

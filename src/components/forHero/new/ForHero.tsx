@@ -1,18 +1,14 @@
 "use client";
-import React, { useEffect } from "react";
+import React, {  useEffect } from "react";
 import styles from "./forHero.module.css";
-import dynamic from "next/dynamic";
+// import dynamic from "next/dynamic";
 import background from "../../../../public/forHero/background16.png";
 import logo from "../../../../public/forHero/logo.svg";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { AOSInit } from "@/Utils/aos/aos";
-const CardMarquee2 = dynamic(
-  () => import("@/components/marquee/cards/CardMarquee2"),
-  {
-    ssr: true,
-  }
-);
+
+// import CardMarquee2 from "@/components/marquee/cards/CardMarquee2";
 import "aos/dist/aos.css";
 
 type Props = {
@@ -21,12 +17,12 @@ type Props = {
     img: string;
     role: string;
   }[];
-  title: string;
-  desc: string;
+  title?: string;
+  desc?: string;
 };
 
 function ForHero(props: Props) {
-  const people = props.people;
+  // const people = props.people;
   const title = props.title;
   const desc = props.desc;
   const t = useTranslations("forHero");
@@ -47,21 +43,21 @@ function ForHero(props: Props) {
           <h2 data-aos="fade-up">
             {t("header")}{" "}
             <span>
-              {t("the")}
+              <span>{t("the")}</span>
               <Image src={logo} alt="logo" />
-              {t("header2")}
+              <span>{t("header2")}</span>
             </span>{" "}
           </h2>
           <p data-aos="fade-up">{desc}</p>
         </div>
-        <div className={styles.marqueeContainer}>
+        {/* <div className={styles.marqueeContainer}>
           <div className={styles.leftMarquee}>
             <CardMarquee2 people={people} direction="left" />
           </div>
           <div className={styles.rightMarquee}>
             <CardMarquee2 people={people} direction="right" />
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );

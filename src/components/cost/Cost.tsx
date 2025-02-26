@@ -15,10 +15,10 @@ import { usePathname } from "next/navigation";
 function Cost() {
   const locale = useLocale();
   const t = useTranslations("cost");
-  const pathname = usePathname();
   useEffect(() => {
     AOSInit(2000);
   }, []);
+  const pathname = usePathname();
   return (
     <>
       <div data-aos="fade-up" className={styles.container}>

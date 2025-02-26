@@ -118,7 +118,7 @@ function Process(props: Props) {
               description={card3Description}
             />
           </div>
-          {pathname.includes("for_managers") || (
+          {pathname.includes("/for_managers") || (
             <div>
               <CardContent
                 number={card4Number}
