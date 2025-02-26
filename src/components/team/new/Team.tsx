@@ -117,7 +117,7 @@ function Team() {
       position: `💻 ${t("positionKarma")}`,
       breif: t("breifKarma"),
       image: karma,
-      linkedin: "",
+      linkedin: "https://www.linkedin.com/in/karma-ahmed/",
     },
     {
       name: t("ahmed1"),
@@ -232,6 +232,7 @@ function Team() {
                         alt="image"
                         width={1000}
                         height={1000}
+                        loading="lazy"
                       />
                     </div>
                   </div>

@@ -11,16 +11,26 @@ type Props = {
 };
 function SmallCard(props: Props) {
   const { name, description, image } = props;
+  const [loaded, setLoaded] = React.useState(false);
   return (
     <>
       <div className={styles.smallCard}>
         <div className={styles.image}>
-          <Image src={image} alt="image" width={100} height={100} loading="lazy" />
+          <Image
+            src={image}
+            alt="image"
+            width={100}
+            height={100}
+            loading="lazy"
+            onLoad={() => setLoaded(true)}
+          />
         </div>
-        <div className={styles.text}>
-          <h4>{name}</h4>
-          <p>{description}</p>
-        </div>
+        {loaded && (
+          <div className={styles.text}>
+            <h4>{name}</h4>
+            <p>{description}</p>
+          </div>
+        )}
       </div>
     </>
   );

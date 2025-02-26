@@ -16,28 +16,38 @@ type Props = {
 };
 function CardMarquee(props: Props) {
   const { direction, people } = props;
+
+  const [mounted, setMounted] = React.useState(false);
+  
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
     <>
       <div className={style.cardMarquee}>
-        <Marquee
-          speed={50}
-          autoFill={true}
-          style={{ overflow: "hidden" }}
-          direction={direction ? direction : "left"}
-        >
-          {people?.map((person, index) => (
-            <div
-              key={index}
-              style={{ margin: "auto 30px", overflow: "hidden" }}
-            >
-              <SmallCard
-                name={person.name}
-                image={person.img}
-                description={person.role}
-              />
-            </div>
-          ))}
-        </Marquee>
+        {mounted && people && (
+          <Marquee
+            speed={50}
+            autoFill={true}
+            style={{ overflow: "hidden" }}
+            direction={direction ? direction : "left"}
+          >
+            {people &&
+              people?.map((person, index) => (
+                <div
+                  key={index}
+                  style={{ margin: "auto 30px", overflow: "hidden" }}
+                >
+                  <SmallCard
+                    name={person.name}
+                    image={person.img}
+                    description={person.role}
+                  />
+                </div>
+              ))}
+          </Marquee>
+        )}
       </div>
     </>
   );
