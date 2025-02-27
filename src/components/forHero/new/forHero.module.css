@@ -215,6 +215,9 @@
   }
 }
 @media screen and (max-width: 430px) {
+  .container{
+    min-height: 760px;
+  }
   .text h2 span img {
     max-width: 80px;
     max-height: 30px;
