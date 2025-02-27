@@ -13,20 +13,18 @@
 }
 
 .marqueeContentLeft {
-  display: flex ;
+  display: flex;
   align-items: center;
   justify-content: center;
-  /*display: inline-block;
-  */animation: marquee 10s linear infinite;
-  -webkit-animation: marquee 20s linear infinite;
+  animation: marquee 200s linear infinite;
+  -webkit-animation: marquee 200s linear infinite;
 }
 .marqueeContentRight {
-  display: flex ;
+  display: flex;
   align-items: center;
   justify-content: center;
-  /*display: inline-block;
-  */animation: marqueeR 10s linear infinite;
-  -webkit-animation: marqueeR 30s linear infinite;
+  animation: marqueeR 200s linear infinite;
+  -webkit-animation: marqueeR 200s linear infinite;
 }
 
 @keyframes marquee {
@@ -42,7 +40,6 @@
 }
 }
 
-
 @keyframes marqueeR {
   0% {
     transform: translateX(-50%);
@@ -50,14 +47,12 @@
     -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     -o-transform: translateX(-50%);
-}
+  }
   100% {
     transform: translateX(0%);
     -webkit-transform: translateX(0%);
     -moz-transform: translateX(0%);
     -ms-transform: translateX(0%);
     -o-transform: translateX(0%);
+  }
 }
-}
-
-

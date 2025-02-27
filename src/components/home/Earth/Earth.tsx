@@ -79,7 +79,7 @@ function Earth() {
                 //     ? { transform: `translateY(${(scroll - 6525) * 0.3}px)` }
                 //     : {}
                 // }
-                href={`${locale}/for_business`}
+                href={`${locale}/for_freelancers`}
                 className={styles.button}
               >
                 <span className={styles.buttonText}>{t("buttonText")}</span>
