@@ -211,6 +211,12 @@ function Footer() {
                     <li>{t("forFreelancers")}</li>
                   </Link>
                   <Link
+                    href={`/${locale}/for_managers`}
+                    className={`${styles.darkLink} ${styles.link}`}
+                  >
+                    <li>{t("forManagers")}</li>
+                  </Link>
+                  <Link
                     href={`/${locale}/contact`}
                     className={`${styles.darkLink} ${styles.link}`}
                   >
