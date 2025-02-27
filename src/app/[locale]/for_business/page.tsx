@@ -226,7 +226,7 @@ async function forBusiness() {
               btnLable={(await tb)("btnLable")}
             />
           </div>
-          <div className={styles.buildContainer}>
+          <div className={styles.barrier}>
             <Build
               title1={(await tbl)("submit")}
               desc1={(await tbl)("submitText")}

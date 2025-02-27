@@ -236,7 +236,7 @@ async function forFreelancers() {
               btnLable={(await tb)("btnLable")}
             />
           </div>
-          <div className={styles.forClientsContainer}>
+          <div className={styles.barrier}>
             <Build
               title1={(await tbl)("submit")}
               desc1={(await tbl)("submitText")}

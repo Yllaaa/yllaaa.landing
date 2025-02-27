@@ -180,7 +180,7 @@ async function forManagers() {
         />
       </Head>
       <Suspense fallback={<div>Loading...</div>}>
-        <section style={{ overflowX: "hidden" }}>
+        <section>
           <div className={styles.heroContainer}>
             <ForHero
               title={(await tt)("manager")}
@@ -217,7 +217,7 @@ async function forManagers() {
               logo={bigLogo}
             />
           </div>
-          <div className={styles.forClientsContainer}>
+          <div className={styles.barrier}>
             <Build
               title1={(await tbl)("submit")}
               desc1={(await tbl)("submitText")}

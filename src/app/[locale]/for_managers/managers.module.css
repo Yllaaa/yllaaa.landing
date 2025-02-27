@@ -1,62 +1,67 @@
 .heroContainer {
-    position: relative;
-    width: 100vw;
-    height: fit-content;
-    min-height: fit-content;
-    margin: 0 auto 70px auto;
+  position: relative;
+  width: 100vw;
+  height: fit-content;
+  min-height: fit-content;
+  margin: 0 auto 70px auto;
+}
+.barrier {
+  position: relative;
+  width: 100vw;
+  height: fit-content;
+  min-height: fit-content;
+  margin: 72px auto 130px auto;
+}
+.marqueeContainer {
+  margin: 70px auto 148px auto;
+  height: fit-content;
+  min-height: fit-content;
+  overflow-y: hidden;
+}
+.missionContainer {
+  position: relative;
+  height: fit-content;
+  min-height: fit-content;
+  margin: 148px auto 130px auto;
+}
+.processContainer {
+  position: relative;
+  width: 100vw;
+  min-height: fit-content;
+  padding-bottom: 102px;
+  margin: 130px auto;
+}
+.forClientsContainer {
+  position: relative;
+  width: 100vw;
+  height: fit-content;
+  min-height: fit-content;
+  margin: 130px auto 260px auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .processContainer {
+    margin: 40px auto 40px auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .heroContainer {
+    margin: 0 auto 40px auto;
   }
   .marqueeContainer {
-    margin: 70px auto 148px auto;
-    height: fit-content;
-    min-height: fit-content;
-    overflow-y: hidden;
+    margin: 40px auto 40px auto;
   }
   .missionContainer {
-    position: relative;
-    height: fit-content;
-    min-height: fit-content;
-    margin: 148px auto 130px auto;
+    margin: 40px auto 40px auto;
   }
   .processContainer {
-    position: relative;
-    width: 100vw;
-    min-height: fit-content;
-    padding-bottom: 102px;
-    margin: 130px auto;
+    height: fit-content;
+  }
+  .teamSection {
+    margin: 50px auto 50px auto;
   }
   .forClientsContainer {
-    position: relative;
-    width: 100vw;
-    height: fit-content;
-    min-height: fit-content;
-    margin: 130px auto 260px auto;
+    margin: 50px auto 50px auto;
   }
-
-  
-  @media screen and (max-width: 1024px) {
-    .processContainer {
-      margin: 40px auto 40px auto;
-    }
-  }
-  
-  @media screen and (max-width: 768px) {
-    .heroContainer {
-      margin: 0 auto 40px auto;
-    }
-    .marqueeContainer {
-      margin: 40px auto 40px auto;
-    }
-    .missionContainer {
-      margin: 40px auto 40px auto;
-    }
-    .processContainer {
-      height: fit-content;
-    }
-    .teamSection {
-      margin: 50px auto 50px auto;
-    }
-    .forClientsContainer {
-      margin: 50px auto 50px auto;
-    }
-  }
-  
+}

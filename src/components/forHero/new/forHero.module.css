@@ -216,9 +216,17 @@
 }
 @media screen and (max-width: 430px) {
   .text h2 span img {
-    max-width: 100px;
+    max-width: 80px;
     max-height: 100px;
-    margin: auto 16px;
-    transform: translateY(30%);
+    min-height: 100px;
+    margin: auto 10px;
+    transform: translateY(35%);
+    -webkit-transform: translateY(35%);
+    -moz-transform: translateY(35%);
+    -ms-transform: translateY(35%);
+    -o-transform: translateY(35%);
+  }
+  .text h2 span {
+    text-wrap: nowrap;
   }
 }

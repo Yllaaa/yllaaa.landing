@@ -5,6 +5,13 @@
   min-height: fit-content;
   margin: 0 auto 70px auto;
 }
+.barrier {
+  position: relative;
+  width: 100vw;
+  height: fit-content;
+  min-height: fit-content;
+  margin: 72px auto 130px auto;
+}
 .marqueeContainer {
   margin: 70px auto 148px auto;
   height: fit-content;

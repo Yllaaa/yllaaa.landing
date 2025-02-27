@@ -112,4 +112,7 @@
     justify-self: center;
     gap: 6px;
   }
+  .cards .card h6 {
+    font-size: 25px;
+  }
 }
