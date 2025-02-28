@@ -43,6 +43,7 @@ function Earth() {
 
         <div data-aos="fade-down-right" className={styles.content}>
           <h5
+          className={styles.titleWeb}
           // style={
           //   scroll >= 6525
           //     ? { transform: `translateY(${(scroll - 6525) * 0.3}px)` }
@@ -50,6 +51,16 @@ function Earth() {
           // }
           >
             {t("title")}
+          </h5>
+          <h5
+          className={styles.titleRes}
+          // style={
+          //   scroll >= 6525
+          //     ? { transform: `translateY(${(scroll - 6525) * 0.3}px)` }
+          //     : {}
+          // }
+          >
+            {t("titleRes")}
           </h5>
           <h3
           // style={

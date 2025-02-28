@@ -142,7 +142,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 60px;
   }
 
   .item1 {
@@ -187,7 +187,15 @@
   .centerImage{
     max-width: 690px;
   }
-  
+  .item1 h6,
+  .item2 h6 {
+    
+    margin: 15px 0px 8px 0px;
+  }
+  .item1 p,
+  .item2 p {
+    font-size: 13.45px;
+  }
 }
 @media screen and (max-width: 360px) {
   .centerImage {
