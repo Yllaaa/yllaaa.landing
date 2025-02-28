@@ -10,7 +10,7 @@ import { ScreenBreakpoints } from "@/Utils/screenBreakPoints/ScreenBreakPoints";
 
 import apple from "../../../public/icons/apple.svg";
 import mail from "../../../public/icons/mail.svg";
-// import facebook from "../../../public/icons/facebook.svg";
+import facebook from "../../../public/icons/facebook.svg";
 import instagram from "../../../public/icons/instagram.svg";
 import linkedIn from "../../../public/icons/linkedIn.svg";
 import smallArrow from "../../../public/icons/smallArrow.svg";
@@ -228,10 +228,37 @@ function Footer() {
             </div>
             <div className={styles.betweenLine}></div>
             <div className={styles.lowerContainerSocial}>
-              {/* <Image src={facebook} alt="linkedInIcon" /> */}
-              <FaTiktok fill="#fff"/>
-              <Image src={instagram} alt="linkedInIcon" />
-              <Image src={linkedIn} alt="linkedInIcon" onClick={()=>{window.open("https://www.linkedin.com/company/yllaaa/posts/?feedView=all")}} />
+              <Image
+                src={facebook}
+                alt="linkedInIcon"
+                onClick={() => {
+                  window.open("https://www.facebook.com/yllaaastartup");
+                }}
+              />
+              <FaTiktok
+                fill="#fff"
+                onClick={() => {
+                  window.open("https://www.tiktok.com/@yllaaastartup");
+                }}
+              />
+              <Image
+                src={instagram}
+                alt="linkedInIcon"
+                onClick={() => {
+                  window.open(
+                    "https://www.instagram.com/yllaaastartup?igsh=bXgxYXdzaXRjbmMw"
+                  );
+                }}
+              />
+              <Image
+                src={linkedIn}
+                alt="linkedInIcon"
+                onClick={() => {
+                  window.open(
+                    "https://www.linkedin.com/company/yllaaa/posts/?feedView=all"
+                  );
+                }}
+              />
             </div>
             <div className={styles.responsiveLowerContainerEmail}>
               <p>info@YLLAAA.com</p>
