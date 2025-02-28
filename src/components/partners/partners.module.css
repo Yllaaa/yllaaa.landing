@@ -68,7 +68,7 @@
 .logoItem {
   cursor: pointer;
   display: inline-block;
-  margin-right: 50px;
+  margin-right: 100px;
   text-align: center;
 }
 .logoItem img {
@@ -132,5 +132,21 @@
   }
   100% {
     transform: translateX(-50%);
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .text h6 {
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 12.45px;
+    line-height: 16.54px;
+    letter-spacing: 0.31px;
+    text-align: center;
+    color: var(--Indigo-700);
+  }
+  .text h3 {
+    font-size: 26.62px;
+    line-height: 36.34px;
   }
 }
