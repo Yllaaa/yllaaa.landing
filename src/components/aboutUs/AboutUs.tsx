@@ -87,13 +87,13 @@ function AboutUs() {
           <div className={styles.aboutAnalatical}>
             <div className={styles.aboutAnalaticalRow}>
               <div className={styles.aboutAnalaticalRowItem}>
-                <p className={styles.aboutAnalaticalRowItemNum}>6+</p>
+                <p className={styles.aboutAnalaticalRowItemNum}>1+</p>
                 <p className={styles.aboutAnalaticalRowItemText}>
-                  {t("months")}
+                  {t("year")}
                 </p>
               </div>
               <div className={styles.aboutAnalaticalRowItem}>
-                <p className={styles.aboutAnalaticalRowItemNum}>14+</p>
+                <p className={styles.aboutAnalaticalRowItemNum}>6+</p>
                 <p className={styles.aboutAnalaticalRowItemText}>
                   {t("clients")}
                 </p>
@@ -101,7 +101,7 @@ function AboutUs() {
             </div>
             <div className={styles.aboutAnalaticalRow}>
               <div className={styles.aboutAnalaticalRowItem}>
-                <p className={styles.aboutAnalaticalRowItemNum}>20+</p>
+                <p className={styles.aboutAnalaticalRowItemNum}>29+</p>
                 <p className={styles.aboutAnalaticalRowItemText}>
                   {t("projects")}
                 </p>

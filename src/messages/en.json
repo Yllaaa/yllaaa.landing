@@ -15,6 +15,7 @@
     "buttonText": "More About Us",
     "projects": "Projects",
     "months": "Months",
+    "year": "Year",
     "clients": "Clients",
     "profs": "Professionals"
   },
@@ -46,7 +47,7 @@
     "header2": "YLLAAA",
     "description": "At YLLAAA, we connect startups with the top 1% of talent in Egypt. We believe in helping startups succeed by finding them the right talent and resources. Unlike traditional freelancing, our platform goes beyond just offering the matching process; we have dedicated support through experienced account managers, seamless matching process and focused collaboration!",
     "buttonText": "About us",
-    "lableCard1": "MONTHS",
+    "lableCard1": "YEAR",
     "numberCard1": "+6",
     "lableCard2": "CLIENTS",
     "numberCard2": "+14",

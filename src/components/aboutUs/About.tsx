@@ -25,7 +25,7 @@ function About() {
     if (!inView) {
       setCounter6(0);
     }
-    if (counter6 < 6 && inView) {
+    if (counter6 < 1 && inView) {
       const timer = setInterval(() => {
         setCounter6((prevCount) => prevCount + 1);
       }, 100);
@@ -49,7 +49,7 @@ function About() {
     if (!inView) {
       setCounter20(0);
     }
-    if (counter20 < 20 && inView) {
+    if (counter20 < 29 && inView) {
       const timer = setInterval(() => {
         setCounter20((prevCount) => prevCount + 1);
       }, 100);
@@ -84,7 +84,7 @@ function About() {
         )}
         <div ref={ref} className={styles.sectionCards}>
           <div className={`${styles.sectionCard} ${styles.card1}`}>
-            <p className={counter6 === 6 ? styles.notNata : ""}>
+            <p className={counter6 === 1 ? styles.notNata : ""}>
               {inView ? `+${counter6}` : 0}
             </p>
             <h6>{t("lableCard1")}</h6>
