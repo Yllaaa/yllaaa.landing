@@ -12,11 +12,11 @@
   align-self: center;
   padding: 0px 12px;
   position: relative;
-  transition: all 0.5s ease-in-out;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
+  transition: none;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
 }
 
 .numberSlide {
@@ -123,7 +123,9 @@
   color: var(--neutral-1);
 }
 .numberSlide:hover {
-  box-shadow: 5px 5px 15px 0px #ca03ed, 0px 0px 15px 5px #df00ff;
+  box-shadow:
+    5px 5px 15px 0px #ca03ed,
+    0px 0px 15px 5px #df00ff;
   transition: box-shadow 0.5s ease-in-out;
   -webkit-transition: box-shadow 0.5s ease-in-out;
   -moz-transition: box-shadow 0.5s ease-in-out;
@@ -251,8 +253,21 @@
 @media screen and (max-width: 1024px) {
   .navigation_wrapper {
     position: relative;
-    /* padding: 0px 50px; */
+    /*padding: 0px 50px;
+    */
     min-height: 524px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transition: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
   }
 }
 
@@ -300,14 +315,28 @@
   }
   .keenSlider {
     padding: 0px 0px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transition: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
   }
   .numberSlide:hover {
-    box-shadow: 0px 0px 0px 0px #ca03ed, 0px 0px 0px 0px #df00ff;
-    transition: all 0.5s ease-in-out;
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -ms-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
+    box-shadow:
+      0px 0px 0px 0px #ca03ed,
+      0px 0px 0px 0px #df00ff;
+    transition: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
   }
   .numberSlide .bottomContent {
     padding: 0px 10px 0px 20px;
@@ -334,3 +363,5 @@
     min-height: 524px;
   }
 }
+
+/* ///////////////////////////////// */

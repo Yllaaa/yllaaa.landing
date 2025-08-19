@@ -14,9 +14,9 @@ import shaimaElfouly from "../../../../public/team/new/shaimaElfouly.png";
 import yehiaAbdelhamed from "../../../../public/team/new/yehiaAbdelhamed.png";
 import wiamOuafi from "../../../../public/team/new/wiamOuafi.png";
 import MohAshraf from "../../../../public/team/new/mohamedAshraf.png";
-import Vittorio from "../../../../public/team/new/vittorio.png";
+// import Vittorio from "../../../../public/team/new/vittorio.png";
 import karma from "../../../../public/team/new/karma.png";
-import ahmed from "../../../../public/team/new/ahmed.png";
+// import ahmed from "../../../../public/team/new/ahmed.png";
 import linkedInIcon from "../../../../public/icons/linkedInTeam.svg";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
@@ -45,14 +45,14 @@ function Team() {
       image: ziadSaleh,
       linkedin: "https://www.linkedin.com/in/zeyad-saleh-612ab7124/",
     },
-    {
-      name: t("vittorio1"),
-      name2: t("vittorio2"),
-      position: `📦 ${t("positionVittorio")}`,
-      breif: t("breifVittorio"),
-      image: Vittorio,
-      linkedin: "#",
-    },
+    // {
+    //   name: t("vittorio1"),
+    //   name2: t("vittorio2"),
+    //   position: `📦 ${t("positionVittorio")}`,
+    //   breif: t("breifVittorio"),
+    //   image: Vittorio,
+    //   linkedin: "#",
+    // },
     {
       name: t("wiamMouafi1"),
       name2: t("wiamMouafi2"),
@@ -119,15 +119,15 @@ function Team() {
       image: karma,
       linkedin: "https://www.linkedin.com/in/karma-ahmed/",
     },
-    {
-      name: t("ahmed1"),
-      name2: t("ahmed2"),
+    // {
+    //   name: t("ahmed1"),
+    //   name2: t("ahmed2"),
 
-      position: `💻 ${t("positionAhmed")}`,
-      breif: t("breifAhmed"),
-      image: ahmed,
-      linkedin: "",
-    },
+    //   position: `💻 ${t("positionAhmed")}`,
+    //   breif: t("breifAhmed"),
+    //   image: ahmed,
+    //   linkedin: "",
+    // },
   ];
 
   const [currentSlide, setCurrentSlide] = React.useState(0);
@@ -140,6 +140,7 @@ function Team() {
       "(min-width: 430px)": {
         slides: {
           perView: 1,
+          spacing: 21,
         },
       },
       "(min-width: 768px)": {
@@ -206,6 +207,8 @@ function Team() {
           <div
             onMouseEnter={stopAutoSlide} // Stop auto-slide on hover
             onMouseLeave={startAutoSlide} // Resume auto-slide when mouse leaves
+            onMouseDown={stopAutoSlide} // Stop auto-slide on mouse down
+            onTouchMoveCapture={stopAutoSlide} // Stop auto-slide on touch move
             ref={sliderRef}
             className={`${styles.keenSlider} keen-slider`}
           >
