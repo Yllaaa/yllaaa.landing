@@ -1,6 +1,7 @@
 @import "aos/dist/aos.css";
+
 :root {
-  /* Indigo */
+  /* Your existing color variables */
   --Indigo-50: #f3edfe;
   --Indigo-100: #d9c7fc;
   --Indigo-200: #c7acfa;
@@ -48,25 +49,156 @@
   --neutral-12: #151515;
   --neutral-13: #010101;
 }
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Space Grotesk", sans-serif;
-  /* overflow-x: hidden; */
+  font-family: var(--space), sans-serif;
 }
+
+/* RTL font family */
+[dir="rtl"] * {
+  font-family: var(--cairo), var(--space), sans-serif;
+}
+
 html,
 body {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
+
 body {
   overflow-x: hidden;
   background-color: var(--Purple-500);
 }
+
 a {
   text-decoration: none;
 }
+
+/* ========================================== */
+/*          COMPREHENSIVE RTL SUPPORT         */
+/* ========================================== */
+
+/* 1. TEXT DIRECTION */
+[dir="rtl"] {
+  text-align: right;
+}
+
+/* 2. FLEXBOX MIRRORING */
+[dir="rtl"] .flex:not(.flex-col):not(.flex-column),
+[dir="rtl"] [style*="display: flex"]:not([style*="flex-direction: column"]) {
+  flex-direction: row-reverse;
+}
+
+/* 3. TRANSFORM PROPERTIES */
+[dir="rtl"] [style*="translateX("] {
+  transform: scaleX(-1);
+}
+
+/* 4. MARGIN MIRRORING */
+[dir="rtl"] [style*="margin-left"],
+[dir="rtl"] [class*="ml-"] {
+  margin-left: 0 !important;
+  margin-right: inherit;
+}
+
+[dir="rtl"] [style*="margin-right"],
+[dir="rtl"] [class*="mr-"] {
+  margin-right: 0 !important;
+  margin-left: inherit;
+}
+
+/* 5. PADDING MIRRORING */
+/* 5. PADDING MIRRORING */
+[dir="rtl"] [style*="padding-left"],
+[dir="rtl"] [class*="pl-"] {
+  padding-left: 0 !important;
+  padding-right: inherit;
+}
+
+[dir="rtl"] [style*="padding-right"],
+[dir="rtl"] [class*="pr-"] {
+  padding-right: 0 !important;
+  padding-left: inherit;
+}
+
+/* 6. POSITION MIRRORING */
+[dir="rtl"] [style*="left:"],
+[dir="rtl"] .left-0,
+[dir="rtl"] [class*="left-"] {
+  left: auto !important;
+  right: 0;
+}
+
+[dir="rtl"] [style*="right:"],
+[dir="rtl"] .right-0,
+[dir="rtl"] [class*="right-"] {
+  right: auto !important;
+  left: 0;
+}
+
+/* 7. BORDER RADIUS MIRRORING */
+[dir="rtl"] [style*="border-top-left-radius"],
+[dir="rtl"] [style*="border-bottom-left-radius"] {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  border-top-right-radius: inherit;
+  border-bottom-right-radius: inherit;
+}
+
+[dir="rtl"] [style*="border-top-right-radius"],
+[dir="rtl"] [style*="border-bottom-right-radius"] {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  border-top-left-radius: inherit;
+  border-bottom-left-radius: inherit;
+}
+
+/* 8. FLOAT MIRRORING */
+[dir="rtl"] [style*="float: left"],
+[dir="rtl"] .float-left {
+  float: right !important;
+}
+
+[dir="rtl"] [style*="float: right"],
+[dir="rtl"] .float-right {
+  float: left !important;
+}
+
+/* 9. TEXT ALIGNMENT */
+[dir="rtl"] [style*="text-align: left"],
+[dir="rtl"] .text-left {
+  text-align: right !important;
+}
+
+[dir="rtl"] [style*="text-align: right"],
+[dir="rtl"] .text-right {
+  text-align: left !important;
+}
+
+/* 10. BACKGROUND POSITION MIRRORING */
+[dir="rtl"] [style*="background-position: left"] {
+  background-position-x: right !important;
+}
+
+[dir="rtl"] [style*="background-position: right"] {
+  background-position-x: left !important;
+}
+
+/* 11. TRANSFORM ORIGIN */
+[dir="rtl"] [style*="transform-origin: left"] {
+  transform-origin: right center !important;
+}
+
+[dir="rtl"] [style*="transform-origin: right"] {
+  transform-origin: left center !important;
+}
+
+/* ========================================== */
+/*     YOUR EXISTING STYLES WITH RTL FIXES    */
+/* ========================================== */
 
 .errorImgs {
   width: 50%;
@@ -80,6 +212,16 @@ a {
   animation: error 4s infinite;
   -webkit-animation: error 4s infinite;
 }
+
+/* Mirror error images for RTL */
+[dir="rtl"] .errorImgs {
+  transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+}
+
 .errorHeader {
   margin: auto;
   display: flex;
@@ -88,14 +230,20 @@ a {
   flex-direction: column;
   gap: 24px;
   text-align: center;
-  color: var(--Indigo-100);
+    color: var(--Indigo-100);
 }
+
 .errorHeader h3 {
   font-family: var(--space);
   font-size: 55px;
   font-weight: 700;
   line-height: 56px;
 }
+
+[dir="rtl"] .errorHeader h3 {
+  font-family: var(--cairo);
+}
+
 .errorHeader p {
   font-family: var(--space);
   font-size: 21px;
@@ -103,6 +251,11 @@ a {
   line-height: 32px;
   text-align: center;
 }
+
+[dir="rtl"] .errorHeader p {
+  font-family: var(--cairo);
+}
+
 .errorButton {
   display: flex;
   justify-content: center;
@@ -117,6 +270,7 @@ a {
   -ms-border-radius: 40px;
   -o-border-radius: 40px;
 }
+
 .errorButton .link {
   margin: auto;
   display: flex;
@@ -131,15 +285,22 @@ a {
   color: var(--Indigo-100);
 }
 
+[dir="rtl"] .errorButton .link {
+  font-family: var(--cairo);
+}
+
+/* ========================================== */
+/*              SCROLLBAR STYLES              */
+/* ========================================== */
+
 /* For Chrome, Edge, and Safari */
 ::-webkit-scrollbar {
-  width: 12px; /* Width of the scrollbar */
+  width: 12px;
 }
 
 ::-webkit-scrollbar-track {
   background: var(--Purple-800);
   border-radius: 10px;
-
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
@@ -153,14 +314,18 @@ a {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--Indigo-500); /* Color of the thumb on hover */
+  background: var(--Indigo-500);
 }
 
 /* For Firefox */
 * {
-  scrollbar-width: thin; /* "auto" or "thin" */
-  scrollbar-color: var(--Indigo-500) var(--Purple-800); /* Thumb and track color */
+  scrollbar-width: thin;
+  scrollbar-color: var(--Indigo-500) var(--Purple-800);
 }
+
+/* ========================================== */
+/*          ANIMATIONS WITH RTL SUPPORT       */
+/* ========================================== */
 
 @keyframes spin {
   0% {
@@ -169,6 +334,11 @@ a {
   100% {
     transform: rotate(360deg);
   }
+}
+
+/* RTL version of spin */
+[dir="rtl"] .spin-animation {
+  animation-direction: reverse;
 }
 
 @keyframes error {
@@ -197,3 +367,295 @@ a {
     background-image: url("../../public/404/4041.svg");
   }
 }
+
+/* ========================================== */
+/*       ADDITIONAL RTL UTILITY CLASSES       */
+/* ========================================== */
+
+/* Logical property utilities for consistent RTL/LTR */
+/* Logical property utilities for consistent RTL/LTR */
+.ps-1 { padding-inline-start: 0.25rem; }
+.ps-2 { padding-inline-start: 0.5rem; }
+.ps-3 { padding-inline-start: 0.75rem; }
+.ps-4 { padding-inline-start: 1rem; }
+.ps-5 { padding-inline-start: 1.25rem; }
+.ps-6 { padding-inline-start: 1.5rem; }
+.ps-8 { padding-inline-start: 2rem; }
+
+.pe-1 { padding-inline-end: 0.25rem; }
+.pe-2 { padding-inline-end: 0.5rem; }
+.pe-3 { padding-inline-end: 0.75rem; }
+.pe-4 { padding-inline-end: 1rem; }
+.pe-5 { padding-inline-end: 1.25rem; }
+.pe-6 { padding-inline-end: 1.5rem; }
+.pe-8 { padding-inline-end: 2rem; }
+
+.ms-1 { margin-inline-start: 0.25rem; }
+.ms-2 { margin-inline-start: 0.5rem; }
+.ms-3 { margin-inline-start: 0.75rem; }
+.ms-4 { margin-inline-start: 1rem; }
+.ms-5 { margin-inline-start: 1.25rem; }
+.ms-6 { margin-inline-start: 1.5rem; }
+.ms-8 { margin-inline-start: 2rem; }
+.ms-auto { margin-inline-start: auto; }
+
+.me-1 { margin-inline-end: 0.25rem; }
+.me-2 { margin-inline-end: 0.5rem; }
+.me-3 { margin-inline-end: 0.75rem; }
+.me-4 { margin-inline-end: 1rem; }
+.me-5 { margin-inline-end: 1.25rem; }
+.me-6 { margin-inline-end: 1.5rem; }
+.me-8 { margin-inline-end: 2rem; }
+.me-auto { margin-inline-end: auto; }
+
+/* Position utilities */
+.start-0 { inset-inline-start: 0; }
+.start-50 { inset-inline-start: 50%; }
+.start-100 { inset-inline-start: 100%; }
+
+.end-0 { inset-inline-end: 0; }
+.end-50 { inset-inline-end: 50%; }
+.end-100 { inset-inline-end: 100%; }
+
+/* Border utilities */
+.border-start { border-inline-start: 1px solid; }
+.border-end { border-inline-end: 1px solid; }
+.border-start-0 { border-inline-start: 0; }
+.border-end-0 { border-inline-end: 0; }
+
+/* Rounded corners logical properties */
+.rounded-start {
+  border-start-start-radius: 0.25rem;
+  border-end-start-radius: 0.25rem;
+}
+
+.rounded-end {
+  border-start-end-radius: 0.25rem;
+  border-end-end-radius: 0.25rem;
+}
+
+/* Text alignment logical properties */
+.text-start { text-align: start; }
+.text-end { text-align: end; }
+
+/* Float logical properties */
+.float-start { float: inline-start; }
+.float-end { float: inline-end; }
+
+/* ========================================== */
+/*     HELPER CLASSES FOR COMMON PATTERNS     */
+/* ========================================== */
+
+/* For icons that should flip in RTL */
+.flip-rtl {
+  display: inline-block;
+}
+
+[dir="rtl"] .flip-rtl {
+  transform: scaleX(-1);
+}
+
+/* For icons that should NOT flip in RTL */
+.no-flip-rtl {
+  display: inline-block;
+}
+
+[dir="rtl"] .no-flip-rtl {
+  transform: scaleX(1) !important;
+}
+
+/* ========================================== */
+/*          RESPONSIVE RTL UTILITIES          */
+/* ========================================== */
+
+/* AOS (Animate On Scroll) RTL fixes */
+[dir="rtl"] [data-aos="fade-left"] {
+  transform: translateX(-100px);
+}
+
+[dir="rtl"] [data-aos="fade-right"] {
+  transform: translateX(100px);
+}
+
+[dir="rtl"] [data-aos="slide-left"] {
+  transform: translateX(-100%);
+}
+
+[dir="rtl"] [data-aos="slide-right"] {
+  transform: translateX(100%);
+}
+
+[dir="rtl"] [data-aos="zoom-in-left"] {
+  transform: translateX(-10px) scale(0.9);
+}
+
+[dir="rtl"] [data-aos="zoom-in-right"] {
+  transform: translateX(10px) scale(0.9);
+}
+
+/* ========================================== */
+/*        COMMON COMPONENT RTL PATTERNS       */
+/* ========================================== */
+
+/* Navigation */
+[dir="rtl"] nav ul {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+[dir="rtl"] nav li {
+  float: right;
+}
+
+/* Dropdown menus */
+[dir="rtl"] .dropdown-menu {
+  left: auto;
+  right: 0;
+}
+
+/* Cards and containers */
+[dir="rtl"] .card,
+[dir="rtl"] .container {
+  direction: rtl;
+}
+
+/* Forms */
+[dir="rtl"] input,
+[dir="rtl"] textarea,
+[dir="rtl"] select {
+  text-align: right;
+  direction: rtl;
+}
+
+/* Placeholder text */
+[dir="rtl"] input::placeholder,
+[dir="rtl"] textarea::placeholder {
+  text-align: right;
+}
+
+/* Lists */
+[dir="rtl"] ul,
+[dir="rtl"] ol {
+  padding-left: 0;
+  padding-right: 40px;
+}
+
+/* List items */
+[dir="rtl"] li {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Tables */
+[dir="rtl"] table {
+  direction: rtl;
+}
+
+[dir="rtl"] th,
+[dir="rtl"] td {
+  text-align: right;
+}
+
+/* Buttons with icons */
+[dir="rtl"] .btn-icon-start {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .btn-icon-end {
+  flex-direction: row;
+}
+
+/* Progress bars */
+[dir="rtl"] .progress-bar {
+  float: right;
+}
+
+/* Breadcrumbs */
+[dir="rtl"] .breadcrumb-item + .breadcrumb-item::before {
+  float: right;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+/* Pagination */
+[dir="rtl"] .pagination {
+  padding-left: 0;
+  flex-direction: row-reverse;
+}
+
+/* Modal positioning */
+[dir="rtl"] .modal-header .close,
+[dir="rtl"] .modal-header .btn-close {
+  margin-left: auto;
+  margin-right: -1rem;
+}
+
+/* Tooltips */
+[dir="rtl"] .tooltip-arrow {
+  transform: scaleX(-1);
+}
+
+/* ========================================== */
+/*        OVERRIDE COMMON LAYOUT ISSUES       */
+/* ========================================== */
+
+/* Fix common absolute positioning */
+[dir="rtl"] .absolute {
+  left: auto;
+  right: 0;
+}
+
+/* Fix common fixed positioning */
+[dir="rtl"] .fixed {
+  left: auto;
+  right: 0;
+}
+
+/* Grid system RTL support */
+[dir="rtl"] .grid {
+  direction: rtl;
+}
+
+/* Flexbox common patterns */
+[dir="rtl"] .flex-row {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .justify-start {
+  justify-content: flex-end;
+}
+
+[dir="rtl"] .justify-end {
+  justify-content: flex-start;
+}
+
+/* ========================================== */
+/*         SPECIFIC FIXES FOR YOUR APP        */
+/* ========================================== */
+
+/* If you're using specific libraries or frameworks, add their RTL fixes here */
+
+/* Example: Fix for specific component libraries */
+/* [dir="rtl"] .your-component-class { */
+  /* Add specific RTL fixes */
+/* } */
+
+/* ========================================== */
+/*              BEST PRACTICES TIP            */
+/* ========================================== */
+
+/* 
+  Instead of using:
+  - margin-left, margin-right
+  - padding-left, padding-right
+  - left, right
+  - border-left, border-right
+  
+  Use logical properties:
+  - margin-inline-start, margin-inline-end
+  - padding-inline-start, padding-inline-end
+  - inset-inline-start, inset-inline-end
+  - border-inline-start, border-inline-end
+  
+  These automatically adjust for RTL/LTR
+*/
