@@ -7,7 +7,7 @@ import curve from "../../../../public/Hero/heroBg.svg";
 import appStore from "../../../../public/Hero/appStoreBtn.svg";
 import Image from "next/image";
 import { AOSInit } from "@/Utils/aos/aos";
-import "aos/dist/aos.css";
+// import "aos/dist/aos.css";
 import Link from "next/link";
 import people1 from "../../../../public/marquee/icons/people/img1.svg";
 import people2 from "../../../../public/marquee/icons/people/img2.svg";
