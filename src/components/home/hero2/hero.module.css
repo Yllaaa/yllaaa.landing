@@ -470,6 +470,7 @@
   }
   .content .contentHeader  .description{
     text-align: center;
+    line-height: 23.33px;
   }
   .content .storeBtns {
     grid-area: appBtns;
