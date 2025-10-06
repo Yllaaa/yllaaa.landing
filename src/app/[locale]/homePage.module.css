@@ -4,21 +4,21 @@
   min-height: 1021px;
   margin: 0 auto 17px auto;
 }
-.reasonContainer{
+.reasonContainer {
   position: relative;
   width: 100vw;
   height: fit-content;
   min-height: fit-content;
   margin: 0 auto 150px auto;
 }
-.aboutUsContainer{
+.aboutUsContainer {
   position: relative;
   width: 100vw;
   height: fit-content;
   min-height: fit-content;
   margin: 127px auto 189px auto;
 }
-.berriersContainer{
+.berriersContainer {
   position: relative;
   width: 100vw;
   height: fit-content;
@@ -32,14 +32,14 @@
   padding-bottom: 102px;
   margin: 150px auto 127px auto;
 }
-.forClientsContainer{
+.forClientsContainer {
   position: relative;
   width: 100vw;
   height: fit-content;
   min-height: fit-content;
   margin: 130px auto 72px auto;
 }
-.teamSection{
+.teamSection {
   position: relative;
   width: 100vw;
   height: fit-content;
@@ -52,15 +52,13 @@
   min-height: fit-content;
   margin: 162px auto 137px auto;
   overflow: hidden;
-  
 }
-.forTalentContainer{
+.forTalentContainer {
   position: relative;
   width: 100vw;
   min-height: fit-content;
   margin: 130px auto 182px auto;
 }
-
 
 @media screen and (max-width: 1024px) {
   .heroContainer {
@@ -83,17 +81,29 @@
 @media screen and (max-width: 432px) {
   .heroContainer {
     height: fit-content;
-    min-height: 932px;
+    min-height: 832px;
     margin: 0 auto 50px auto;
+  }
+  .teamSection {
+    margin: 72px auto 90px auto;
+  }
+  .aboutUsContainer {
+    margin: 90px auto 90px auto;
+  }
+  .earthContainer {
+    margin: 90px auto 90px auto;
+  }
+  .reasonContainer {
+    margin: 0 auto 90px auto;
   }
   .processContainer {
     height: fit-content;
   }
-  .forClientsContainer{
+  .forClientsContainer {
     height: fit-content;
     margin: 40px auto 40px auto;
   }
-  .forTalentContainer{
+  .forTalentContainer {
     position: relative;
     width: 100vw;
     min-height: fit-content;

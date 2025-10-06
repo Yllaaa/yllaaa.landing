@@ -470,7 +470,7 @@
   }
   .content .contentHeader  .description{
     text-align: center;
-    line-height: 27.33px;
+    line-height: 37.33px;
   }
   .content .storeBtns {
     grid-area: appBtns;
@@ -522,7 +522,7 @@
     font-family: var(--monta);
     font-size: 16px;
     font-weight: 400;
-    line-height: 27.33px;
+    line-height: 37.33px;
     color: var(--neutral-1);
   }
   .content .combined {
