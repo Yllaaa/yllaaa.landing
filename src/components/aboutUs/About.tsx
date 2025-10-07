@@ -6,6 +6,7 @@ import { useLocale, useTranslations } from "next-intl"
 
 import { useInView } from "react-intersection-observer"
 import { usePathname } from "next/navigation"
+import { useRouter } from "next/navigation"
 
 function About() {
   const locale = useLocale()
@@ -57,6 +58,8 @@ function About() {
     }
   }, [counter20, inView])
 
+  const router = useRouter()
+
   return (
     <>
       <div className={styles.container}>
@@ -75,7 +78,11 @@ function About() {
           <p>{t("description")}</p>
         </div>
         {pathname.includes("about") || (
-          <div className={styles.sectionBtn}>
+          <div
+            className={styles.sectionBtn}
+            onClick={() => {
+              router.push(`/${locale}/about`)
+            }}>
             <Link href={`/${locale}/about`}>
               <span>{t("buttonText")}</span>
               <div className={styles.arrow}></div>

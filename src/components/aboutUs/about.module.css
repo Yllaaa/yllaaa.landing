@@ -82,6 +82,7 @@
   grid-area: sectionBtn;
   width: 205px;
   height: 22px;
+  cursor: pointer;
 }
 .sectionBtn a {
   color: var(--Indigo-500);
